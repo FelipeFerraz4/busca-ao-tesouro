@@ -1,8 +1,11 @@
 from queue import Empty, Queue
+# from main import graph
+
+branco = 0
+cinza = 1
+preto = 2
+
 def breadthFirstSearch(graph, vertice, verticeObjective):
-    branco = 0
-    cinza = 1
-    preto = 2
     color = []
     # distance = []
     father = []
@@ -42,3 +45,26 @@ def breadthFirstSearch(graph, vertice, verticeObjective):
     # print(verticeU)
     # print(verticeAnterio)
     return verticeAnterio
+
+def visit(graph, vertice, color):
+    color[vertice.id] = cinza
+    status = -1
+    
+    for verticeV in vertice.adjacentVertices:
+        if graph[verticeV].person == True:
+            return graph[verticeV].id
+        if color[graph[verticeV].id] == branco:
+            status = visit(graph, graph[verticeV], color)
+        if status != -1:
+            return status
+    
+    color[vertice.id] = preto
+    return status
+
+
+def depthFirstSearch(graph, vertice):
+    color = []
+    
+    for item in graph:
+        color.append(branco)
+    return visit(graph, vertice, color)

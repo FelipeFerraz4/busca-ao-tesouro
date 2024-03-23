@@ -23,6 +23,11 @@ class Button():
         return action
     
 def create_button_start():
-    start_img = pygame.image.load('./src/assets/image/start_button.png')
-    start_img = pygame.transform.scale(start_img, (200, 100))
+    start_img = pygame.image.load('./src/assets/image/start_button.jpeg')
+    start_img = pygame.transform.scale(start_img, (200, 200))
+    return Button(800, 400, start_img)
+
+def create_button_next():
+    start_img = pygame.image.load('./src/assets/image/next_button.jpeg')
+    start_img = pygame.transform.scale(start_img, (200, 200))
     return Button(800, 200, start_img)

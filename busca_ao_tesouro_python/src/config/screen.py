@@ -1,14 +1,24 @@
 import pygame
 
-from src.graph.search import breadthFirstSearch
-from .button import Button
+from src.graph.search import breadthFirstSearch, depthFirstSearch
+from src.config.button import *
+from src.graph.read import graphRead
+from .biome import *
 
 screen_width = 1000
 screen_height = 600
+
 colorPointBlue = (50, 100, 200) #azul
 colorPointRed = (200, 50, 100) #vermelho
 colorPointGreen = (50, 200, 100) #verde
 colorPointWhite = (255, 255, 255) #branco
+
+graph = graphRead()
+button_start = create_button_start()
+button_next = create_button_next()
+
+biome = create_biome()
+BiomeType = 0
 
 def createScreen():
     screen = pygame.display.set_mode((screen_width, screen_height), 0)
@@ -38,11 +48,18 @@ def draw_vertices(graph, surface):
         else:
             pygame.draw.circle(surface, colorPointBlue, vertice.coordinate, 8, 0)
 
-def draw_backGround(graph, backGround, surface, button_start):
+def draw_biomes(graph, surface, type):
+    biome.draw_biome(surface)
+
+def draw_backGround(backGround, surface):
     surface.blit(backGround, (0, 0))
     draw_edges(graph, surface)
     draw_vertices(graph, surface)
+    draw_biomes(graph, surface, BiomeType)
     if button_start.draw(surface):
         print('start')
         print(breadthFirstSearch(graph, graph[10], graph[3]))
-    
+    if button_next.draw(surface):
+        print('next')
+        verticeId = depthFirstSearch(graph, graph[0])
+        print(verticeId)
