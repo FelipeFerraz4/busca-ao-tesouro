@@ -14,3 +14,7 @@ def create_biome():
     biome = pygame.image.load('./src/assets/image/home_beach_biome.jpeg')
     biome = pygame.transform.scale(biome, (200, 200))
     return Biome(800, 0, biome)
+
+
+def draw_biomes(biome, surface, type):
+    biome.draw_biome(surface)

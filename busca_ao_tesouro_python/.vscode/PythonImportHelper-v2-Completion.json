@@ -57,6 +57,14 @@
         "documentation": {}
     },
     {
+        "label": "*",
+        "importPath": "src.graph.vertice",
+        "description": "src.graph.vertice",
+        "isExtraImport": true,
+        "detail": "src.graph.vertice",
+        "documentation": {}
+    },
+    {
         "label": "Empty",
         "importPath": "queue",
         "description": "queue",
@@ -70,6 +78,14 @@
         "description": "queue",
         "isExtraImport": true,
         "detail": "queue",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "src.config.color",
+        "description": "src.config.color",
+        "isExtraImport": true,
+        "detail": "src.config.color",
         "documentation": {}
     },
     {
@@ -102,7 +118,16 @@
         "kind": 2,
         "importPath": "src.config.biome",
         "description": "src.config.biome",
-        "peekOfCode": "def create_biome():\n    images = []\n    biome = pygame.image.load('./src/assets/image/home_beach_biome.jpeg')\n    biome = pygame.transform.scale(biome, (200, 200))\n    return Biome(800, 0, biome)",
+        "peekOfCode": "def create_biome():\n    images = []\n    biome = pygame.image.load('./src/assets/image/home_beach_biome.jpeg')\n    biome = pygame.transform.scale(biome, (200, 200))\n    return Biome(800, 0, biome)\ndef draw_biomes(biome, surface, type):\n    biome.draw_biome(surface)",
+        "detail": "src.config.biome",
+        "documentation": {}
+    },
+    {
+        "label": "draw_biomes",
+        "kind": 2,
+        "importPath": "src.config.biome",
+        "description": "src.config.biome",
+        "peekOfCode": "def draw_biomes(biome, surface, type):\n    biome.draw_biome(surface)",
         "detail": "src.config.biome",
         "documentation": {}
     },
@@ -134,6 +159,42 @@
         "documentation": {}
     },
     {
+        "label": "colorPointBlue",
+        "kind": 5,
+        "importPath": "src.config.color",
+        "description": "src.config.color",
+        "peekOfCode": "colorPointBlue = (50, 100, 200) #azul\ncolorPointRed = (200, 50, 100) #vermelho\ncolorPointGreen = (50, 200, 100) #verde\ncolorPointWhite = (255, 255, 255) #branco",
+        "detail": "src.config.color",
+        "documentation": {}
+    },
+    {
+        "label": "colorPointRed",
+        "kind": 5,
+        "importPath": "src.config.color",
+        "description": "src.config.color",
+        "peekOfCode": "colorPointRed = (200, 50, 100) #vermelho\ncolorPointGreen = (50, 200, 100) #verde\ncolorPointWhite = (255, 255, 255) #branco",
+        "detail": "src.config.color",
+        "documentation": {}
+    },
+    {
+        "label": "colorPointGreen",
+        "kind": 5,
+        "importPath": "src.config.color",
+        "description": "src.config.color",
+        "peekOfCode": "colorPointGreen = (50, 200, 100) #verde\ncolorPointWhite = (255, 255, 255) #branco",
+        "detail": "src.config.color",
+        "documentation": {}
+    },
+    {
+        "label": "colorPointWhite",
+        "kind": 5,
+        "importPath": "src.config.color",
+        "description": "src.config.color",
+        "peekOfCode": "colorPointWhite = (255, 255, 255) #branco",
+        "detail": "src.config.color",
+        "documentation": {}
+    },
+    {
         "label": "createScreen",
         "kind": 2,
         "importPath": "src.config.screen",
@@ -147,34 +208,7 @@
         "kind": 2,
         "importPath": "src.config.screen",
         "description": "src.config.screen",
-        "peekOfCode": "def createBackground():\n    backGround = pygame.image.load('./src/assets/mapa_image/image.png')\n    backGround = pygame.transform.scale(backGround, (screen_width - 200, screen_height))\n    return backGround\ndef draw_edges(graph, surface):\n    for vertice in graph:\n        for neighboring in vertice.adjacentVertices:\n            pygame.draw.line(surface, colorPointBlue, vertice.coordinate, graph[neighboring].coordinate, 2)\ndef draw_vertices(graph, surface):\n    for vertice in graph:",
-        "detail": "src.config.screen",
-        "documentation": {}
-    },
-    {
-        "label": "draw_edges",
-        "kind": 2,
-        "importPath": "src.config.screen",
-        "description": "src.config.screen",
-        "peekOfCode": "def draw_edges(graph, surface):\n    for vertice in graph:\n        for neighboring in vertice.adjacentVertices:\n            pygame.draw.line(surface, colorPointBlue, vertice.coordinate, graph[neighboring].coordinate, 2)\ndef draw_vertices(graph, surface):\n    for vertice in graph:\n        if vertice.person == True:\n            pygame.draw.circle(surface, colorPointGreen, vertice.coordinate, 8, 0)\n        elif vertice.savePoint == True:\n            pygame.draw.circle(surface, colorPointWhite, vertice.coordinate, 8, 0)",
-        "detail": "src.config.screen",
-        "documentation": {}
-    },
-    {
-        "label": "draw_vertices",
-        "kind": 2,
-        "importPath": "src.config.screen",
-        "description": "src.config.screen",
-        "peekOfCode": "def draw_vertices(graph, surface):\n    for vertice in graph:\n        if vertice.person == True:\n            pygame.draw.circle(surface, colorPointGreen, vertice.coordinate, 8, 0)\n        elif vertice.savePoint == True:\n            pygame.draw.circle(surface, colorPointWhite, vertice.coordinate, 8, 0)\n        elif vertice.treasure == True:\n            pygame.draw.circle(surface, colorPointRed, vertice.coordinate, 8, 0)\n        else:\n            pygame.draw.circle(surface, colorPointBlue, vertice.coordinate, 8, 0)",
-        "detail": "src.config.screen",
-        "documentation": {}
-    },
-    {
-        "label": "draw_biomes",
-        "kind": 2,
-        "importPath": "src.config.screen",
-        "description": "src.config.screen",
-        "peekOfCode": "def draw_biomes(graph, surface, type):\n    biome.draw_biome(surface)\ndef draw_backGround(backGround, surface):\n    surface.blit(backGround, (0, 0))\n    draw_edges(graph, surface)\n    draw_vertices(graph, surface)\n    draw_biomes(graph, surface, BiomeType)\n    if button_start.draw(surface):\n        print('start')\n        print(breadthFirstSearch(graph, graph[10], graph[3]))",
+        "peekOfCode": "def createBackground():\n    backGround = pygame.image.load('./src/assets/mapa_image/image.png')\n    backGround = pygame.transform.scale(backGround, (screen_width - 200, screen_height))\n    return backGround\ndef draw_backGround(backGround, surface):\n    surface.blit(backGround, (0, 0))\n    draw_edges(graph, surface)\n    draw_vertices(graph, surface)\n    draw_biomes(biome, surface, BiomeType)\n    if button_start.draw(surface):",
         "detail": "src.config.screen",
         "documentation": {}
     },
@@ -183,7 +217,7 @@
         "kind": 2,
         "importPath": "src.config.screen",
         "description": "src.config.screen",
-        "peekOfCode": "def draw_backGround(backGround, surface):\n    surface.blit(backGround, (0, 0))\n    draw_edges(graph, surface)\n    draw_vertices(graph, surface)\n    draw_biomes(graph, surface, BiomeType)\n    if button_start.draw(surface):\n        print('start')\n        print(breadthFirstSearch(graph, graph[10], graph[3]))\n    if button_next.draw(surface):\n        print('next')",
+        "peekOfCode": "def draw_backGround(backGround, surface):\n    surface.blit(backGround, (0, 0))\n    draw_edges(graph, surface)\n    draw_vertices(graph, surface)\n    draw_biomes(biome, surface, BiomeType)\n    if button_start.draw(surface):\n        print('start')\n        print(breadthFirstSearch(graph, graph[10], graph[3]))\n    if button_next.draw(surface):\n        print('next')",
         "detail": "src.config.screen",
         "documentation": {}
     },
@@ -192,7 +226,7 @@
         "kind": 5,
         "importPath": "src.config.screen",
         "description": "src.config.screen",
-        "peekOfCode": "screen_width = 1000\nscreen_height = 600\ncolorPointBlue = (50, 100, 200) #azul\ncolorPointRed = (200, 50, 100) #vermelho\ncolorPointGreen = (50, 200, 100) #verde\ncolorPointWhite = (255, 255, 255) #branco\ngraph = graphRead()\nbutton_start = create_button_start()\nbutton_next = create_button_next()\nbiome = create_biome()",
+        "peekOfCode": "screen_width = 1000\nscreen_height = 600\ngraph = graphRead()\nbutton_start = create_button_start()\nbutton_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\ndef createScreen():\n    screen = pygame.display.set_mode((screen_width, screen_height), 0)\n    pygame.display.set_caption('Busca ao Tesouro')",
         "detail": "src.config.screen",
         "documentation": {}
     },
@@ -201,43 +235,7 @@
         "kind": 5,
         "importPath": "src.config.screen",
         "description": "src.config.screen",
-        "peekOfCode": "screen_height = 600\ncolorPointBlue = (50, 100, 200) #azul\ncolorPointRed = (200, 50, 100) #vermelho\ncolorPointGreen = (50, 200, 100) #verde\ncolorPointWhite = (255, 255, 255) #branco\ngraph = graphRead()\nbutton_start = create_button_start()\nbutton_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0",
-        "detail": "src.config.screen",
-        "documentation": {}
-    },
-    {
-        "label": "colorPointBlue",
-        "kind": 5,
-        "importPath": "src.config.screen",
-        "description": "src.config.screen",
-        "peekOfCode": "colorPointBlue = (50, 100, 200) #azul\ncolorPointRed = (200, 50, 100) #vermelho\ncolorPointGreen = (50, 200, 100) #verde\ncolorPointWhite = (255, 255, 255) #branco\ngraph = graphRead()\nbutton_start = create_button_start()\nbutton_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\ndef createScreen():",
-        "detail": "src.config.screen",
-        "documentation": {}
-    },
-    {
-        "label": "colorPointRed",
-        "kind": 5,
-        "importPath": "src.config.screen",
-        "description": "src.config.screen",
-        "peekOfCode": "colorPointRed = (200, 50, 100) #vermelho\ncolorPointGreen = (50, 200, 100) #verde\ncolorPointWhite = (255, 255, 255) #branco\ngraph = graphRead()\nbutton_start = create_button_start()\nbutton_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\ndef createScreen():\n    screen = pygame.display.set_mode((screen_width, screen_height), 0)",
-        "detail": "src.config.screen",
-        "documentation": {}
-    },
-    {
-        "label": "colorPointGreen",
-        "kind": 5,
-        "importPath": "src.config.screen",
-        "description": "src.config.screen",
-        "peekOfCode": "colorPointGreen = (50, 200, 100) #verde\ncolorPointWhite = (255, 255, 255) #branco\ngraph = graphRead()\nbutton_start = create_button_start()\nbutton_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\ndef createScreen():\n    screen = pygame.display.set_mode((screen_width, screen_height), 0)\n    pygame.display.set_caption('Busca ao Tesouro')",
-        "detail": "src.config.screen",
-        "documentation": {}
-    },
-    {
-        "label": "colorPointWhite",
-        "kind": 5,
-        "importPath": "src.config.screen",
-        "description": "src.config.screen",
-        "peekOfCode": "colorPointWhite = (255, 255, 255) #branco\ngraph = graphRead()\nbutton_start = create_button_start()\nbutton_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\ndef createScreen():\n    screen = pygame.display.set_mode((screen_width, screen_height), 0)\n    pygame.display.set_caption('Busca ao Tesouro')\n    backGround = pygame.image.load('./src/assets/mapa_image/image.png')",
+        "peekOfCode": "screen_height = 600\ngraph = graphRead()\nbutton_start = create_button_start()\nbutton_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\ndef createScreen():\n    screen = pygame.display.set_mode((screen_width, screen_height), 0)\n    pygame.display.set_caption('Busca ao Tesouro')\n    backGround = pygame.image.load('./src/assets/mapa_image/image.png')",
         "detail": "src.config.screen",
         "documentation": {}
     },
@@ -364,6 +362,24 @@
         "importPath": "src.graph.vertice",
         "description": "src.graph.vertice",
         "peekOfCode": "class verticeGraph():\n    def __init__(self, id, coordenate, adjacentVertices, person=False, savePoint=False, treasure=False):\n        self.id = id\n        self.coordinate = (coordenate[0], coordenate[1])\n        self.savePoint = savePoint\n        self.person = person\n        self.adjacentVertices = adjacentVertices\n        self.treasure = treasure\n        self.item = False\n        self.strangeBiome = False",
+        "detail": "src.graph.vertice",
+        "documentation": {}
+    },
+    {
+        "label": "draw_vertices",
+        "kind": 2,
+        "importPath": "src.graph.vertice",
+        "description": "src.graph.vertice",
+        "peekOfCode": "def draw_vertices(graph, surface):\n    for vertice in graph:\n        if vertice.person == True:\n            pygame.draw.circle(surface, colorPointGreen, vertice.coordinate, 8, 0)\n        elif vertice.savePoint == True:\n            pygame.draw.circle(surface, colorPointWhite, vertice.coordinate, 8, 0)\n        elif vertice.treasure == True:\n            pygame.draw.circle(surface, colorPointRed, vertice.coordinate, 8, 0)\n        else:\n            pygame.draw.circle(surface, colorPointBlue, vertice.coordinate, 8, 0)",
+        "detail": "src.graph.vertice",
+        "documentation": {}
+    },
+    {
+        "label": "draw_edges",
+        "kind": 2,
+        "importPath": "src.graph.vertice",
+        "description": "src.graph.vertice",
+        "peekOfCode": "def draw_edges(graph, surface):\n    for vertice in graph:\n        for neighboring in vertice.adjacentVertices:\n            pygame.draw.line(surface, colorPointBlue, vertice.coordinate, graph[neighboring].coordinate, 2)",
         "detail": "src.graph.vertice",
         "documentation": {}
     },
