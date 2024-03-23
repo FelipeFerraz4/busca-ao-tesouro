@@ -33,6 +33,30 @@
         "documentation": {}
     },
     {
+        "label": "breadthFirstSearch",
+        "importPath": "src.graph.search",
+        "description": "src.graph.search",
+        "isExtraImport": true,
+        "detail": "src.graph.search",
+        "documentation": {}
+    },
+    {
+        "label": "depthFirstSearch",
+        "importPath": "src.graph.search",
+        "description": "src.graph.search",
+        "isExtraImport": true,
+        "detail": "src.graph.search",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "src.config.button",
+        "description": "src.config.button",
+        "isExtraImport": true,
+        "detail": "src.config.button",
+        "documentation": {}
+    },
+    {
         "label": "*",
         "importPath": "src.config.button",
         "description": "src.config.button",
@@ -62,6 +86,22 @@
         "description": "src.graph.vertice",
         "isExtraImport": true,
         "detail": "src.graph.vertice",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "src.graph.vertice",
+        "description": "src.graph.vertice",
+        "isExtraImport": true,
+        "detail": "src.graph.vertice",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "src.config.screen",
+        "description": "src.config.screen",
+        "isExtraImport": true,
+        "detail": "src.config.screen",
         "documentation": {}
     },
     {
@@ -97,11 +137,11 @@
         "documentation": {}
     },
     {
-        "label": "*",
-        "importPath": "src.config.screen",
-        "description": "src.config.screen",
+        "label": "gameOn",
+        "importPath": "src.config.game",
+        "description": "src.config.game",
         "isExtraImport": true,
-        "detail": "src.config.screen",
+        "detail": "src.config.game",
         "documentation": {}
     },
     {
@@ -195,6 +235,78 @@
         "documentation": {}
     },
     {
+        "label": "gameOn",
+        "kind": 2,
+        "importPath": "src.config.game",
+        "description": "src.config.game",
+        "peekOfCode": "def gameOn():\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_biomes(biome, screen, BiomeType)\n    if button_start.draw(screen):\n        print('start')\n        print(breadthFirstSearch(graph, graph[10], graph[3]))\n    if button_next.draw(screen):\n        print('next')",
+        "detail": "src.config.game",
+        "documentation": {}
+    },
+    {
+        "label": "screen",
+        "kind": 5,
+        "importPath": "src.config.game",
+        "description": "src.config.game",
+        "peekOfCode": "screen = createScreen()\nbackGround = createBackground()\ngraph = graphRead()\nbutton_start = create_button_start()\nbutton_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\ndef gameOn():\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)",
+        "detail": "src.config.game",
+        "documentation": {}
+    },
+    {
+        "label": "backGround",
+        "kind": 5,
+        "importPath": "src.config.game",
+        "description": "src.config.game",
+        "peekOfCode": "backGround = createBackground()\ngraph = graphRead()\nbutton_start = create_button_start()\nbutton_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\ndef gameOn():\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)",
+        "detail": "src.config.game",
+        "documentation": {}
+    },
+    {
+        "label": "graph",
+        "kind": 5,
+        "importPath": "src.config.game",
+        "description": "src.config.game",
+        "peekOfCode": "graph = graphRead()\nbutton_start = create_button_start()\nbutton_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\ndef gameOn():\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_biomes(biome, screen, BiomeType)",
+        "detail": "src.config.game",
+        "documentation": {}
+    },
+    {
+        "label": "button_start",
+        "kind": 5,
+        "importPath": "src.config.game",
+        "description": "src.config.game",
+        "peekOfCode": "button_start = create_button_start()\nbutton_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\ndef gameOn():\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_biomes(biome, screen, BiomeType)\n    if button_start.draw(screen):",
+        "detail": "src.config.game",
+        "documentation": {}
+    },
+    {
+        "label": "button_next",
+        "kind": 5,
+        "importPath": "src.config.game",
+        "description": "src.config.game",
+        "peekOfCode": "button_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\ndef gameOn():\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_biomes(biome, screen, BiomeType)\n    if button_start.draw(screen):\n        print('start')",
+        "detail": "src.config.game",
+        "documentation": {}
+    },
+    {
+        "label": "biome",
+        "kind": 5,
+        "importPath": "src.config.game",
+        "description": "src.config.game",
+        "peekOfCode": "biome = create_biome()\nBiomeType = 0\ndef gameOn():\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_biomes(biome, screen, BiomeType)\n    if button_start.draw(screen):\n        print('start')\n        print(breadthFirstSearch(graph, graph[10], graph[3]))",
+        "detail": "src.config.game",
+        "documentation": {}
+    },
+    {
+        "label": "BiomeType",
+        "kind": 5,
+        "importPath": "src.config.game",
+        "description": "src.config.game",
+        "peekOfCode": "BiomeType = 0\ndef gameOn():\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_biomes(biome, screen, BiomeType)\n    if button_start.draw(screen):\n        print('start')\n        print(breadthFirstSearch(graph, graph[10], graph[3]))\n    if button_next.draw(screen):",
+        "detail": "src.config.game",
+        "documentation": {}
+    },
+    {
         "label": "createScreen",
         "kind": 2,
         "importPath": "src.config.screen",
@@ -208,7 +320,7 @@
         "kind": 2,
         "importPath": "src.config.screen",
         "description": "src.config.screen",
-        "peekOfCode": "def createBackground():\n    backGround = pygame.image.load('./src/assets/mapa_image/image.png')\n    backGround = pygame.transform.scale(backGround, (screen_width - 200, screen_height))\n    return backGround\ndef draw_backGround(backGround, surface):\n    surface.blit(backGround, (0, 0))\n    draw_edges(graph, surface)\n    draw_vertices(graph, surface)\n    draw_biomes(biome, surface, BiomeType)\n    if button_start.draw(surface):",
+        "peekOfCode": "def createBackground():\n    backGround = pygame.image.load('./src/assets/mapa_image/image.png')\n    backGround = pygame.transform.scale(backGround, (screen_width - 200, screen_height))\n    return backGround\ndef draw_backGround(backGround, surface):\n    surface.blit(backGround, (0, 0))",
         "detail": "src.config.screen",
         "documentation": {}
     },
@@ -217,7 +329,7 @@
         "kind": 2,
         "importPath": "src.config.screen",
         "description": "src.config.screen",
-        "peekOfCode": "def draw_backGround(backGround, surface):\n    surface.blit(backGround, (0, 0))\n    draw_edges(graph, surface)\n    draw_vertices(graph, surface)\n    draw_biomes(biome, surface, BiomeType)\n    if button_start.draw(surface):\n        print('start')\n        print(breadthFirstSearch(graph, graph[10], graph[3]))\n    if button_next.draw(surface):\n        print('next')",
+        "peekOfCode": "def draw_backGround(backGround, surface):\n    surface.blit(backGround, (0, 0))",
         "detail": "src.config.screen",
         "documentation": {}
     },
@@ -226,7 +338,7 @@
         "kind": 5,
         "importPath": "src.config.screen",
         "description": "src.config.screen",
-        "peekOfCode": "screen_width = 1000\nscreen_height = 600\ngraph = graphRead()\nbutton_start = create_button_start()\nbutton_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\ndef createScreen():\n    screen = pygame.display.set_mode((screen_width, screen_height), 0)\n    pygame.display.set_caption('Busca ao Tesouro')",
+        "peekOfCode": "screen_width = 1000\nscreen_height = 600\ndef createScreen():\n    screen = pygame.display.set_mode((screen_width, screen_height), 0)\n    pygame.display.set_caption('Busca ao Tesouro')\n    backGround = pygame.image.load('./src/assets/mapa_image/image.png')\n    backGround = pygame.transform.scale(backGround, (screen_width - 200, screen_height))\n    return screen\ndef createBackground():\n    backGround = pygame.image.load('./src/assets/mapa_image/image.png')",
         "detail": "src.config.screen",
         "documentation": {}
     },
@@ -235,52 +347,7 @@
         "kind": 5,
         "importPath": "src.config.screen",
         "description": "src.config.screen",
-        "peekOfCode": "screen_height = 600\ngraph = graphRead()\nbutton_start = create_button_start()\nbutton_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\ndef createScreen():\n    screen = pygame.display.set_mode((screen_width, screen_height), 0)\n    pygame.display.set_caption('Busca ao Tesouro')\n    backGround = pygame.image.load('./src/assets/mapa_image/image.png')",
-        "detail": "src.config.screen",
-        "documentation": {}
-    },
-    {
-        "label": "graph",
-        "kind": 5,
-        "importPath": "src.config.screen",
-        "description": "src.config.screen",
-        "peekOfCode": "graph = graphRead()\nbutton_start = create_button_start()\nbutton_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\ndef createScreen():\n    screen = pygame.display.set_mode((screen_width, screen_height), 0)\n    pygame.display.set_caption('Busca ao Tesouro')\n    backGround = pygame.image.load('./src/assets/mapa_image/image.png')\n    backGround = pygame.transform.scale(backGround, (screen_width - 200, screen_height))",
-        "detail": "src.config.screen",
-        "documentation": {}
-    },
-    {
-        "label": "button_start",
-        "kind": 5,
-        "importPath": "src.config.screen",
-        "description": "src.config.screen",
-        "peekOfCode": "button_start = create_button_start()\nbutton_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\ndef createScreen():\n    screen = pygame.display.set_mode((screen_width, screen_height), 0)\n    pygame.display.set_caption('Busca ao Tesouro')\n    backGround = pygame.image.load('./src/assets/mapa_image/image.png')\n    backGround = pygame.transform.scale(backGround, (screen_width - 200, screen_height))\n    return screen",
-        "detail": "src.config.screen",
-        "documentation": {}
-    },
-    {
-        "label": "button_next",
-        "kind": 5,
-        "importPath": "src.config.screen",
-        "description": "src.config.screen",
-        "peekOfCode": "button_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\ndef createScreen():\n    screen = pygame.display.set_mode((screen_width, screen_height), 0)\n    pygame.display.set_caption('Busca ao Tesouro')\n    backGround = pygame.image.load('./src/assets/mapa_image/image.png')\n    backGround = pygame.transform.scale(backGround, (screen_width - 200, screen_height))\n    return screen\ndef createBackground():",
-        "detail": "src.config.screen",
-        "documentation": {}
-    },
-    {
-        "label": "biome",
-        "kind": 5,
-        "importPath": "src.config.screen",
-        "description": "src.config.screen",
-        "peekOfCode": "biome = create_biome()\nBiomeType = 0\ndef createScreen():\n    screen = pygame.display.set_mode((screen_width, screen_height), 0)\n    pygame.display.set_caption('Busca ao Tesouro')\n    backGround = pygame.image.load('./src/assets/mapa_image/image.png')\n    backGround = pygame.transform.scale(backGround, (screen_width - 200, screen_height))\n    return screen\ndef createBackground():\n    backGround = pygame.image.load('./src/assets/mapa_image/image.png')",
-        "detail": "src.config.screen",
-        "documentation": {}
-    },
-    {
-        "label": "BiomeType",
-        "kind": 5,
-        "importPath": "src.config.screen",
-        "description": "src.config.screen",
-        "peekOfCode": "BiomeType = 0\ndef createScreen():\n    screen = pygame.display.set_mode((screen_width, screen_height), 0)\n    pygame.display.set_caption('Busca ao Tesouro')\n    backGround = pygame.image.load('./src/assets/mapa_image/image.png')\n    backGround = pygame.transform.scale(backGround, (screen_width - 200, screen_height))\n    return screen\ndef createBackground():\n    backGround = pygame.image.load('./src/assets/mapa_image/image.png')\n    backGround = pygame.transform.scale(backGround, (screen_width - 200, screen_height))",
+        "peekOfCode": "screen_height = 600\ndef createScreen():\n    screen = pygame.display.set_mode((screen_width, screen_height), 0)\n    pygame.display.set_caption('Busca ao Tesouro')\n    backGround = pygame.image.load('./src/assets/mapa_image/image.png')\n    backGround = pygame.transform.scale(backGround, (screen_width - 200, screen_height))\n    return screen\ndef createBackground():\n    backGround = pygame.image.load('./src/assets/mapa_image/image.png')\n    backGround = pygame.transform.scale(backGround, (screen_width - 200, screen_height))",
         "detail": "src.config.screen",
         "documentation": {}
     },
@@ -384,29 +451,11 @@
         "documentation": {}
     },
     {
-        "label": "screen",
-        "kind": 5,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "screen = createScreen()\nbackGround = createBackground()\nrun = True\nwhile run:\n    draw_backGround(backGround, screen)\n    pygame.display.update()\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            run = False\npygame.quit()",
-        "detail": "main",
-        "documentation": {}
-    },
-    {
-        "label": "backGround",
-        "kind": 5,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "backGround = createBackground()\nrun = True\nwhile run:\n    draw_backGround(backGround, screen)\n    pygame.display.update()\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            run = False\npygame.quit()",
-        "detail": "main",
-        "documentation": {}
-    },
-    {
         "label": "run",
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "run = True\nwhile run:\n    draw_backGround(backGround, screen)\n    pygame.display.update()\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            run = False\npygame.quit()",
+        "peekOfCode": "run = True\nwhile run:\n    gameOn()\n    pygame.display.update()\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            run = False\npygame.quit()",
         "detail": "main",
         "documentation": {}
     }

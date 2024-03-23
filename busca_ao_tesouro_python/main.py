@@ -2,19 +2,14 @@ import pygame
 from pygame import mixer
 from pygame.locals import *
 
-from src.graph.read import graphRead
-from src.config.screen import *
+from src.config.game import gameOn
 
 pygame.init()
-
-screen = createScreen()
-backGround = createBackground()
-
 
 run = True
 
 while run:
-    draw_backGround(backGround, screen)
+    gameOn()
     
     pygame.display.update()
     
