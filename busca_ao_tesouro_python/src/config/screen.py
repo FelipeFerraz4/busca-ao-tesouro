@@ -12,8 +12,6 @@ screen_height = 600
 def createScreen():
     screen = pygame.display.set_mode((screen_width, screen_height), 0)
     pygame.display.set_caption('Busca ao Tesouro')
-    backGround = pygame.image.load('./src/assets/mapa_image/image.png')
-    backGround = pygame.transform.scale(backGround, (screen_width - 200, screen_height))
     return screen
 
 def createBackground():

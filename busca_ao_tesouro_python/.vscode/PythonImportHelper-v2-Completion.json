@@ -17,6 +17,24 @@
         "documentation": {}
     },
     {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "copy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "copy",
+        "description": "copy",
+        "detail": "copy",
+        "documentation": {}
+    },
+    {
         "label": "breadthFirstSearch",
         "importPath": "src.graph.search",
         "description": "src.graph.search",
@@ -239,7 +257,25 @@
         "kind": 2,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "def gameOn():\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_biomes(biome, screen, BiomeType)\n    if button_start.draw(screen):\n        print('start')\n        print(breadthFirstSearch(graph, graph[10], graph[3]))\n    if button_next.draw(screen):\n        print('next')",
+        "peekOfCode": "def gameOn(verticeObjective, end):\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_biomes(biome, screen, BiomeType)\n    if button_start.draw(screen):\n        print('start')\n    if button_next.draw(screen) and end == False:\n        personVertice = depthFirstSearch(graph, graph[0])\n        nextVertice = nextPosition(personVertice, verticeObjective)",
+        "detail": "src.config.game",
+        "documentation": {}
+    },
+    {
+        "label": "nextPosition",
+        "kind": 2,
+        "importPath": "src.config.game",
+        "description": "src.config.game",
+        "peekOfCode": "def nextPosition(personVertice, verticeObjective):\n    # get the best neighbor of the character's current vertice\n    bestNeighboringVertice = breadthFirstSearch(graph, graph[personVertice], graph[verticeObjective])\n    neighboringList = copy.deepcopy(graph[personVertice].adjacentVertices)\n    # 50% of being chosen the best vertice\n    porcente = 5/10\n    luckNumber = random.randint(0, len(neighboringList))\n    # choosing the next vertice\n    neighboringChoice = bestNeighboringVertice\n    if luckNumber > int(len(neighboringList)*porcente):",
+        "detail": "src.config.game",
+        "documentation": {}
+    },
+    {
+        "label": "step",
+        "kind": 2,
+        "importPath": "src.config.game",
+        "description": "src.config.game",
+        "peekOfCode": "def step(personVertice, nextVertice):\n    #change the person's vertice\n    graph[personVertice].person = False\n    graph[nextVertice].person = True",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -248,7 +284,7 @@
         "kind": 5,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "screen = createScreen()\nbackGround = createBackground()\ngraph = graphRead()\nbutton_start = create_button_start()\nbutton_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\ndef gameOn():\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)",
+        "peekOfCode": "screen = createScreen()\nbackGround = createBackground()\ngraph = graphRead()\nbutton_start = create_button_start()\nbutton_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\ndef gameOn(verticeObjective, end):\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -257,7 +293,7 @@
         "kind": 5,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "backGround = createBackground()\ngraph = graphRead()\nbutton_start = create_button_start()\nbutton_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\ndef gameOn():\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)",
+        "peekOfCode": "backGround = createBackground()\ngraph = graphRead()\nbutton_start = create_button_start()\nbutton_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\ndef gameOn(verticeObjective, end):\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -266,7 +302,7 @@
         "kind": 5,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "graph = graphRead()\nbutton_start = create_button_start()\nbutton_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\ndef gameOn():\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_biomes(biome, screen, BiomeType)",
+        "peekOfCode": "graph = graphRead()\nbutton_start = create_button_start()\nbutton_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\ndef gameOn(verticeObjective, end):\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_biomes(biome, screen, BiomeType)",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -275,7 +311,7 @@
         "kind": 5,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "button_start = create_button_start()\nbutton_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\ndef gameOn():\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_biomes(biome, screen, BiomeType)\n    if button_start.draw(screen):",
+        "peekOfCode": "button_start = create_button_start()\nbutton_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\ndef gameOn(verticeObjective, end):\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_biomes(biome, screen, BiomeType)\n    if button_start.draw(screen):",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -284,7 +320,7 @@
         "kind": 5,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "button_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\ndef gameOn():\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_biomes(biome, screen, BiomeType)\n    if button_start.draw(screen):\n        print('start')",
+        "peekOfCode": "button_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\ndef gameOn(verticeObjective, end):\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_biomes(biome, screen, BiomeType)\n    if button_start.draw(screen):\n        print('start')",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -293,7 +329,7 @@
         "kind": 5,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "biome = create_biome()\nBiomeType = 0\ndef gameOn():\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_biomes(biome, screen, BiomeType)\n    if button_start.draw(screen):\n        print('start')\n        print(breadthFirstSearch(graph, graph[10], graph[3]))",
+        "peekOfCode": "biome = create_biome()\nBiomeType = 0\ndef gameOn(verticeObjective, end):\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_biomes(biome, screen, BiomeType)\n    if button_start.draw(screen):\n        print('start')\n    if button_next.draw(screen) and end == False:",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -302,7 +338,7 @@
         "kind": 5,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "BiomeType = 0\ndef gameOn():\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_biomes(biome, screen, BiomeType)\n    if button_start.draw(screen):\n        print('start')\n        print(breadthFirstSearch(graph, graph[10], graph[3]))\n    if button_next.draw(screen):",
+        "peekOfCode": "BiomeType = 0\ndef gameOn(verticeObjective, end):\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_biomes(biome, screen, BiomeType)\n    if button_start.draw(screen):\n        print('start')\n    if button_next.draw(screen) and end == False:\n        personVertice = depthFirstSearch(graph, graph[0])",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -311,7 +347,7 @@
         "kind": 2,
         "importPath": "src.config.screen",
         "description": "src.config.screen",
-        "peekOfCode": "def createScreen():\n    screen = pygame.display.set_mode((screen_width, screen_height), 0)\n    pygame.display.set_caption('Busca ao Tesouro')\n    backGround = pygame.image.load('./src/assets/mapa_image/image.png')\n    backGround = pygame.transform.scale(backGround, (screen_width - 200, screen_height))\n    return screen\ndef createBackground():\n    backGround = pygame.image.load('./src/assets/mapa_image/image.png')\n    backGround = pygame.transform.scale(backGround, (screen_width - 200, screen_height))\n    return backGround",
+        "peekOfCode": "def createScreen():\n    screen = pygame.display.set_mode((screen_width, screen_height), 0)\n    pygame.display.set_caption('Busca ao Tesouro')\n    return screen\ndef createBackground():\n    backGround = pygame.image.load('./src/assets/mapa_image/image.png')\n    backGround = pygame.transform.scale(backGround, (screen_width - 200, screen_height))\n    return backGround\ndef draw_backGround(backGround, surface):\n    surface.blit(backGround, (0, 0))",
         "detail": "src.config.screen",
         "documentation": {}
     },
@@ -338,7 +374,7 @@
         "kind": 5,
         "importPath": "src.config.screen",
         "description": "src.config.screen",
-        "peekOfCode": "screen_width = 1000\nscreen_height = 600\ndef createScreen():\n    screen = pygame.display.set_mode((screen_width, screen_height), 0)\n    pygame.display.set_caption('Busca ao Tesouro')\n    backGround = pygame.image.load('./src/assets/mapa_image/image.png')\n    backGround = pygame.transform.scale(backGround, (screen_width - 200, screen_height))\n    return screen\ndef createBackground():\n    backGround = pygame.image.load('./src/assets/mapa_image/image.png')",
+        "peekOfCode": "screen_width = 1000\nscreen_height = 600\ndef createScreen():\n    screen = pygame.display.set_mode((screen_width, screen_height), 0)\n    pygame.display.set_caption('Busca ao Tesouro')\n    return screen\ndef createBackground():\n    backGround = pygame.image.load('./src/assets/mapa_image/image.png')\n    backGround = pygame.transform.scale(backGround, (screen_width - 200, screen_height))\n    return backGround",
         "detail": "src.config.screen",
         "documentation": {}
     },
@@ -347,7 +383,7 @@
         "kind": 5,
         "importPath": "src.config.screen",
         "description": "src.config.screen",
-        "peekOfCode": "screen_height = 600\ndef createScreen():\n    screen = pygame.display.set_mode((screen_width, screen_height), 0)\n    pygame.display.set_caption('Busca ao Tesouro')\n    backGround = pygame.image.load('./src/assets/mapa_image/image.png')\n    backGround = pygame.transform.scale(backGround, (screen_width - 200, screen_height))\n    return screen\ndef createBackground():\n    backGround = pygame.image.load('./src/assets/mapa_image/image.png')\n    backGround = pygame.transform.scale(backGround, (screen_width - 200, screen_height))",
+        "peekOfCode": "screen_height = 600\ndef createScreen():\n    screen = pygame.display.set_mode((screen_width, screen_height), 0)\n    pygame.display.set_caption('Busca ao Tesouro')\n    return screen\ndef createBackground():\n    backGround = pygame.image.load('./src/assets/mapa_image/image.png')\n    backGround = pygame.transform.scale(backGround, (screen_width - 200, screen_height))\n    return backGround\ndef draw_backGround(backGround, surface):",
         "detail": "src.config.screen",
         "documentation": {}
     },
@@ -455,7 +491,25 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "run = True\nwhile run:\n    gameOn()\n    pygame.display.update()\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            run = False\npygame.quit()",
+        "peekOfCode": "run = True\n#status code 0 - continue, 1 - change goal, 2 - finish game\nverticeObjective = 3\nend = False\nwhile run:\n    status = gameOn(verticeObjective, end)\n    if status == 1:\n        verticeObjective = 10\n        print('Change Goal')\n    if status == 2:",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "verticeObjective",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "verticeObjective = 3\nend = False\nwhile run:\n    status = gameOn(verticeObjective, end)\n    if status == 1:\n        verticeObjective = 10\n        print('Change Goal')\n    if status == 2:\n        print('Game Over')\n        end = True",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "end",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "end = False\nwhile run:\n    status = gameOn(verticeObjective, end)\n    if status == 1:\n        verticeObjective = 10\n        print('Change Goal')\n    if status == 2:\n        print('Game Over')\n        end = True\n        # run = False",
         "detail": "main",
         "documentation": {}
     }

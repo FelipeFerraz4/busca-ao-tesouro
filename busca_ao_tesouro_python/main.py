@@ -8,8 +8,19 @@ pygame.init()
 
 run = True
 
+#status code 0 - continue, 1 - change goal, 2 - finish game
+verticeObjective = 3
+end = False
+
 while run:
-    gameOn()
+    status = gameOn(verticeObjective, end)
+    if status == 1:
+        verticeObjective = 10
+        print('Change Goal')
+    if status == 2:
+        print('Game Over')
+        end = True
+        # run = False
     
     pygame.display.update()
     
