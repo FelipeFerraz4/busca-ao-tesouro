@@ -17,6 +17,22 @@
         "documentation": {}
     },
     {
+        "label": "*",
+        "importPath": "pygame.locals",
+        "description": "pygame.locals",
+        "isExtraImport": true,
+        "detail": "pygame.locals",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "pygame.locals",
+        "description": "pygame.locals",
+        "isExtraImport": true,
+        "detail": "pygame.locals",
+        "documentation": {}
+    },
+    {
         "label": "random",
         "kind": 6,
         "isExtraImport": true,
@@ -147,14 +163,6 @@
         "documentation": {}
     },
     {
-        "label": "*",
-        "importPath": "pygame.locals",
-        "description": "pygame.locals",
-        "isExtraImport": true,
-        "detail": "pygame.locals",
-        "documentation": {}
-    },
-    {
         "label": "gameOn",
         "importPath": "src.config.game",
         "description": "src.config.game",
@@ -257,7 +265,7 @@
         "kind": 2,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "def gameOn(verticeObjective, end):\n    global graph\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_biomes(biome, screen, BiomeType)\n    if button_start.draw(screen):\n        graph = graphRead()\n        return 3\n    if button_next.draw(screen) and end == False:",
+        "peekOfCode": "def gameOn(verticeObjective, end, statusGame, startTime):\n    if statusGame > -1:\n        global graph\n        draw_backGround(backGround, screen)\n        draw_edges(graph, screen)\n        draw_vertices(graph, screen)\n        draw_biomes(biome, screen, BiomeType)\n        if button_reset.draw(screen):\n            graph = graphRead()\n            return 3",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -275,7 +283,16 @@
         "kind": 2,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "def step(personVertice, nextVertice):\n    #change the person's vertice\n    graph[personVertice].person = False\n    graph[nextVertice].person = True",
+        "peekOfCode": "def step(personVertice, nextVertice):\n    #change the person's vertice\n    graph[personVertice].person = False\n    graph[nextVertice].person = True\ndef startMessage(statusGame, startTime):\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_biomes(biome, screen, BiomeType)\n    if statusGame == -1:",
+        "detail": "src.config.game",
+        "documentation": {}
+    },
+    {
+        "label": "startMessage",
+        "kind": 2,
+        "importPath": "src.config.game",
+        "description": "src.config.game",
+        "peekOfCode": "def startMessage(statusGame, startTime):\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_biomes(biome, screen, BiomeType)\n    if statusGame == -1:\n        txttela = fontesys.render('Prepare-se, a ilha está a vista', 1, (255,255,255))\n    elif statusGame == -2:\n        txttela = fontesys.render('Desvende segredos ocultos e tesouros.', 1, (255,255,255))\n    elif statusGame == -3:",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -284,7 +301,7 @@
         "kind": 5,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "screen = createScreen()\nbackGround = createBackground()\ngraph = graphRead()\nbutton_start = create_button_reset()\nbutton_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\ndef gameOn(verticeObjective, end):\n    global graph\n    draw_backGround(backGround, screen)",
+        "peekOfCode": "screen = createScreen()\nbackGround = createBackground()\ngraph = graphRead()\nbutton_reset = create_button_reset()\nbutton_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)  ",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -293,7 +310,7 @@
         "kind": 5,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "backGround = createBackground()\ngraph = graphRead()\nbutton_start = create_button_reset()\nbutton_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\ndef gameOn(verticeObjective, end):\n    global graph\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)",
+        "peekOfCode": "backGround = createBackground()\ngraph = graphRead()\nbutton_reset = create_button_reset()\nbutton_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)  \ndef gameOn(verticeObjective, end, statusGame, startTime):",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -302,16 +319,16 @@
         "kind": 5,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "graph = graphRead()\nbutton_start = create_button_reset()\nbutton_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\ndef gameOn(verticeObjective, end):\n    global graph\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)",
+        "peekOfCode": "graph = graphRead()\nbutton_reset = create_button_reset()\nbutton_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)  \ndef gameOn(verticeObjective, end, statusGame, startTime):\n    if statusGame > -1:",
         "detail": "src.config.game",
         "documentation": {}
     },
     {
-        "label": "button_start",
+        "label": "button_reset",
         "kind": 5,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "button_start = create_button_reset()\nbutton_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\ndef gameOn(verticeObjective, end):\n    global graph\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_biomes(biome, screen, BiomeType)",
+        "peekOfCode": "button_reset = create_button_reset()\nbutton_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)  \ndef gameOn(verticeObjective, end, statusGame, startTime):\n    if statusGame > -1:\n        global graph",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -320,7 +337,7 @@
         "kind": 5,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "button_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\ndef gameOn(verticeObjective, end):\n    global graph\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_biomes(biome, screen, BiomeType)\n    if button_start.draw(screen):",
+        "peekOfCode": "button_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)  \ndef gameOn(verticeObjective, end, statusGame, startTime):\n    if statusGame > -1:\n        global graph\n        draw_backGround(backGround, screen)",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -329,7 +346,7 @@
         "kind": 5,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "biome = create_biome()\nBiomeType = 0\ndef gameOn(verticeObjective, end):\n    global graph\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_biomes(biome, screen, BiomeType)\n    if button_start.draw(screen):\n        graph = graphRead()",
+        "peekOfCode": "biome = create_biome()\nBiomeType = 0\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)  \ndef gameOn(verticeObjective, end, statusGame, startTime):\n    if statusGame > -1:\n        global graph\n        draw_backGround(backGround, screen)\n        draw_edges(graph, screen)",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -338,7 +355,25 @@
         "kind": 5,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "BiomeType = 0\ndef gameOn(verticeObjective, end):\n    global graph\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_biomes(biome, screen, BiomeType)\n    if button_start.draw(screen):\n        graph = graphRead()\n        return 3",
+        "peekOfCode": "BiomeType = 0\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)  \ndef gameOn(verticeObjective, end, statusGame, startTime):\n    if statusGame > -1:\n        global graph\n        draw_backGround(backGround, screen)\n        draw_edges(graph, screen)\n        draw_vertices(graph, screen)",
+        "detail": "src.config.game",
+        "documentation": {}
+    },
+    {
+        "label": "fonte",
+        "kind": 5,
+        "importPath": "src.config.game",
+        "description": "src.config.game",
+        "peekOfCode": "fonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)  \ndef gameOn(verticeObjective, end, statusGame, startTime):\n    if statusGame > -1:\n        global graph\n        draw_backGround(backGround, screen)\n        draw_edges(graph, screen)\n        draw_vertices(graph, screen)\n        draw_biomes(biome, screen, BiomeType)\n        if button_reset.draw(screen):",
+        "detail": "src.config.game",
+        "documentation": {}
+    },
+    {
+        "label": "fontesys",
+        "kind": 5,
+        "importPath": "src.config.game",
+        "description": "src.config.game",
+        "peekOfCode": "fontesys = pygame.font.SysFont(fonte, 40)  \ndef gameOn(verticeObjective, end, statusGame, startTime):\n    if statusGame > -1:\n        global graph\n        draw_backGround(backGround, screen)\n        draw_edges(graph, screen)\n        draw_vertices(graph, screen)\n        draw_biomes(biome, screen, BiomeType)\n        if button_reset.draw(screen):\n            graph = graphRead()",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -491,7 +526,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "run = True\n#status code 0 - continue, 1 - change goal, 2 - finish game\nverticeObjective = 3\nend = False\nwhile run:\n    status = gameOn(verticeObjective, end)\n    if status == 1:\n        verticeObjective = 10\n        print('Change Goal')\n    if status == 2:",
+        "peekOfCode": "run = True\n#statusGame code 0 - continue, 1 - change goal, 2 - finish game\nverticeObjective = 3\nend = False\nstatusGame = -1\nstartTime = pygame.time.get_ticks()\nwhile run:\n    statusGame = gameOn(verticeObjective, end, statusGame, startTime)\n    if statusGame == 1:\n        verticeObjective = 10",
         "detail": "main",
         "documentation": {}
     },
@@ -500,7 +535,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "verticeObjective = 3\nend = False\nwhile run:\n    status = gameOn(verticeObjective, end)\n    if status == 1:\n        verticeObjective = 10\n        print('Change Goal')\n    if status == 2:\n        print('Game Over')\n        end = True",
+        "peekOfCode": "verticeObjective = 3\nend = False\nstatusGame = -1\nstartTime = pygame.time.get_ticks()\nwhile run:\n    statusGame = gameOn(verticeObjective, end, statusGame, startTime)\n    if statusGame == 1:\n        verticeObjective = 10\n        print('Change Goal')\n    if statusGame == 2:",
         "detail": "main",
         "documentation": {}
     },
@@ -509,7 +544,25 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "end = False\nwhile run:\n    status = gameOn(verticeObjective, end)\n    if status == 1:\n        verticeObjective = 10\n        print('Change Goal')\n    if status == 2:\n        print('Game Over')\n        end = True\n        # run = False",
+        "peekOfCode": "end = False\nstatusGame = -1\nstartTime = pygame.time.get_ticks()\nwhile run:\n    statusGame = gameOn(verticeObjective, end, statusGame, startTime)\n    if statusGame == 1:\n        verticeObjective = 10\n        print('Change Goal')\n    if statusGame == 2:\n        end = True",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "statusGame",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "statusGame = -1\nstartTime = pygame.time.get_ticks()\nwhile run:\n    statusGame = gameOn(verticeObjective, end, statusGame, startTime)\n    if statusGame == 1:\n        verticeObjective = 10\n        print('Change Goal')\n    if statusGame == 2:\n        end = True\n    if statusGame == 3:",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "startTime",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "startTime = pygame.time.get_ticks()\nwhile run:\n    statusGame = gameOn(verticeObjective, end, statusGame, startTime)\n    if statusGame == 1:\n        verticeObjective = 10\n        print('Change Goal')\n    if statusGame == 2:\n        end = True\n    if statusGame == 3:\n        verticeObjective = 3",
         "detail": "main",
         "documentation": {}
     }
