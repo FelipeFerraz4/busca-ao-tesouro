@@ -13,19 +13,21 @@ screen = createScreen()
 backGround = createBackground()
 
 graph = graphRead()
-button_start = create_button_start()
+button_start = create_button_reset()
 button_next = create_button_next()
 
 biome = create_biome()
 BiomeType = 0
 
 def gameOn(verticeObjective, end):
+    global graph
     draw_backGround(backGround, screen)
     draw_edges(graph, screen)
     draw_vertices(graph, screen)
     draw_biomes(biome, screen, BiomeType)
     if button_start.draw(screen):
-        print('start')
+        graph = graphRead()
+        return 3
     if button_next.draw(screen) and end == False:
         personVertice = depthFirstSearch(graph, graph[0])
         nextVertice = nextPosition(personVertice, verticeObjective)

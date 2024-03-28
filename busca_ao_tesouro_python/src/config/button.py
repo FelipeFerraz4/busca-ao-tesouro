@@ -22,8 +22,8 @@ class Button():
         surface.blit(self.image, (self.rect.x, self.rect.y))
         return action
     
-def create_button_start():
-    start_img = pygame.image.load('./src/assets/image/start_button.jpeg')
+def create_button_reset():
+    start_img = pygame.image.load('./src/assets/button_image/reset_button.jpeg')
     start_img = pygame.transform.scale(start_img, (200, 200))
     return Button(800, 400, start_img)
 

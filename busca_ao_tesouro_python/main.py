@@ -21,6 +21,10 @@ while run:
         print('Game Over')
         end = True
         # run = False
+    if status == 3:
+        verticeObjective = 3
+        end = False
+        print('reset')
     
     pygame.display.update()
     

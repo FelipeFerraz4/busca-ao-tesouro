@@ -199,11 +199,11 @@
         "documentation": {}
     },
     {
-        "label": "create_button_start",
+        "label": "create_button_reset",
         "kind": 2,
         "importPath": "src.config.button",
         "description": "src.config.button",
-        "peekOfCode": "def create_button_start():\n    start_img = pygame.image.load('./src/assets/image/start_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 400, start_img)\ndef create_button_next():\n    start_img = pygame.image.load('./src/assets/image/next_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 200, start_img)",
+        "peekOfCode": "def create_button_reset():\n    start_img = pygame.image.load('./src/assets/button_image/reset_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 400, start_img)\ndef create_button_next():\n    start_img = pygame.image.load('./src/assets/image/next_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 200, start_img)",
         "detail": "src.config.button",
         "documentation": {}
     },
@@ -257,7 +257,7 @@
         "kind": 2,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "def gameOn(verticeObjective, end):\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_biomes(biome, screen, BiomeType)\n    if button_start.draw(screen):\n        print('start')\n    if button_next.draw(screen) and end == False:\n        personVertice = depthFirstSearch(graph, graph[0])\n        nextVertice = nextPosition(personVertice, verticeObjective)",
+        "peekOfCode": "def gameOn(verticeObjective, end):\n    global graph\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_biomes(biome, screen, BiomeType)\n    if button_start.draw(screen):\n        graph = graphRead()\n        return 3\n    if button_next.draw(screen) and end == False:",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -284,7 +284,7 @@
         "kind": 5,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "screen = createScreen()\nbackGround = createBackground()\ngraph = graphRead()\nbutton_start = create_button_start()\nbutton_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\ndef gameOn(verticeObjective, end):\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)",
+        "peekOfCode": "screen = createScreen()\nbackGround = createBackground()\ngraph = graphRead()\nbutton_start = create_button_reset()\nbutton_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\ndef gameOn(verticeObjective, end):\n    global graph\n    draw_backGround(backGround, screen)",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -293,7 +293,7 @@
         "kind": 5,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "backGround = createBackground()\ngraph = graphRead()\nbutton_start = create_button_start()\nbutton_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\ndef gameOn(verticeObjective, end):\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)",
+        "peekOfCode": "backGround = createBackground()\ngraph = graphRead()\nbutton_start = create_button_reset()\nbutton_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\ndef gameOn(verticeObjective, end):\n    global graph\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -302,7 +302,7 @@
         "kind": 5,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "graph = graphRead()\nbutton_start = create_button_start()\nbutton_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\ndef gameOn(verticeObjective, end):\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_biomes(biome, screen, BiomeType)",
+        "peekOfCode": "graph = graphRead()\nbutton_start = create_button_reset()\nbutton_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\ndef gameOn(verticeObjective, end):\n    global graph\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -311,7 +311,7 @@
         "kind": 5,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "button_start = create_button_start()\nbutton_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\ndef gameOn(verticeObjective, end):\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_biomes(biome, screen, BiomeType)\n    if button_start.draw(screen):",
+        "peekOfCode": "button_start = create_button_reset()\nbutton_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\ndef gameOn(verticeObjective, end):\n    global graph\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_biomes(biome, screen, BiomeType)",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -320,7 +320,7 @@
         "kind": 5,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "button_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\ndef gameOn(verticeObjective, end):\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_biomes(biome, screen, BiomeType)\n    if button_start.draw(screen):\n        print('start')",
+        "peekOfCode": "button_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\ndef gameOn(verticeObjective, end):\n    global graph\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_biomes(biome, screen, BiomeType)\n    if button_start.draw(screen):",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -329,7 +329,7 @@
         "kind": 5,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "biome = create_biome()\nBiomeType = 0\ndef gameOn(verticeObjective, end):\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_biomes(biome, screen, BiomeType)\n    if button_start.draw(screen):\n        print('start')\n    if button_next.draw(screen) and end == False:",
+        "peekOfCode": "biome = create_biome()\nBiomeType = 0\ndef gameOn(verticeObjective, end):\n    global graph\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_biomes(biome, screen, BiomeType)\n    if button_start.draw(screen):\n        graph = graphRead()",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -338,7 +338,7 @@
         "kind": 5,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "BiomeType = 0\ndef gameOn(verticeObjective, end):\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_biomes(biome, screen, BiomeType)\n    if button_start.draw(screen):\n        print('start')\n    if button_next.draw(screen) and end == False:\n        personVertice = depthFirstSearch(graph, graph[0])",
+        "peekOfCode": "BiomeType = 0\ndef gameOn(verticeObjective, end):\n    global graph\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_biomes(biome, screen, BiomeType)\n    if button_start.draw(screen):\n        graph = graphRead()\n        return 3",
         "detail": "src.config.game",
         "documentation": {}
     },
