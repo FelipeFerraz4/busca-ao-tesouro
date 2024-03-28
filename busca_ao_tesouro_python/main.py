@@ -20,15 +20,12 @@ while run:
         verticeObjective = 10
         print('Change Goal')
     if statusGame == 2:
-        print('Game Over')
         end = True
-        # run = False
     if statusGame == 3:
         verticeObjective = 3
         end = False
         statusGame = -1
         startTime = pygame.time.get_ticks()
-        print('reset')
     
     pygame.display.update()
     

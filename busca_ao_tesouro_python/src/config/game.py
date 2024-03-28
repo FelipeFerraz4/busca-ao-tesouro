@@ -14,7 +14,7 @@ screen = createScreen()
 backGround = createBackground()
 
 graph = graphRead()
-button_start = create_button_reset()
+button_reset = create_button_reset()
 button_next = create_button_next()
 
 biome = create_biome()
@@ -31,7 +31,7 @@ def gameOn(verticeObjective, end, statusGame, startTime):
         draw_edges(graph, screen)
         draw_vertices(graph, screen)
         draw_biomes(biome, screen, BiomeType)
-        if button_start.draw(screen):
+        if button_reset.draw(screen):
             graph = graphRead()
             return 3
         if button_next.draw(screen) and end == False:
@@ -43,6 +43,10 @@ def gameOn(verticeObjective, end, statusGame, startTime):
             if verticeObjective == 10 and nextVertice == 10:
                 return 2
             print('next')
+        if statusGame == 2:
+            txttela = fontesys.render('Parabéns, fase completa!', 1, (255,255,255))
+            screen.blit(txttela, (225, 280))
+            return 2
         return 0
     else:
         return startMessage(statusGame, startTime)
@@ -91,3 +95,4 @@ def startMessage(statusGame, startTime):
     elif startTime + 3000 < count_timer:
         return 0
     return -1
+
