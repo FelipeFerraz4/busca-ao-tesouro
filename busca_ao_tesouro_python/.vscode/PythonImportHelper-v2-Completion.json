@@ -351,7 +351,7 @@
         "kind": 2,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "def nextPosition(personVertice, verticeObjective):\n    # get the best neighbor of the character's current vertice\n    bestNeighboringVertice = breadthFirstSearch(graph, graph[personVertice], graph[verticeObjective])\n    neighboringList = copy.deepcopy(graph[personVertice].adjacentVertices)\n    # 50% of being chosen the best vertice\n    porcente = 5/10\n    luckNumber = random.randint(0, len(neighboringList))\n    # choosing the next vertice\n    neighboringChoice = bestNeighboringVertice\n    if luckNumber > int(len(neighboringList)*porcente):",
+        "peekOfCode": "def nextPosition(personVertice, verticeObjective):\n    # get the best neighbor of the character's current vertice\n    bestNeighboringVertice = breadthFirstSearch(graph, graph[personVertice], graph[verticeObjective])\n    neighboringList = copy.deepcopy(graph[personVertice].adjacentVertices)\n    # 50% of being chosen the best vertice\n    porcente = 2/10\n    luckNumber = random.randint(0, len(neighboringList))\n    # choosing the next vertice\n    neighboringChoice = bestNeighboringVertice\n    if luckNumber > int(len(neighboringList)*porcente):",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -486,7 +486,7 @@
         "kind": 5,
         "importPath": "src.graph.info",
         "description": "src.graph.info",
-        "peekOfCode": "points = [\n    [0, (180, 290), [2, 20, 32, 39], False, False, False, 0], \n    [1, (300, 200), [2, 7, 23, 36, 37], False, False, False, 0],\n    [2, (200, 200), [0, 1, 20, 36, 37], False, False, False, 0],\n    [3, (450, 100), [4, 5, 6], False, False, True, 0],\n    [4, (450, 150), [3, 5, 6, 8, 34], False, False, False, 0],\n    [5, (400, 150), [3 , 4, 7, 8, 37, 38], False, False, False, 0],\n    [6, (500, 150), [3, 4, 31, 34], False, False, False, 0],\n    [7, (360, 180), [1, 5, 23, 37, 38], False, False, False, 0],\n    [8, (420, 190), [4, 5, 24, 34, 38], False, False, False, 0],",
+        "peekOfCode": "points = [\n    [0, (180, 290), [2, 20, 32, 39], False, False, False, -1], \n    [1, (300, 200), [2, 7, 23, 36, 37], False, False, False, -1],\n    [2, (200, 200), [0, 1, 20, 36, 37], False, False, False, 4],\n    [3, (450, 100), [4, 5, 6], False, False, True, -1],\n    [4, (450, 150), [3, 5, 6, 8, 34], False, False, False, -1],\n    [5, (400, 150), [3 , 4, 7, 8, 37, 38], False, False, False, -1],\n    [6, (500, 150), [3, 4, 31, 34], False, False, False, -1],\n    [7, (360, 180), [1, 5, 23, 37, 38], False, False, False, -1],\n    [8, (420, 190), [4, 5, 24, 34, 38], False, False, False, -1],",
         "detail": "src.graph.info",
         "documentation": {}
     },
