@@ -8,6 +8,7 @@ from src.config.button import *
 from src.graph.read import graphRead
 from src.graph.vertice import *
 from src.config.screen import *
+from src.graph.informateVertice import draw_informationVetices
 from .biome import *
 
 screen = createScreen()
@@ -16,9 +17,6 @@ backGround = createBackground()
 graph = graphRead()
 button_reset = create_button_reset()
 button_next = create_button_next()
-
-biome = create_biome()
-BiomeType = 0
 
 pygame.font.init()
 fonte = pygame.font.get_default_font()
@@ -30,7 +28,7 @@ def gameOn(verticeObjective, end, statusGame, startTime):
         draw_backGround(backGround, screen)
         draw_edges(graph, screen)
         draw_vertices(graph, screen)
-        draw_biomes(biome, screen, BiomeType)
+        draw_informationVetices(graph, screen)
         if button_reset.draw(screen):
             graph = graphRead()
             return 3
@@ -56,7 +54,7 @@ def nextPosition(personVertice, verticeObjective):
     neighboringList = copy.deepcopy(graph[personVertice].adjacentVertices)
     
     # 50% of being chosen the best vertice
-    porcente = 5/10
+    porcente = 2/10
     luckNumber = random.randint(0, len(neighboringList))
 
     # choosing the next vertice
@@ -78,7 +76,7 @@ def startMessage(statusGame, startTime):
     draw_backGround(backGround, screen)
     draw_edges(graph, screen)
     draw_vertices(graph, screen)
-    draw_biomes(biome, screen, BiomeType)
+    draw_informationVetices(graph, screen)
     
     if statusGame == -1:
         txttela = fontesys.render('Prepare-se, a ilha está a vista', 1, (255,255,255))

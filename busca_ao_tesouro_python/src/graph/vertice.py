@@ -3,7 +3,7 @@ import pygame
 from src.config.color import *
 
 class verticeGraph():
-    def __init__(self, id, coordenate, adjacentVertices, person=False, savePoint=False, treasure=False):
+    def __init__(self, id, coordenate, adjacentVertices, person=False, savePoint=False, treasure=False, strangeBiome=0):
         self.id = id
         self.coordinate = (coordenate[0], coordenate[1])
         self.savePoint = savePoint
@@ -11,7 +11,7 @@ class verticeGraph():
         self.adjacentVertices = adjacentVertices
         self.treasure = treasure
         self.item = False
-        self.strangeBiome = False
+        self.strangeBiome = strangeBiome
     
 def draw_vertices(graph, surface):
     for vertice in graph:
