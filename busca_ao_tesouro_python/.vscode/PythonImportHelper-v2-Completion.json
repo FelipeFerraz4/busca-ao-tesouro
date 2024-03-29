@@ -261,7 +261,7 @@
         "kind": 2,
         "importPath": "src.config.biome",
         "description": "src.config.biome",
-        "peekOfCode": "def create_biome_4():\n    biome = pygame.image.load('./src/assets/biome-img/rock_slide_biome.jpeg')\n    biome = pygame.transform.scale(biome, (200, 200))\n    return Biome(800, 0, biome)\ndef create_biome_5():\n    biome = pygame.image.load('./src/assets/biome-img/swamp_biome.jpg')\n    biome = pygame.transform.scale(biome, (200, 200))\n    return Biome(800, 0, biome)",
+        "peekOfCode": "def create_biome_4():\n    biome = pygame.image.load('./src/assets/biome-img/rock_slide_biome.jpeg')\n    biome = pygame.transform.scale(biome, (200, 200))\n    return Biome(800, 0, biome)\ndef create_biome_5():\n    biome = pygame.image.load('./src/assets/biome-img/swamp_biome.jpg')\n    biome = pygame.transform.scale(biome, (200, 200))\n    return Biome(800, 0, biome)\ndef create_biome_treasure():\n    biome = pygame.image.load('./src/assets/image/treasure.jpeg')",
         "detail": "src.config.biome",
         "documentation": {}
     },
@@ -270,7 +270,16 @@
         "kind": 2,
         "importPath": "src.config.biome",
         "description": "src.config.biome",
-        "peekOfCode": "def create_biome_5():\n    biome = pygame.image.load('./src/assets/biome-img/swamp_biome.jpg')\n    biome = pygame.transform.scale(biome, (200, 200))\n    return Biome(800, 0, biome)",
+        "peekOfCode": "def create_biome_5():\n    biome = pygame.image.load('./src/assets/biome-img/swamp_biome.jpg')\n    biome = pygame.transform.scale(biome, (200, 200))\n    return Biome(800, 0, biome)\ndef create_biome_treasure():\n    biome = pygame.image.load('./src/assets/image/treasure.jpeg')\n    biome = pygame.transform.scale(biome, (200, 200))\n    return Biome(800, 0, biome)",
+        "detail": "src.config.biome",
+        "documentation": {}
+    },
+    {
+        "label": "create_biome_treasure",
+        "kind": 2,
+        "importPath": "src.config.biome",
+        "description": "src.config.biome",
+        "peekOfCode": "def create_biome_treasure():\n    biome = pygame.image.load('./src/assets/image/treasure.jpeg')\n    biome = pygame.transform.scale(biome, (200, 200))\n    return Biome(800, 0, biome)",
         "detail": "src.config.biome",
         "documentation": {}
     },

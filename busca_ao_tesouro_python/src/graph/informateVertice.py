@@ -15,7 +15,9 @@ def draw_informationVetices(graph, surface):
     elif biomeType == 4:
         info = create_biome_4()
     elif biomeType == 5:
-        info = create_biome_5()    
+        info = create_biome_5()
+    elif biomeType == -1 and graph[personVertice].treasure:
+        info = create_biome_treasure()  
     else:
         info = create_biome()
         

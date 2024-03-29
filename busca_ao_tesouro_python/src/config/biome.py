@@ -45,3 +45,8 @@ def create_biome_5():
     biome = pygame.transform.scale(biome, (200, 200))
     return Biome(800, 0, biome)
 
+def create_biome_treasure():
+    biome = pygame.image.load('./src/assets/image/treasure.jpeg')
+    biome = pygame.transform.scale(biome, (200, 200))
+    return Biome(800, 0, biome)
+
