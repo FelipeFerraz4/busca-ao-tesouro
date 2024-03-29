@@ -8,19 +8,24 @@ pygame.init()
 
 run = True
 
-#status code 0 - continue, 1 - change goal, 2 - finish game
+#statusGame code 0 - continue, 1 - change goal, 2 - finish game
 verticeObjective = 3
 end = False
+statusGame = -1
+startTime = pygame.time.get_ticks()
 
 while run:
-    status = gameOn(verticeObjective, end)
-    if status == 1:
+    statusGame = gameOn(verticeObjective, end, statusGame, startTime)
+    if statusGame == 1:
         verticeObjective = 10
         print('Change Goal')
-    if status == 2:
-        print('Game Over')
+    if statusGame == 2:
         end = True
-        # run = False
+    if statusGame == 3:
+        verticeObjective = 3
+        end = False
+        statusGame = -1
+        startTime = pygame.time.get_ticks()
     
     pygame.display.update()
     
