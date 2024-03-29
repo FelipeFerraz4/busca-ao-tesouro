@@ -288,7 +288,16 @@
         "kind": 2,
         "importPath": "src.config.button",
         "description": "src.config.button",
-        "peekOfCode": "def create_button_reset():\n    start_img = pygame.image.load('./src/assets/button_image/reset_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 400, start_img)\ndef create_button_next():\n    start_img = pygame.image.load('./src/assets/image/next_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 200, start_img)",
+        "peekOfCode": "def create_button_reset():\n    start_img = pygame.image.load('./src/assets/button_image/reset_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 400, start_img)\ndef create_button_scape():\n    start_img = pygame.image.load('./src/assets/image/scape_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 400, start_img)\ndef create_button_next():\n    start_img = pygame.image.load('./src/assets/image/next_button.jpeg')",
+        "detail": "src.config.button",
+        "documentation": {}
+    },
+    {
+        "label": "create_button_scape",
+        "kind": 2,
+        "importPath": "src.config.button",
+        "description": "src.config.button",
+        "peekOfCode": "def create_button_scape():\n    start_img = pygame.image.load('./src/assets/image/scape_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 400, start_img)\ndef create_button_next():\n    start_img = pygame.image.load('./src/assets/image/next_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 200, start_img)\ndef create_button_combat():\n    start_img = pygame.image.load('./src/assets/image/combat_button.jpeg')",
         "detail": "src.config.button",
         "documentation": {}
     },
@@ -297,7 +306,16 @@
         "kind": 2,
         "importPath": "src.config.button",
         "description": "src.config.button",
-        "peekOfCode": "def create_button_next():\n    start_img = pygame.image.load('./src/assets/image/next_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 200, start_img)",
+        "peekOfCode": "def create_button_next():\n    start_img = pygame.image.load('./src/assets/image/next_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 200, start_img)\ndef create_button_combat():\n    start_img = pygame.image.load('./src/assets/image/combat_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 200, start_img)",
+        "detail": "src.config.button",
+        "documentation": {}
+    },
+    {
+        "label": "create_button_combat",
+        "kind": 2,
+        "importPath": "src.config.button",
+        "description": "src.config.button",
+        "peekOfCode": "def create_button_combat():\n    start_img = pygame.image.load('./src/assets/image/combat_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 200, start_img)",
         "detail": "src.config.button",
         "documentation": {}
     },
