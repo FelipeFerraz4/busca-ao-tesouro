@@ -50,3 +50,22 @@ def create_biome_treasure():
     biome = pygame.transform.scale(biome, (200, 200))
     return Biome(800, 0, biome)
 
+def create_biome_ant():
+   animal = pygame.image.load('./src/assets/image/ant.jpeg')
+   animal = pygame.transform.scale(animal, (200, 200))
+   return Biome(800, 0, animal)
+
+def create_biome_jaguar():
+   animal = pygame.image.load('./src/assets/image/jaguar.jpeg')
+   animal = pygame.transform.scale(animal, (200, 200))
+   return Biome(800, 0, animal)
+
+def create_biome_hawk():
+   animal = pygame.image.load('./src/assets/image/hawk.jpeg')
+   animal = pygame.transform.scale(animal, (200, 200))
+   return Biome(800, 0, animal)
+
+def create_biome_alligator():
+   animal = pygame.image.load('./src/assets/animals-img/alligator.jpg')
+   animal = pygame.transform.scale(animal, (200, 200))
+   return Biome(800, 0, animal)
