@@ -7,9 +7,6 @@ class Monster():
         self.health_points = health_points
         self.attack_points = attack_points
 
-def createMonster():
-    firstMonsters = monsterRead()
-    return firstMonsters
 
 def take_damage(self, damage):
     self.health_points -= damage
