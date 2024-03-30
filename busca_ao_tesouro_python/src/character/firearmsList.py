@@ -1,26 +1,8 @@
 firearms =[
-    {
-        "name": "Pistol",
-        "attack_points": 10,
-        "remaining-uses": 3
-    },
-
-    {
-        "name": "Rifle",
-        "attack_points": 20,
-        "remaining-uses": 3
-    },
-
-    {
-        "name": "Shotgun",
-        "attack_points": 40,
-        "remaining-uses": 3
-    },
-
-    {
-        "name": "Machine gun",
-        "attack_points": 40,
-        "remaining-uses": 3
-    },
+    [0,"Pistol", 10, 3],
+    [1,"Rifle", 20, 3],
+    [2,"Shotgun", 30, 3],
+    [3,"Machine gun", 40, 3]
+ 
 
 ]
