@@ -1,7 +1,5 @@
-import random
-from weapon import Weapon
 
-class Character:
+class Explorer:
     def __init__(self, max_health=100, max_attack=10):
         self.max_health = max_health  
         self.max_attack = max_attack  
@@ -11,9 +9,9 @@ class Character:
         self.weapon = None            
         self.checkpoints_found = []   
 
-    def attack_enemy(self, enemy):
+    def attack_enemy(self, enemy, weapon):
         if self.weapon:
-            damage = self.attack + Weapon.attack_bonus
+            damage = self.attack + weapon.attack_bonus
         else:
             damage = self.attack
         enemy.take_damage(damage)
@@ -41,7 +39,7 @@ class Character:
 
         self.weapon = weapon
        
-        self.treasure_percentage -= Weapon.treasure_penalty
+        self.treasure_percentage -= weapon.treasure_penalty
 
     def drop_weapon(self):
        

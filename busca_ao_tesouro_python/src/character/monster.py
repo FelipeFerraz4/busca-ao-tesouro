@@ -11,3 +11,8 @@ class Monster():
 def createMonster():
     firstMonsters = monsterRead()
     return firstMonsters
+
+def take_damage(self, damage):
+    self.health_points -= damage
+    if self.health_points < 0:
+        self.healyh_points = 0
