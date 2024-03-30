@@ -17,6 +17,54 @@
         "documentation": {}
     },
     {
+        "label": "depthFirstSearch",
+        "importPath": "src.graph.search",
+        "description": "src.graph.search",
+        "isExtraImport": true,
+        "detail": "src.graph.search",
+        "documentation": {}
+    },
+    {
+        "label": "breadthFirstSearch",
+        "importPath": "src.graph.search",
+        "description": "src.graph.search",
+        "isExtraImport": true,
+        "detail": "src.graph.search",
+        "documentation": {}
+    },
+    {
+        "label": "depthFirstSearch",
+        "importPath": "src.graph.search",
+        "description": "src.graph.search",
+        "isExtraImport": true,
+        "detail": "src.graph.search",
+        "documentation": {}
+    },
+    {
+        "label": "breadthFirstSearch",
+        "importPath": "src.graph.search",
+        "description": "src.graph.search",
+        "isExtraImport": true,
+        "detail": "src.graph.search",
+        "documentation": {}
+    },
+    {
+        "label": "depthFirstSearch",
+        "importPath": "src.graph.search",
+        "description": "src.graph.search",
+        "isExtraImport": true,
+        "detail": "src.graph.search",
+        "documentation": {}
+    },
+    {
+        "label": "depthFirstSearch",
+        "importPath": "src.graph.search",
+        "description": "src.graph.search",
+        "isExtraImport": true,
+        "detail": "src.graph.search",
+        "documentation": {}
+    },
+    {
         "label": "*",
         "importPath": "pygame.locals",
         "description": "pygame.locals",
@@ -48,38 +96,6 @@
         "importPath": "copy",
         "description": "copy",
         "detail": "copy",
-        "documentation": {}
-    },
-    {
-        "label": "breadthFirstSearch",
-        "importPath": "src.graph.search",
-        "description": "src.graph.search",
-        "isExtraImport": true,
-        "detail": "src.graph.search",
-        "documentation": {}
-    },
-    {
-        "label": "depthFirstSearch",
-        "importPath": "src.graph.search",
-        "description": "src.graph.search",
-        "isExtraImport": true,
-        "detail": "src.graph.search",
-        "documentation": {}
-    },
-    {
-        "label": "breadthFirstSearch",
-        "importPath": "src.graph.search",
-        "description": "src.graph.search",
-        "isExtraImport": true,
-        "detail": "src.graph.search",
-        "documentation": {}
-    },
-    {
-        "label": "depthFirstSearch",
-        "importPath": "src.graph.search",
-        "description": "src.graph.search",
-        "isExtraImport": true,
-        "detail": "src.graph.search",
         "documentation": {}
     },
     {
@@ -139,6 +155,22 @@
         "documentation": {}
     },
     {
+        "label": "draw_informationVetices",
+        "importPath": "src.graph.informateVertice",
+        "description": "src.graph.informateVertice",
+        "isExtraImport": true,
+        "detail": "src.graph.informateVertice",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "src.config.biome",
+        "description": "src.config.biome",
+        "isExtraImport": true,
+        "detail": "src.config.biome",
+        "documentation": {}
+    },
+    {
         "label": "Empty",
         "importPath": "queue",
         "description": "queue",
@@ -175,7 +207,7 @@
         "kind": 6,
         "importPath": "src.config.biome",
         "description": "src.config.biome",
-        "peekOfCode": "class Biome():\n    def __init__(self, x, y, image):\n        self.image = image\n        self.rect = self.image.get_rect()\n        self.rect.topleft = (x, y)\n    def draw_biome(self, surface):\n        surface.blit(self.image, (self.rect.x, self.rect.y))\ndef create_biome():\n    images = []\n    biome = pygame.image.load('./src/assets/image/home_beach_biome.jpeg')",
+        "peekOfCode": "class Biome():\n    def __init__(self, x, y, image):\n        self.image = image\n        self.rect = self.image.get_rect()\n        self.rect.topleft = (x, y)\n    def draw_biome(self, surface):\n        surface.blit(self.image, (self.rect.x, self.rect.y))\ndef create_biome():\n    biome = pygame.image.load('./src/assets/biome-img/safe_biome.jpeg')\n    biome = pygame.transform.scale(biome, (200, 200))",
         "detail": "src.config.biome",
         "documentation": {}
     },
@@ -184,16 +216,70 @@
         "kind": 2,
         "importPath": "src.config.biome",
         "description": "src.config.biome",
-        "peekOfCode": "def create_biome():\n    images = []\n    biome = pygame.image.load('./src/assets/image/home_beach_biome.jpeg')\n    biome = pygame.transform.scale(biome, (200, 200))\n    return Biome(800, 0, biome)\ndef draw_biomes(biome, surface, type):\n    biome.draw_biome(surface)",
+        "peekOfCode": "def create_biome():\n    biome = pygame.image.load('./src/assets/biome-img/safe_biome.jpeg')\n    biome = pygame.transform.scale(biome, (200, 200))\n    return Biome(800, 0, biome)\ndef create_biome_0():\n    biome = pygame.image.load('./src/assets/image/home_beach_biome.jpeg')\n    biome = pygame.transform.scale(biome, (200, 200))\n    return Biome(800, 0, biome)\ndef create_biome_1():\n    biome = pygame.image.load('./src/assets/biome-img/carnivorus_plant_biome.jpg')",
         "detail": "src.config.biome",
         "documentation": {}
     },
     {
-        "label": "draw_biomes",
+        "label": "create_biome_0",
         "kind": 2,
         "importPath": "src.config.biome",
         "description": "src.config.biome",
-        "peekOfCode": "def draw_biomes(biome, surface, type):\n    biome.draw_biome(surface)",
+        "peekOfCode": "def create_biome_0():\n    biome = pygame.image.load('./src/assets/image/home_beach_biome.jpeg')\n    biome = pygame.transform.scale(biome, (200, 200))\n    return Biome(800, 0, biome)\ndef create_biome_1():\n    biome = pygame.image.load('./src/assets/biome-img/carnivorus_plant_biome.jpg')\n    biome = pygame.transform.scale(biome, (200, 200))\n    return Biome(800, 0, biome)\ndef create_biome_2():\n    biome = pygame.image.load('./src/assets/biome-img/healing_plant_biome1.jpeg')",
+        "detail": "src.config.biome",
+        "documentation": {}
+    },
+    {
+        "label": "create_biome_1",
+        "kind": 2,
+        "importPath": "src.config.biome",
+        "description": "src.config.biome",
+        "peekOfCode": "def create_biome_1():\n    biome = pygame.image.load('./src/assets/biome-img/carnivorus_plant_biome.jpg')\n    biome = pygame.transform.scale(biome, (200, 200))\n    return Biome(800, 0, biome)\ndef create_biome_2():\n    biome = pygame.image.load('./src/assets/biome-img/healing_plant_biome1.jpeg')\n    biome = pygame.transform.scale(biome, (200, 200))\n    return Biome(800, 0, biome)\ndef create_biome_3():\n    biome = pygame.image.load('./src/assets/biome-img/poisonous_plant_biome.jpg')",
+        "detail": "src.config.biome",
+        "documentation": {}
+    },
+    {
+        "label": "create_biome_2",
+        "kind": 2,
+        "importPath": "src.config.biome",
+        "description": "src.config.biome",
+        "peekOfCode": "def create_biome_2():\n    biome = pygame.image.load('./src/assets/biome-img/healing_plant_biome1.jpeg')\n    biome = pygame.transform.scale(biome, (200, 200))\n    return Biome(800, 0, biome)\ndef create_biome_3():\n    biome = pygame.image.load('./src/assets/biome-img/poisonous_plant_biome.jpg')\n    biome = pygame.transform.scale(biome, (200, 200))\n    return Biome(800, 0, biome)\ndef create_biome_4():\n    biome = pygame.image.load('./src/assets/biome-img/rock_slide_biome.jpeg')",
+        "detail": "src.config.biome",
+        "documentation": {}
+    },
+    {
+        "label": "create_biome_3",
+        "kind": 2,
+        "importPath": "src.config.biome",
+        "description": "src.config.biome",
+        "peekOfCode": "def create_biome_3():\n    biome = pygame.image.load('./src/assets/biome-img/poisonous_plant_biome.jpg')\n    biome = pygame.transform.scale(biome, (200, 200))\n    return Biome(800, 0, biome)\ndef create_biome_4():\n    biome = pygame.image.load('./src/assets/biome-img/rock_slide_biome.jpeg')\n    biome = pygame.transform.scale(biome, (200, 200))\n    return Biome(800, 0, biome)\ndef create_biome_5():\n    biome = pygame.image.load('./src/assets/biome-img/swamp_biome.jpg')",
+        "detail": "src.config.biome",
+        "documentation": {}
+    },
+    {
+        "label": "create_biome_4",
+        "kind": 2,
+        "importPath": "src.config.biome",
+        "description": "src.config.biome",
+        "peekOfCode": "def create_biome_4():\n    biome = pygame.image.load('./src/assets/biome-img/rock_slide_biome.jpeg')\n    biome = pygame.transform.scale(biome, (200, 200))\n    return Biome(800, 0, biome)\ndef create_biome_5():\n    biome = pygame.image.load('./src/assets/biome-img/swamp_biome.jpg')\n    biome = pygame.transform.scale(biome, (200, 200))\n    return Biome(800, 0, biome)\ndef create_biome_treasure():\n    biome = pygame.image.load('./src/assets/image/treasure.jpeg')",
+        "detail": "src.config.biome",
+        "documentation": {}
+    },
+    {
+        "label": "create_biome_5",
+        "kind": 2,
+        "importPath": "src.config.biome",
+        "description": "src.config.biome",
+        "peekOfCode": "def create_biome_5():\n    biome = pygame.image.load('./src/assets/biome-img/swamp_biome.jpg')\n    biome = pygame.transform.scale(biome, (200, 200))\n    return Biome(800, 0, biome)\ndef create_biome_treasure():\n    biome = pygame.image.load('./src/assets/image/treasure.jpeg')\n    biome = pygame.transform.scale(biome, (200, 200))\n    return Biome(800, 0, biome)",
+        "detail": "src.config.biome",
+        "documentation": {}
+    },
+    {
+        "label": "create_biome_treasure",
+        "kind": 2,
+        "importPath": "src.config.biome",
+        "description": "src.config.biome",
+        "peekOfCode": "def create_biome_treasure():\n    biome = pygame.image.load('./src/assets/image/treasure.jpeg')\n    biome = pygame.transform.scale(biome, (200, 200))\n    return Biome(800, 0, biome)",
         "detail": "src.config.biome",
         "documentation": {}
     },
@@ -211,7 +297,16 @@
         "kind": 2,
         "importPath": "src.config.button",
         "description": "src.config.button",
-        "peekOfCode": "def create_button_reset():\n    start_img = pygame.image.load('./src/assets/button_image/reset_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 400, start_img)\ndef create_button_next():\n    start_img = pygame.image.load('./src/assets/image/next_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 200, start_img)",
+        "peekOfCode": "def create_button_reset():\n    start_img = pygame.image.load('./src/assets/button_image/reset_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 400, start_img)\ndef create_button_scape():\n    start_img = pygame.image.load('./src/assets/image/scape_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 400, start_img)\ndef create_button_next():\n    start_img = pygame.image.load('./src/assets/image/next_button.jpeg')",
+        "detail": "src.config.button",
+        "documentation": {}
+    },
+    {
+        "label": "create_button_scape",
+        "kind": 2,
+        "importPath": "src.config.button",
+        "description": "src.config.button",
+        "peekOfCode": "def create_button_scape():\n    start_img = pygame.image.load('./src/assets/image/scape_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 400, start_img)\ndef create_button_next():\n    start_img = pygame.image.load('./src/assets/image/next_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 200, start_img)\ndef create_button_combat():\n    start_img = pygame.image.load('./src/assets/image/combat_button.jpeg')",
         "detail": "src.config.button",
         "documentation": {}
     },
@@ -220,7 +315,16 @@
         "kind": 2,
         "importPath": "src.config.button",
         "description": "src.config.button",
-        "peekOfCode": "def create_button_next():\n    start_img = pygame.image.load('./src/assets/image/next_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 200, start_img)",
+        "peekOfCode": "def create_button_next():\n    start_img = pygame.image.load('./src/assets/image/next_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 200, start_img)\ndef create_button_combat():\n    start_img = pygame.image.load('./src/assets/image/combat_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 200, start_img)",
+        "detail": "src.config.button",
+        "documentation": {}
+    },
+    {
+        "label": "create_button_combat",
+        "kind": 2,
+        "importPath": "src.config.button",
+        "description": "src.config.button",
+        "peekOfCode": "def create_button_combat():\n    start_img = pygame.image.load('./src/assets/image/combat_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 200, start_img)",
         "detail": "src.config.button",
         "documentation": {}
     },
@@ -265,7 +369,7 @@
         "kind": 2,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "def gameOn(verticeObjective, end, statusGame, startTime):\n    if statusGame > -1:\n        global graph\n        draw_backGround(backGround, screen)\n        draw_edges(graph, screen)\n        draw_vertices(graph, screen)\n        draw_biomes(biome, screen, BiomeType)\n        if button_reset.draw(screen):\n            graph = graphRead()\n            return 3",
+        "peekOfCode": "def gameOn(verticeObjective, end, statusGame, startTime):\n    if statusGame > -1:\n        global graph\n        draw_backGround(backGround, screen)\n        draw_edges(graph, screen)\n        draw_vertices(graph, screen)\n        draw_informationVetices(graph, screen)\n        if button_reset.draw(screen):\n            graph = graphRead()\n            return 3",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -274,7 +378,7 @@
         "kind": 2,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "def nextPosition(personVertice, verticeObjective):\n    # get the best neighbor of the character's current vertice\n    bestNeighboringVertice = breadthFirstSearch(graph, graph[personVertice], graph[verticeObjective])\n    neighboringList = copy.deepcopy(graph[personVertice].adjacentVertices)\n    # 50% of being chosen the best vertice\n    porcente = 5/10\n    luckNumber = random.randint(0, len(neighboringList))\n    # choosing the next vertice\n    neighboringChoice = bestNeighboringVertice\n    if luckNumber > int(len(neighboringList)*porcente):",
+        "peekOfCode": "def nextPosition(personVertice, verticeObjective):\n    # get the best neighbor of the character's current vertice\n    bestNeighboringVertice = breadthFirstSearch(graph, graph[personVertice], graph[verticeObjective])\n    neighboringList = copy.deepcopy(graph[personVertice].adjacentVertices)\n    # 50% of being chosen the best vertice\n    porcente = 2/10\n    luckNumber = random.randint(0, len(neighboringList))\n    # choosing the next vertice\n    neighboringChoice = bestNeighboringVertice\n    if luckNumber > int(len(neighboringList)*porcente):",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -283,7 +387,7 @@
         "kind": 2,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "def step(personVertice, nextVertice):\n    #change the person's vertice\n    graph[personVertice].person = False\n    graph[nextVertice].person = True\ndef startMessage(statusGame, startTime):\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_biomes(biome, screen, BiomeType)\n    if statusGame == -1:",
+        "peekOfCode": "def step(personVertice, nextVertice):\n    #change the person's vertice\n    graph[personVertice].person = False\n    graph[nextVertice].person = True\ndef startMessage(statusGame, startTime):\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_informationVetices(graph, screen)\n    if statusGame == -1:",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -292,7 +396,7 @@
         "kind": 2,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "def startMessage(statusGame, startTime):\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_biomes(biome, screen, BiomeType)\n    if statusGame == -1:\n        txttela = fontesys.render('Prepare-se, a ilha está a vista', 1, (255,255,255))\n    elif statusGame == -2:\n        txttela = fontesys.render('Desvende segredos ocultos e tesouros.', 1, (255,255,255))\n    elif statusGame == -3:",
+        "peekOfCode": "def startMessage(statusGame, startTime):\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_informationVetices(graph, screen)\n    if statusGame == -1:\n        txttela = fontesys.render('Prepare-se, a ilha está a vista', 1, (255,255,255))\n    elif statusGame == -2:\n        txttela = fontesys.render('Desvende segredos ocultos e tesouros.', 1, (255,255,255))\n    elif statusGame == -3:",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -301,7 +405,7 @@
         "kind": 5,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "screen = createScreen()\nbackGround = createBackground()\ngraph = graphRead()\nbutton_reset = create_button_reset()\nbutton_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)  ",
+        "peekOfCode": "screen = createScreen()\nbackGround = createBackground()\ngraph = graphRead()\nbutton_reset = create_button_reset()\nbutton_next = create_button_next()\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)  \ndef gameOn(verticeObjective, end, statusGame, startTime):\n    if statusGame > -1:",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -310,7 +414,7 @@
         "kind": 5,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "backGround = createBackground()\ngraph = graphRead()\nbutton_reset = create_button_reset()\nbutton_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)  \ndef gameOn(verticeObjective, end, statusGame, startTime):",
+        "peekOfCode": "backGround = createBackground()\ngraph = graphRead()\nbutton_reset = create_button_reset()\nbutton_next = create_button_next()\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)  \ndef gameOn(verticeObjective, end, statusGame, startTime):\n    if statusGame > -1:\n        global graph",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -319,7 +423,7 @@
         "kind": 5,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "graph = graphRead()\nbutton_reset = create_button_reset()\nbutton_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)  \ndef gameOn(verticeObjective, end, statusGame, startTime):\n    if statusGame > -1:",
+        "peekOfCode": "graph = graphRead()\nbutton_reset = create_button_reset()\nbutton_next = create_button_next()\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)  \ndef gameOn(verticeObjective, end, statusGame, startTime):\n    if statusGame > -1:\n        global graph\n        draw_backGround(backGround, screen)",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -328,7 +432,7 @@
         "kind": 5,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "button_reset = create_button_reset()\nbutton_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)  \ndef gameOn(verticeObjective, end, statusGame, startTime):\n    if statusGame > -1:\n        global graph",
+        "peekOfCode": "button_reset = create_button_reset()\nbutton_next = create_button_next()\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)  \ndef gameOn(verticeObjective, end, statusGame, startTime):\n    if statusGame > -1:\n        global graph\n        draw_backGround(backGround, screen)\n        draw_edges(graph, screen)",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -337,25 +441,7 @@
         "kind": 5,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "button_next = create_button_next()\nbiome = create_biome()\nBiomeType = 0\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)  \ndef gameOn(verticeObjective, end, statusGame, startTime):\n    if statusGame > -1:\n        global graph\n        draw_backGround(backGround, screen)",
-        "detail": "src.config.game",
-        "documentation": {}
-    },
-    {
-        "label": "biome",
-        "kind": 5,
-        "importPath": "src.config.game",
-        "description": "src.config.game",
-        "peekOfCode": "biome = create_biome()\nBiomeType = 0\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)  \ndef gameOn(verticeObjective, end, statusGame, startTime):\n    if statusGame > -1:\n        global graph\n        draw_backGround(backGround, screen)\n        draw_edges(graph, screen)",
-        "detail": "src.config.game",
-        "documentation": {}
-    },
-    {
-        "label": "BiomeType",
-        "kind": 5,
-        "importPath": "src.config.game",
-        "description": "src.config.game",
-        "peekOfCode": "BiomeType = 0\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)  \ndef gameOn(verticeObjective, end, statusGame, startTime):\n    if statusGame > -1:\n        global graph\n        draw_backGround(backGround, screen)\n        draw_edges(graph, screen)\n        draw_vertices(graph, screen)",
+        "peekOfCode": "button_next = create_button_next()\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)  \ndef gameOn(verticeObjective, end, statusGame, startTime):\n    if statusGame > -1:\n        global graph\n        draw_backGround(backGround, screen)\n        draw_edges(graph, screen)\n        draw_vertices(graph, screen)",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -364,7 +450,7 @@
         "kind": 5,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "fonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)  \ndef gameOn(verticeObjective, end, statusGame, startTime):\n    if statusGame > -1:\n        global graph\n        draw_backGround(backGround, screen)\n        draw_edges(graph, screen)\n        draw_vertices(graph, screen)\n        draw_biomes(biome, screen, BiomeType)\n        if button_reset.draw(screen):",
+        "peekOfCode": "fonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)  \ndef gameOn(verticeObjective, end, statusGame, startTime):\n    if statusGame > -1:\n        global graph\n        draw_backGround(backGround, screen)\n        draw_edges(graph, screen)\n        draw_vertices(graph, screen)\n        draw_informationVetices(graph, screen)\n        if button_reset.draw(screen):",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -373,7 +459,7 @@
         "kind": 5,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "fontesys = pygame.font.SysFont(fonte, 40)  \ndef gameOn(verticeObjective, end, statusGame, startTime):\n    if statusGame > -1:\n        global graph\n        draw_backGround(backGround, screen)\n        draw_edges(graph, screen)\n        draw_vertices(graph, screen)\n        draw_biomes(biome, screen, BiomeType)\n        if button_reset.draw(screen):\n            graph = graphRead()",
+        "peekOfCode": "fontesys = pygame.font.SysFont(fonte, 40)  \ndef gameOn(verticeObjective, end, statusGame, startTime):\n    if statusGame > -1:\n        global graph\n        draw_backGround(backGround, screen)\n        draw_edges(graph, screen)\n        draw_vertices(graph, screen)\n        draw_informationVetices(graph, screen)\n        if button_reset.draw(screen):\n            graph = graphRead()",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -427,8 +513,17 @@
         "kind": 5,
         "importPath": "src.graph.info",
         "description": "src.graph.info",
-        "peekOfCode": "points = [\n    [0, (180, 290), [2, 20, 32, 39], False, False, False], \n    [1, (300, 200), [2, 7, 23, 36, 37], False, False, False],\n    [2, (200, 200), [0, 1, 20, 36, 37], False, False, False],\n    [3, (450, 100), [4, 5, 6], False, False, True],\n    [4, (450, 150), [3, 5, 6, 8, 34], False, False, False],\n    [5, (400, 150), [3 , 4, 7, 8, 37, 38], False, False, False],\n    [6, (500, 150), [3, 4, 31, 34], False, False, False],\n    [7, (360, 180), [1, 5, 23, 37, 38], False, False, False],\n    [8, (420, 190), [4, 5, 24, 34, 38], False, False, False],",
+        "peekOfCode": "points = [\n    [0, (180, 290), [2, 20, 32, 39], False, False, False, -1], \n    [1, (300, 200), [2, 7, 23, 36, 37], False, False, False, -1],\n    [2, (200, 200), [0, 1, 20, 36, 37], False, False, False, 4],\n    [3, (450, 100), [4, 5, 6], False, False, True, -1],\n    [4, (450, 150), [3, 5, 6, 8, 34], False, False, False, -1],\n    [5, (400, 150), [3 , 4, 7, 8, 37, 38], False, False, False, -1],\n    [6, (500, 150), [3, 4, 31, 34], False, False, False, -1],\n    [7, (360, 180), [1, 5, 23, 37, 38], False, False, False, -1],\n    [8, (420, 190), [4, 5, 24, 34, 38], False, False, False, -1],",
         "detail": "src.graph.info",
+        "documentation": {}
+    },
+    {
+        "label": "draw_informationVetices",
+        "kind": 2,
+        "importPath": "src.graph.informateVertice",
+        "description": "src.graph.informateVertice",
+        "peekOfCode": "def draw_informationVetices(graph, surface):\n    personVertice = depthFirstSearch(graph, graph[0])\n    biomeType = graph[personVertice].strangeBiome\n    if biomeType == 0:\n        info = create_biome_0()\n    elif biomeType == 1:\n        info = create_biome_1()\n    elif biomeType == 2:\n        info = create_biome_2()\n    elif biomeType == 3:",
+        "detail": "src.graph.informateVertice",
         "documentation": {}
     },
     {
@@ -436,7 +531,7 @@
         "kind": 2,
         "importPath": "src.graph.read",
         "description": "src.graph.read",
-        "peekOfCode": "def graphRead():\n    graph = []\n    for item in points:\n        graph.append(verticeGraph(item[0], item[1], item[2], item[3], item[4], item[5]))\n    return graph",
+        "peekOfCode": "def graphRead():\n    graph = []\n    for item in points:\n        graph.append(verticeGraph(item[0], item[1], item[2], item[3], item[4], item[5], item[6]))\n    return graph",
         "detail": "src.graph.read",
         "documentation": {}
     },
@@ -499,7 +594,7 @@
         "kind": 6,
         "importPath": "src.graph.vertice",
         "description": "src.graph.vertice",
-        "peekOfCode": "class verticeGraph():\n    def __init__(self, id, coordenate, adjacentVertices, person=False, savePoint=False, treasure=False):\n        self.id = id\n        self.coordinate = (coordenate[0], coordenate[1])\n        self.savePoint = savePoint\n        self.person = person\n        self.adjacentVertices = adjacentVertices\n        self.treasure = treasure\n        self.item = False\n        self.strangeBiome = False",
+        "peekOfCode": "class verticeGraph():\n    def __init__(self, id, coordenate, adjacentVertices, person=False, savePoint=False, treasure=False, strangeBiome=0):\n        self.id = id\n        self.coordinate = (coordenate[0], coordenate[1])\n        self.savePoint = savePoint\n        self.person = person\n        self.adjacentVertices = adjacentVertices\n        self.treasure = treasure\n        self.item = False\n        self.strangeBiome = strangeBiome",
         "detail": "src.graph.vertice",
         "documentation": {}
     },
@@ -526,7 +621,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "run = True\n#statusGame code 0 - continue, 1 - change goal, 2 - finish game\nverticeObjective = 3\nend = False\nstatusGame = -1\nstartTime = pygame.time.get_ticks()\nwhile run:\n    statusGame = gameOn(verticeObjective, end, statusGame, startTime)\n    if statusGame == 1:\n        verticeObjective = 10",
+        "peekOfCode": "run = True\n#statusGame code 0 - continue, 1 - change goal, 2 - finish game, 3 - reset \nverticeObjective = 3\nend = False\nstatusGame = -1\nstartTime = pygame.time.get_ticks()\nwhile run:\n    statusGame = gameOn(verticeObjective, end, statusGame, startTime)\n    if statusGame == 1:\n        verticeObjective = 10",
         "detail": "main",
         "documentation": {}
     },

@@ -8,7 +8,7 @@ pygame.init()
 
 run = True
 
-#statusGame code 0 - continue, 1 - change goal, 2 - finish game
+#statusGame code 0 - continue, 1 - change goal, 2 - finish game, 3 - reset 
 verticeObjective = 3
 end = False
 statusGame = -1
