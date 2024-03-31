@@ -4,7 +4,7 @@ from src.graph.search import breadthFirstSearch, depthFirstSearch
 from src.config.button import *
 from src.graph.read import graphRead
 from src.graph.vertice import *
-from .biome import *
+from .draw_info_vertice import *
 
 screen_width = 1000
 screen_height = 600

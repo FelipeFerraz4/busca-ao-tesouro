@@ -9,7 +9,7 @@ from src.graph.read import graphRead
 from src.graph.vertice import *
 from src.config.screen import *
 from src.graph.informateVertice import draw_informationVetices
-from .biome import *
+from .draw_info_vertice import *
 
 screen = createScreen()
 backGround = createBackground()
@@ -29,13 +29,15 @@ class Game():
       self.statusGame = statusGame
       self.end = end
 
-def gameOn(game):
+def gameOn(game, person, monster):
     if game.statusGame > -1:
         global graph
         draw_backGround(backGround, screen)
         draw_edges(graph, screen)
         draw_vertices(graph, screen)
-        draw_informationVetices(graph, screen)
+        draw_informationVetices(graph, screen, monster)
+        person.draw_explorer_info(fontesys, screen)
+        # person.draw_explorer_info(fontesys, screen)
         if game.time > 120:
             txttela = fontesys.render('Game Over, tempo esgotado', 1, (255,255,255))
             screen.blit(txttela, (225, 280))
@@ -59,7 +61,7 @@ def gameOn(game):
             return 2
         return 0
     else:
-        return startMessage(game.statusGame, game.startTime)
+        return startMessage(game.statusGame, game.startTime, monster)
 def nextPosition(personVertice, verticeObjective):
     # get the best neighbor of the character's current vertice
     bestNeighboringVertice = breadthFirstSearch(graph, graph[personVertice], graph[verticeObjective])
@@ -84,11 +86,11 @@ def step(personVertice, nextVertice):
     graph[personVertice].person = False
     graph[nextVertice].person = True
     
-def startMessage(statusGame, startTime):
+def startMessage(statusGame, startTime, monster):
     draw_backGround(backGround, screen)
     draw_edges(graph, screen)
     draw_vertices(graph, screen)
-    draw_informationVetices(graph, screen)
+    draw_informationVetices(graph, screen, monster)
     
     if statusGame == -1:
         txttela = fontesys.render('Prepare-se, a ilha está a vista', 1, (255,255,255))

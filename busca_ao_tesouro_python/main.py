@@ -3,6 +3,8 @@ from pygame import mixer
 from pygame.locals import *
 
 from src.config.game import Game, gameOn
+from src.character.explorer import Explorer
+from src.character.monsterRead import monsterRead
 
 pygame.init()
 
@@ -14,10 +16,11 @@ game = Game()
 # end = False
 # statusGame = -1
 # startTime = pygame.time.get_ticks()
+person = Explorer()
+monster = monsterRead()
 
 while run:
-    game.statusGame = gameOn(game)
-    print(game.time)
+    game.statusGame = gameOn(game, person, monster)
     if game.statusGame == 1:
         game.verticeObjective = 10
         print('Change Goal')

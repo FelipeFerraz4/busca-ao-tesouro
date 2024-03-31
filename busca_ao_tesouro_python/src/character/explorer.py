@@ -1,3 +1,4 @@
+from src.config.game import fontesys, screen
 
 class Explorer:
     def __init__(self, max_health=100, max_attack=10):
@@ -45,3 +46,10 @@ class Explorer:
        
         self.weapon = None
 
+    def draw_explorer_info(self, fontesys, screen):
+        txttela = fontesys.render(f'Ponto de vida: {self.health}', 1, (255,255,255))
+        screen.blit(txttela, (0, 0))
+        txttela = fontesys.render(f'Tesouro: {self.treasure_percentage}%', 1, (255,255,255))
+        screen.blit(txttela, (270, 0))
+        txttela = fontesys.render(f'Arma: {self.weapon}', 1, (255,255,255))
+        screen.blit(txttela, (480, 0))

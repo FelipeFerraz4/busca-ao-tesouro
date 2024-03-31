@@ -1,6 +1,10 @@
-criar as imagens (mostros)
+completa - tempo
+completa - criar os mostros no mapa
+completa - criar as imagens (mostros)
+
+mostra dados do personagem
+
 função savepoint
 função mover mostros
     combate dos monstro
 funções de combate
-tempo
