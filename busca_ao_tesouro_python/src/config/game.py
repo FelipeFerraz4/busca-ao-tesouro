@@ -1,3 +1,4 @@
+from time import sleep
 import pygame
 from pygame.locals import *
 import random
@@ -10,58 +11,51 @@ from src.graph.vertice import *
 from src.config.screen import *
 from src.graph.informateVertice import draw_informationVetices
 from .draw_info_vertice import *
+from src.character.monster import *
 
 screen = createScreen()
 backGround = createBackground()
 graph = graphRead()
 button_reset = create_button_reset()
 button_next = create_button_next()
+button_scape = create_button_scape()
+button_combat = create_button_combat()
 
 pygame.font.init()
 fonte = pygame.font.get_default_font()
 fontesys = pygame.font.SysFont(fonte, 40)
 
 class Game():
-    def __init__(self, verticeObjective=3, time=0, startTime=pygame.time.get_ticks(), statusGame=-1, end=False):
+    def __init__(
+        self, 
+        verticeObjective=3, 
+        time=0, 
+        startTime=pygame.time.get_ticks(), 
+        statusGame=-1, 
+        end=False,
+        combatMenu=False
+        ):
       self.verticeObjective = verticeObjective
       self.time = time
       self.startTime = startTime
       self.statusGame = statusGame
       self.end = end
+      self.combatMenu = False
 
-def gameOn(game, person, monster):
+def gameOn(game, person, monsters):
     if game.statusGame > -1:
-        global graph
-        draw_backGround(backGround, screen)
-        draw_edges(graph, screen)
-        draw_vertices(graph, screen)
-        draw_informationVetices(graph, screen, monster)
-        person.draw_explorer_info(fontesys, screen)
-        # person.draw_explorer_info(fontesys, screen)
-        if game.time > 120:
-            txttela = fontesys.render('Game Over, tempo esgotado', 1, (255,255,255))
-            screen.blit(txttela, (225, 280))
-            return 2
-        if button_reset.draw(screen):
-            graph = graphRead()
-            return 3
-        if button_next.draw(screen) and game.end == False:
-            personVertice = depthFirstSearch(graph, graph[0])
-            nextVertice = nextPosition(personVertice, game.verticeObjective)
-            step(personVertice, nextVertice)
-            if nextVertice == 3:
-                return 1
-            if game.verticeObjective == 10 and nextVertice == 10:
-                return 2
-            game.time += 1
-            print('next')
-        if game.statusGame == 2:
-            txttela = fontesys.render('Parabéns, fase completa!', 1, (255,255,255))
-            screen.blit(txttela, (225, 280))
+        if game.combatMenu == False:
+            return display_default(game, monsters, person)
+        else:
+            return display_combat(game, monsters, person)
+            
+        if message_end(game, person) == 2:
             return 2
         return 0
     else:
-        return startMessage(game.statusGame, game.startTime, monster)
+        return startMessage(game.statusGame, game.startTime, monsters)
+    
+
 def nextPosition(personVertice, verticeObjective):
     # get the best neighbor of the character's current vertice
     bestNeighboringVertice = breadthFirstSearch(graph, graph[personVertice], graph[verticeObjective])
@@ -86,11 +80,11 @@ def step(personVertice, nextVertice):
     graph[personVertice].person = False
     graph[nextVertice].person = True
     
-def startMessage(statusGame, startTime, monster):
+def startMessage(statusGame, startTime, monsters):
     draw_backGround(backGround, screen)
     draw_edges(graph, screen)
     draw_vertices(graph, screen)
-    draw_informationVetices(graph, screen, monster)
+    draw_informationVetices(graph, screen, monsters)
     
     if statusGame == -1:
         txttela = fontesys.render('Prepare-se, a ilha está a vista', 1, (255,255,255))
@@ -108,3 +102,69 @@ def startMessage(statusGame, startTime, monster):
         return 0
     return -1
 
+def display_default(game, monsters, person):
+    global graph
+    draw_backGround(backGround, screen)
+    draw_edges(graph, screen)
+    draw_vertices(graph, screen)
+    draw_informationVetices(graph, screen, monsters)
+    person.draw_explorer_info(fontesys, screen)
+    if button_reset.draw(screen):
+        graph = graphRead()
+        return 3
+    if button_next.draw(screen) and game.end == False:
+        personVertice = depthFirstSearch(graph, graph[0])
+        nextVertice = nextPosition(personVertice, game.verticeObjective)
+        step(personVertice, nextVertice)
+        if nextVertice == 3:
+            return 1
+        if game.verticeObjective == 10 and nextVertice == 10:
+            return 2
+        game.time += 1
+        action_vertices(graph, nextVertice, person)
+        if isMonster(monsters, nextVertice):
+            game.combatMenu = True
+            game.startTime = pygame.time.get_ticks()
+        print('next')
+    return 0
+
+def message_end(game, person):
+    if game.time > 120:
+        txttela = fontesys.render('Game Over, tempo esgotado', 1, (255,255,255))
+        screen.blit(txttela, (225, 280))
+        return 2
+    if person.health == 0:
+        txttela = fontesys.render('Game Over, muito danano', 1, (255,255,255))
+        screen.blit(txttela, (225, 280))
+        return 2
+    if game.statusGame == 2:
+        txttela = fontesys.render('Parabéns, fase completa!', 1, (255,255,255))
+        screen.blit(txttela, (225, 280))
+        return 2
+    return 0
+
+
+def display_combat(game, monsters, person):
+    global graph
+    draw_backGround(backGround, screen)
+    draw_edges(graph, screen)
+    draw_vertices(graph, screen)
+    draw_informationVetices(graph, screen, monsters)
+    person.draw_explorer_info(fontesys, screen)
+    personVertice = depthFirstSearch(graph, graph[0])
+    monster = monsters[getMonster(monsters, personVertice)]
+    if button_scape.draw(screen):
+        person.take_damage(monster.attack_points)
+        game.combatMenu = False
+        nextVertice = nextPosition(personVertice, game.verticeObjective)
+        step(personVertice, nextVertice)
+        sleep(0.1)
+        print('scape')
+        if nextVertice == 3:
+            return 1
+        if game.verticeObjective == 10 and nextVertice == 10:
+            return 2
+    if button_combat.draw(screen):
+        print('combat')
+    return 0
+    

@@ -12,3 +12,15 @@ def take_damage(self, damage):
     self.health_points -= damage
     if self.health_points < 0:
         self.healyh_points = 0
+
+def isMonster(monsters, vertice):
+    for monster in monsters:
+        if monster.vertices == vertice:
+            return True
+    return False
+
+def getMonster(monsters, vertice):
+    for monster in monsters:
+        if monster.vertices == vertice:
+            return monster.index
+    return -1

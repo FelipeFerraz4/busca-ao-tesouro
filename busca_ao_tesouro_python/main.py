@@ -17,10 +17,10 @@ game = Game()
 # statusGame = -1
 # startTime = pygame.time.get_ticks()
 person = Explorer()
-monster = monsterRead()
+monsters = monsterRead()
 
 while run:
-    game.statusGame = gameOn(game, person, monster)
+    game.statusGame = gameOn(game, person, monsters)
     if game.statusGame == 1:
         game.verticeObjective = 10
         print('Change Goal')
@@ -32,6 +32,7 @@ while run:
         game.statusGame = -1
         game.startTime = pygame.time.get_ticks()
         game.time = 0
+        person.health = 100
     
     pygame.display.update()
     

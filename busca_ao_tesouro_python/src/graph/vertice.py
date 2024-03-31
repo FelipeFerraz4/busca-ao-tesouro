@@ -1,6 +1,7 @@
 import pygame
 
 from src.config.color import *
+from src.graph.search import depthFirstSearch
 
 class verticeGraph():
     def __init__(self, id, coordenate, adjacentVertices, person=False, savePoint=False, treasure=False, strangeBiome=0):
@@ -28,3 +29,20 @@ def draw_edges(graph, surface):
     for vertice in graph:
         for neighboring in vertice.adjacentVertices:
             pygame.draw.line(surface, colorPointBlue, vertice.coordinate, graph[neighboring].coordinate, 2)
+
+def action_vertices(graph, nextVertice, person):
+    biome = graph[nextVertice].strangeBiome
+    if biome != -1:
+        if biome == 1:
+            person.take_damage(10)
+        elif biome == 2:
+            person.heal()
+        elif biome == 3:
+            person.take_damage(15)
+        elif biome == 4:
+            person.take_damage(5)
+        elif biome == 5:
+            person.take_damage(17)
+
+            
+    

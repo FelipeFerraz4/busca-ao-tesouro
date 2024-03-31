@@ -2,7 +2,8 @@ completa - tempo
 completa - criar os mostros no mapa
 completa - criar as imagens (mostros)
 
-mostra dados do personagem
+completa - mostra dados do personagem
+fazer o personagem tomar dano
 
 função savepoint
 função mover mostros

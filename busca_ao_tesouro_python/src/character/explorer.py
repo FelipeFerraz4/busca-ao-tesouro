@@ -24,7 +24,7 @@ class Explorer:
             self.health = 0
 
     def heal(self):
-        self.health +=20 #pontos fixos do bioma de chá
+        self.health += 20 #pontos fixos do bioma de chá
         if self.health > 100 :
             self.health = 100
 

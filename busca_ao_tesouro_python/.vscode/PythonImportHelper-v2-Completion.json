@@ -97,6 +97,22 @@
         "documentation": {}
     },
     {
+        "label": "depthFirstSearch",
+        "importPath": "src.graph.search",
+        "description": "src.graph.search",
+        "isExtraImport": true,
+        "detail": "src.graph.search",
+        "documentation": {}
+    },
+    {
+        "label": "sleep",
+        "importPath": "time",
+        "description": "time",
+        "isExtraImport": true,
+        "detail": "time",
+        "documentation": {}
+    },
+    {
         "label": "*",
         "importPath": "pygame.locals",
         "description": "pygame.locals",
@@ -196,6 +212,14 @@
     },
     {
         "label": "*",
+        "importPath": "src.character.monster",
+        "description": "src.character.monster",
+        "isExtraImport": true,
+        "detail": "src.character.monster",
+        "documentation": {}
+    },
+    {
+        "label": "*",
         "importPath": "src.config.draw_info_vertice",
         "description": "src.config.draw_info_vertice",
         "isExtraImport": true,
@@ -265,7 +289,25 @@
         "kind": 2,
         "importPath": "src.character.monster",
         "description": "src.character.monster",
-        "peekOfCode": "def take_damage(self, damage):\n    self.health_points -= damage\n    if self.health_points < 0:\n        self.healyh_points = 0",
+        "peekOfCode": "def take_damage(self, damage):\n    self.health_points -= damage\n    if self.health_points < 0:\n        self.healyh_points = 0\ndef isMonster(monsters, vertice):\n    for monster in monsters:\n        if monster.vertices == vertice:\n            return True\n    return False\ndef getMonster(monsters, vertice):",
+        "detail": "src.character.monster",
+        "documentation": {}
+    },
+    {
+        "label": "isMonster",
+        "kind": 2,
+        "importPath": "src.character.monster",
+        "description": "src.character.monster",
+        "peekOfCode": "def isMonster(monsters, vertice):\n    for monster in monsters:\n        if monster.vertices == vertice:\n            return True\n    return False\ndef getMonster(monsters, vertice):\n    for monster in monsters:\n        if monster.vertices == vertice:\n            return monster.index\n    return -1",
+        "detail": "src.character.monster",
+        "documentation": {}
+    },
+    {
+        "label": "getMonster",
+        "kind": 2,
+        "importPath": "src.character.monster",
+        "description": "src.character.monster",
+        "peekOfCode": "def getMonster(monsters, vertice):\n    for monster in monsters:\n        if monster.vertices == vertice:\n            return monster.index\n    return -1",
         "detail": "src.character.monster",
         "documentation": {}
     },
@@ -319,7 +361,7 @@
         "kind": 2,
         "importPath": "src.config.button",
         "description": "src.config.button",
-        "peekOfCode": "def create_button_reset():\n    start_img = pygame.image.load('./src/assets/button_image/reset_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 400, start_img)\ndef create_button_scape():\n    start_img = pygame.image.load('./src/assets/image/scape_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 400, start_img)\ndef create_button_next():\n    start_img = pygame.image.load('./src/assets/image/next_button.jpeg')",
+        "peekOfCode": "def create_button_reset():\n    start_img = pygame.image.load('./src/assets/button_image/reset_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 400, start_img)\ndef create_button_scape():\n    start_img = pygame.image.load('./src/assets/image/scape_button.jpg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 400, start_img)\ndef create_button_next():\n    start_img = pygame.image.load('./src/assets/image/next_button.jpeg')",
         "detail": "src.config.button",
         "documentation": {}
     },
@@ -328,7 +370,7 @@
         "kind": 2,
         "importPath": "src.config.button",
         "description": "src.config.button",
-        "peekOfCode": "def create_button_scape():\n    start_img = pygame.image.load('./src/assets/image/scape_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 400, start_img)\ndef create_button_next():\n    start_img = pygame.image.load('./src/assets/image/next_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 200, start_img)\ndef create_button_combat():\n    start_img = pygame.image.load('./src/assets/image/combat_button.jpeg')",
+        "peekOfCode": "def create_button_scape():\n    start_img = pygame.image.load('./src/assets/image/scape_button.jpg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 400, start_img)\ndef create_button_next():\n    start_img = pygame.image.load('./src/assets/image/next_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 200, start_img)\ndef create_button_combat():\n    start_img = pygame.image.load('./src/assets/image/combat_button.jpg')",
         "detail": "src.config.button",
         "documentation": {}
     },
@@ -337,7 +379,7 @@
         "kind": 2,
         "importPath": "src.config.button",
         "description": "src.config.button",
-        "peekOfCode": "def create_button_next():\n    start_img = pygame.image.load('./src/assets/image/next_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 200, start_img)\ndef create_button_combat():\n    start_img = pygame.image.load('./src/assets/image/combat_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 200, start_img)",
+        "peekOfCode": "def create_button_next():\n    start_img = pygame.image.load('./src/assets/image/next_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 200, start_img)\ndef create_button_combat():\n    start_img = pygame.image.load('./src/assets/image/combat_button.jpg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 200, start_img)",
         "detail": "src.config.button",
         "documentation": {}
     },
@@ -346,7 +388,7 @@
         "kind": 2,
         "importPath": "src.config.button",
         "description": "src.config.button",
-        "peekOfCode": "def create_button_combat():\n    start_img = pygame.image.load('./src/assets/image/combat_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 200, start_img)",
+        "peekOfCode": "def create_button_combat():\n    start_img = pygame.image.load('./src/assets/image/combat_button.jpg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 200, start_img)",
         "detail": "src.config.button",
         "documentation": {}
     },
@@ -508,7 +550,7 @@
         "kind": 6,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "class Game():\n    def __init__(self, verticeObjective=3, time=0, startTime=pygame.time.get_ticks(), statusGame=-1, end=False):\n      self.verticeObjective = verticeObjective\n      self.time = time\n      self.startTime = startTime\n      self.statusGame = statusGame\n      self.end = end\ndef gameOn(game, person, monster):\n    if game.statusGame > -1:\n        global graph",
+        "peekOfCode": "class Game():\n    def __init__(\n        self, \n        verticeObjective=3, \n        time=0, \n        startTime=pygame.time.get_ticks(), \n        statusGame=-1, \n        end=False,\n        combatMenu=False\n        ):",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -517,7 +559,7 @@
         "kind": 2,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "def gameOn(game, person, monster):\n    if game.statusGame > -1:\n        global graph\n        draw_backGround(backGround, screen)\n        draw_edges(graph, screen)\n        draw_vertices(graph, screen)\n        draw_informationVetices(graph, screen, monster)\n        person.draw_explorer_info(fontesys, screen)\n        # person.draw_explorer_info(fontesys, screen)\n        if game.time > 120:",
+        "peekOfCode": "def gameOn(game, person, monsters):\n    if game.statusGame > -1:\n        if game.combatMenu == False:\n            return display_default(game, monsters, person)\n        else:\n            return display_combat(game, monsters, person)\n        if message_end(game, person) == 2:\n            return 2\n        return 0\n    else:",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -535,7 +577,7 @@
         "kind": 2,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "def step(personVertice, nextVertice):\n    #change the person's vertice\n    graph[personVertice].person = False\n    graph[nextVertice].person = True\ndef startMessage(statusGame, startTime, monster):\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_informationVetices(graph, screen, monster)\n    if statusGame == -1:",
+        "peekOfCode": "def step(personVertice, nextVertice):\n    #change the person's vertice\n    graph[personVertice].person = False\n    graph[nextVertice].person = True\ndef startMessage(statusGame, startTime, monsters):\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_informationVetices(graph, screen, monsters)\n    if statusGame == -1:",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -544,7 +586,34 @@
         "kind": 2,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "def startMessage(statusGame, startTime, monster):\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_informationVetices(graph, screen, monster)\n    if statusGame == -1:\n        txttela = fontesys.render('Prepare-se, a ilha está a vista', 1, (255,255,255))\n    elif statusGame == -2:\n        txttela = fontesys.render('Desvende segredos ocultos e tesouros.', 1, (255,255,255))\n    elif statusGame == -3:",
+        "peekOfCode": "def startMessage(statusGame, startTime, monsters):\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_informationVetices(graph, screen, monsters)\n    if statusGame == -1:\n        txttela = fontesys.render('Prepare-se, a ilha está a vista', 1, (255,255,255))\n    elif statusGame == -2:\n        txttela = fontesys.render('Desvende segredos ocultos e tesouros.', 1, (255,255,255))\n    elif statusGame == -3:",
+        "detail": "src.config.game",
+        "documentation": {}
+    },
+    {
+        "label": "display_default",
+        "kind": 2,
+        "importPath": "src.config.game",
+        "description": "src.config.game",
+        "peekOfCode": "def display_default(game, monsters, person):\n    global graph\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_informationVetices(graph, screen, monsters)\n    person.draw_explorer_info(fontesys, screen)\n    if button_reset.draw(screen):\n        graph = graphRead()\n        return 3",
+        "detail": "src.config.game",
+        "documentation": {}
+    },
+    {
+        "label": "message_end",
+        "kind": 2,
+        "importPath": "src.config.game",
+        "description": "src.config.game",
+        "peekOfCode": "def message_end(game, person):\n    if game.time > 120:\n        txttela = fontesys.render('Game Over, tempo esgotado', 1, (255,255,255))\n        screen.blit(txttela, (225, 280))\n        return 2\n    if person.health == 0:\n        txttela = fontesys.render('Game Over, muito danano', 1, (255,255,255))\n        screen.blit(txttela, (225, 280))\n        return 2\n    if game.statusGame == 2:",
+        "detail": "src.config.game",
+        "documentation": {}
+    },
+    {
+        "label": "display_combat",
+        "kind": 2,
+        "importPath": "src.config.game",
+        "description": "src.config.game",
+        "peekOfCode": "def display_combat(game, monsters, person):\n    global graph\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_informationVetices(graph, screen, monsters)\n    person.draw_explorer_info(fontesys, screen)\n    personVertice = depthFirstSearch(graph, graph[0])\n    monster = monsters[getMonster(monsters, personVertice)]\n    if button_scape.draw(screen):",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -553,7 +622,7 @@
         "kind": 5,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "screen = createScreen()\nbackGround = createBackground()\ngraph = graphRead()\nbutton_reset = create_button_reset()\nbutton_next = create_button_next()\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)\nclass Game():\n    def __init__(self, verticeObjective=3, time=0, startTime=pygame.time.get_ticks(), statusGame=-1, end=False):",
+        "peekOfCode": "screen = createScreen()\nbackGround = createBackground()\ngraph = graphRead()\nbutton_reset = create_button_reset()\nbutton_next = create_button_next()\nbutton_scape = create_button_scape()\nbutton_combat = create_button_combat()\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -562,7 +631,7 @@
         "kind": 5,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "backGround = createBackground()\ngraph = graphRead()\nbutton_reset = create_button_reset()\nbutton_next = create_button_next()\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)\nclass Game():\n    def __init__(self, verticeObjective=3, time=0, startTime=pygame.time.get_ticks(), statusGame=-1, end=False):\n      self.verticeObjective = verticeObjective",
+        "peekOfCode": "backGround = createBackground()\ngraph = graphRead()\nbutton_reset = create_button_reset()\nbutton_next = create_button_next()\nbutton_scape = create_button_scape()\nbutton_combat = create_button_combat()\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)\nclass Game():",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -571,7 +640,7 @@
         "kind": 5,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "graph = graphRead()\nbutton_reset = create_button_reset()\nbutton_next = create_button_next()\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)\nclass Game():\n    def __init__(self, verticeObjective=3, time=0, startTime=pygame.time.get_ticks(), statusGame=-1, end=False):\n      self.verticeObjective = verticeObjective\n      self.time = time",
+        "peekOfCode": "graph = graphRead()\nbutton_reset = create_button_reset()\nbutton_next = create_button_next()\nbutton_scape = create_button_scape()\nbutton_combat = create_button_combat()\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)\nclass Game():\n    def __init__(",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -580,7 +649,7 @@
         "kind": 5,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "button_reset = create_button_reset()\nbutton_next = create_button_next()\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)\nclass Game():\n    def __init__(self, verticeObjective=3, time=0, startTime=pygame.time.get_ticks(), statusGame=-1, end=False):\n      self.verticeObjective = verticeObjective\n      self.time = time\n      self.startTime = startTime",
+        "peekOfCode": "button_reset = create_button_reset()\nbutton_next = create_button_next()\nbutton_scape = create_button_scape()\nbutton_combat = create_button_combat()\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)\nclass Game():\n    def __init__(\n        self, ",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -589,7 +658,25 @@
         "kind": 5,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "button_next = create_button_next()\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)\nclass Game():\n    def __init__(self, verticeObjective=3, time=0, startTime=pygame.time.get_ticks(), statusGame=-1, end=False):\n      self.verticeObjective = verticeObjective\n      self.time = time\n      self.startTime = startTime\n      self.statusGame = statusGame",
+        "peekOfCode": "button_next = create_button_next()\nbutton_scape = create_button_scape()\nbutton_combat = create_button_combat()\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)\nclass Game():\n    def __init__(\n        self, \n        verticeObjective=3, ",
+        "detail": "src.config.game",
+        "documentation": {}
+    },
+    {
+        "label": "button_scape",
+        "kind": 5,
+        "importPath": "src.config.game",
+        "description": "src.config.game",
+        "peekOfCode": "button_scape = create_button_scape()\nbutton_combat = create_button_combat()\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)\nclass Game():\n    def __init__(\n        self, \n        verticeObjective=3, \n        time=0, ",
+        "detail": "src.config.game",
+        "documentation": {}
+    },
+    {
+        "label": "button_combat",
+        "kind": 5,
+        "importPath": "src.config.game",
+        "description": "src.config.game",
+        "peekOfCode": "button_combat = create_button_combat()\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)\nclass Game():\n    def __init__(\n        self, \n        verticeObjective=3, \n        time=0, \n        startTime=pygame.time.get_ticks(), ",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -598,7 +685,7 @@
         "kind": 5,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "fonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)\nclass Game():\n    def __init__(self, verticeObjective=3, time=0, startTime=pygame.time.get_ticks(), statusGame=-1, end=False):\n      self.verticeObjective = verticeObjective\n      self.time = time\n      self.startTime = startTime\n      self.statusGame = statusGame\n      self.end = end\ndef gameOn(game, person, monster):",
+        "peekOfCode": "fonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)\nclass Game():\n    def __init__(\n        self, \n        verticeObjective=3, \n        time=0, \n        startTime=pygame.time.get_ticks(), \n        statusGame=-1, \n        end=False,",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -607,7 +694,7 @@
         "kind": 5,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "fontesys = pygame.font.SysFont(fonte, 40)\nclass Game():\n    def __init__(self, verticeObjective=3, time=0, startTime=pygame.time.get_ticks(), statusGame=-1, end=False):\n      self.verticeObjective = verticeObjective\n      self.time = time\n      self.startTime = startTime\n      self.statusGame = statusGame\n      self.end = end\ndef gameOn(game, person, monster):\n    if game.statusGame > -1:",
+        "peekOfCode": "fontesys = pygame.font.SysFont(fonte, 40)\nclass Game():\n    def __init__(\n        self, \n        verticeObjective=3, \n        time=0, \n        startTime=pygame.time.get_ticks(), \n        statusGame=-1, \n        end=False,\n        combatMenu=False",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -760,7 +847,16 @@
         "kind": 2,
         "importPath": "src.graph.vertice",
         "description": "src.graph.vertice",
-        "peekOfCode": "def draw_edges(graph, surface):\n    for vertice in graph:\n        for neighboring in vertice.adjacentVertices:\n            pygame.draw.line(surface, colorPointBlue, vertice.coordinate, graph[neighboring].coordinate, 2)",
+        "peekOfCode": "def draw_edges(graph, surface):\n    for vertice in graph:\n        for neighboring in vertice.adjacentVertices:\n            pygame.draw.line(surface, colorPointBlue, vertice.coordinate, graph[neighboring].coordinate, 2)\ndef action_vertices(graph, nextVertice, person):\n    biome = graph[nextVertice].strangeBiome\n    if biome != -1:\n        if biome == 1:\n            person.take_damage(10)\n        elif biome == 2:",
+        "detail": "src.graph.vertice",
+        "documentation": {}
+    },
+    {
+        "label": "action_vertices",
+        "kind": 2,
+        "importPath": "src.graph.vertice",
+        "description": "src.graph.vertice",
+        "peekOfCode": "def action_vertices(graph, nextVertice, person):\n    biome = graph[nextVertice].strangeBiome\n    if biome != -1:\n        if biome == 1:\n            person.take_damage(10)\n        elif biome == 2:\n            person.heal()\n        elif biome == 3:\n            person.take_damage(15)\n        elif biome == 4:",
         "detail": "src.graph.vertice",
         "documentation": {}
     },
@@ -769,7 +865,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "run = True\n#statusGame code 0 - continue, 1 - change goal, 2 - finish game, 3 - reset \ngame = Game()\n# verticeObjective = 3\n# end = False\n# statusGame = -1\n# startTime = pygame.time.get_ticks()\nperson = Explorer()\nmonster = monsterRead()\nwhile run:",
+        "peekOfCode": "run = True\n#statusGame code 0 - continue, 1 - change goal, 2 - finish game, 3 - reset \ngame = Game()\n# verticeObjective = 3\n# end = False\n# statusGame = -1\n# startTime = pygame.time.get_ticks()\nperson = Explorer()\nmonsters = monsterRead()\nwhile run:",
         "detail": "main",
         "documentation": {}
     },
@@ -778,7 +874,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "game = Game()\n# verticeObjective = 3\n# end = False\n# statusGame = -1\n# startTime = pygame.time.get_ticks()\nperson = Explorer()\nmonster = monsterRead()\nwhile run:\n    game.statusGame = gameOn(game, person, monster)\n    if game.statusGame == 1:",
+        "peekOfCode": "game = Game()\n# verticeObjective = 3\n# end = False\n# statusGame = -1\n# startTime = pygame.time.get_ticks()\nperson = Explorer()\nmonsters = monsterRead()\nwhile run:\n    game.statusGame = gameOn(game, person, monsters)\n    if game.statusGame == 1:",
         "detail": "main",
         "documentation": {}
     },
@@ -787,16 +883,16 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "person = Explorer()\nmonster = monsterRead()\nwhile run:\n    game.statusGame = gameOn(game, person, monster)\n    if game.statusGame == 1:\n        game.verticeObjective = 10\n        print('Change Goal')\n    if game.statusGame == 2:\n        game.end = True\n    if game.statusGame == 3:",
+        "peekOfCode": "person = Explorer()\nmonsters = monsterRead()\nwhile run:\n    game.statusGame = gameOn(game, person, monsters)\n    if game.statusGame == 1:\n        game.verticeObjective = 10\n        print('Change Goal')\n    if game.statusGame == 2:\n        game.end = True\n    if game.statusGame == 3:",
         "detail": "main",
         "documentation": {}
     },
     {
-        "label": "monster",
+        "label": "monsters",
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "monster = monsterRead()\nwhile run:\n    game.statusGame = gameOn(game, person, monster)\n    if game.statusGame == 1:\n        game.verticeObjective = 10\n        print('Change Goal')\n    if game.statusGame == 2:\n        game.end = True\n    if game.statusGame == 3:\n        game.verticeObjective = 3",
+        "peekOfCode": "monsters = monsterRead()\nwhile run:\n    game.statusGame = gameOn(game, person, monsters)\n    if game.statusGame == 1:\n        game.verticeObjective = 10\n        print('Change Goal')\n    if game.statusGame == 2:\n        game.end = True\n    if game.statusGame == 3:\n        game.verticeObjective = 3",
         "detail": "main",
         "documentation": {}
     }
