@@ -1,0 +1,6 @@
+criar as imagens (mostros)
+função savepoint
+função mover mostros
+    combate dos monstro
+funções de combate
+tempo

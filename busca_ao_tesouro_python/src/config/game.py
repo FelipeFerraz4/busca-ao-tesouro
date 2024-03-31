@@ -13,47 +13,59 @@ from .biome import *
 
 screen = createScreen()
 backGround = createBackground()
-
 graph = graphRead()
 button_reset = create_button_reset()
 button_next = create_button_next()
 
 pygame.font.init()
 fonte = pygame.font.get_default_font()
-fontesys = pygame.font.SysFont(fonte, 40)  
+fontesys = pygame.font.SysFont(fonte, 40)
 
-def gameOn(verticeObjective, end, statusGame, startTime):
-    if statusGame > -1:
+class Game():
+    def __init__(self, verticeObjective=3, time=0, startTime=pygame.time.get_ticks(), statusGame=-1, end=False):
+      self.verticeObjective = verticeObjective
+      self.time = time
+      self.startTime = startTime
+      self.statusGame = statusGame
+      self.end = end
+
+def gameOn(game):
+    if game.statusGame > -1:
         global graph
         draw_backGround(backGround, screen)
         draw_edges(graph, screen)
         draw_vertices(graph, screen)
         draw_informationVetices(graph, screen)
+        if game.time > 120:
+            txttela = fontesys.render('Game Over, tempo esgotado', 1, (255,255,255))
+            screen.blit(txttela, (225, 280))
+            return 2
         if button_reset.draw(screen):
             graph = graphRead()
             return 3
-        if button_next.draw(screen) and end == False:
+        if button_next.draw(screen) and game.end == False:
             personVertice = depthFirstSearch(graph, graph[0])
-            nextVertice = nextPosition(personVertice, verticeObjective)
+            nextVertice = nextPosition(personVertice, game.verticeObjective)
             step(personVertice, nextVertice)
             if nextVertice == 3:
                 return 1
-            if verticeObjective == 10 and nextVertice == 10:
+            if game.verticeObjective == 10 and nextVertice == 10:
                 return 2
+            game.time += 1
             print('next')
-        if statusGame == 2:
+        if game.statusGame == 2:
             txttela = fontesys.render('Parabéns, fase completa!', 1, (255,255,255))
             screen.blit(txttela, (225, 280))
             return 2
         return 0
     else:
-        return startMessage(statusGame, startTime)
+        return startMessage(game.statusGame, game.startTime)
 def nextPosition(personVertice, verticeObjective):
     # get the best neighbor of the character's current vertice
     bestNeighboringVertice = breadthFirstSearch(graph, graph[personVertice], graph[verticeObjective])
     neighboringList = copy.deepcopy(graph[personVertice].adjacentVertices)
     
-    # 50% of being chosen the best vertice
+    # 20% of being chosen the best vertice
     porcente = 2/10
     luckNumber = random.randint(0, len(neighboringList))
 

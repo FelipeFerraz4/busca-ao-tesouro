@@ -2,30 +2,33 @@ import pygame
 from pygame import mixer
 from pygame.locals import *
 
-from src.config.game import gameOn
+from src.config.game import Game, gameOn
 
 pygame.init()
 
 run = True
 
 #statusGame code 0 - continue, 1 - change goal, 2 - finish game, 3 - reset 
-verticeObjective = 3
-end = False
-statusGame = -1
-startTime = pygame.time.get_ticks()
+game = Game()
+# verticeObjective = 3
+# end = False
+# statusGame = -1
+# startTime = pygame.time.get_ticks()
 
 while run:
-    statusGame = gameOn(verticeObjective, end, statusGame, startTime)
-    if statusGame == 1:
-        verticeObjective = 10
+    game.statusGame = gameOn(game)
+    print(game.time)
+    if game.statusGame == 1:
+        game.verticeObjective = 10
         print('Change Goal')
-    if statusGame == 2:
-        end = True
-    if statusGame == 3:
-        verticeObjective = 3
-        end = False
-        statusGame = -1
-        startTime = pygame.time.get_ticks()
+    if game.statusGame == 2:
+        game.end = True
+    if game.statusGame == 3:
+        game.verticeObjective = 3
+        game.end = False
+        game.statusGame = -1
+        game.startTime = pygame.time.get_ticks()
+        game.time = 0
     
     pygame.display.update()
     
