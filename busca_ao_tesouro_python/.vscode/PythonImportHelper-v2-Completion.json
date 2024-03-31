@@ -8,6 +8,14 @@
         "documentation": {}
     },
     {
+        "label": "graph",
+        "importPath": "src.config.game",
+        "description": "src.config.game",
+        "isExtraImport": true,
+        "detail": "src.config.game",
+        "documentation": {}
+    },
+    {
         "label": "screen",
         "importPath": "src.config.game",
         "description": "src.config.game",
@@ -271,7 +279,7 @@
         "kind": 6,
         "importPath": "src.character.explorer",
         "description": "src.character.explorer",
-        "peekOfCode": "class Explorer:\n    def __init__(self, max_health=100, max_attack=10):\n        self.max_health = max_health  \n        self.max_attack = max_attack  \n        self.health = max_health      \n        self.attack = max_attack      \n        self.treasure_percentage = 100  \n        self.weapon = None            \n        self.checkpoints_found = []   \n    def attack_enemy(self, enemy, weapon):",
+        "peekOfCode": "class Explorer:\n    def __init__(self, max_health=100, max_attack=10):\n        self.max_health = max_health  \n        self.max_attack = max_attack  \n        self.health = max_health      \n        self.attack = max_attack      \n        self.treasure_percentage = 0  \n        self.weapon = None            \n        self.checkpoints_found = []   \n    def attack_enemy(self, enemy, weapon):",
         "detail": "src.character.explorer",
         "documentation": {}
     },
@@ -550,7 +558,7 @@
         "kind": 6,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "class Game():\n    def __init__(\n        self, \n        verticeObjective=3, \n        time=0, \n        startTime=pygame.time.get_ticks(), \n        statusGame=-1, \n        end=False,\n        combatMenu=False\n        ):",
+        "peekOfCode": "class Game():\n    def __init__(\n        self, \n        verticeObjective=3, \n        time=0, \n        startTime=pygame.time.get_ticks(), \n        statusGame=-1, \n        end=False,\n        combatMenu=False,\n        ):",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -559,7 +567,7 @@
         "kind": 2,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "def gameOn(game, person, monsters):\n    if game.statusGame > -1:\n        if game.combatMenu == False:\n            return display_default(game, monsters, person)\n        else:\n            return display_combat(game, monsters, person)\n        if message_end(game, person) == 2:\n            return 2\n        return 0\n    else:",
+        "peekOfCode": "def gameOn(game, person, monsters):\n    if game.statusGame > -1:\n        res = 0\n        if game.combatMenu == False:\n            res =  display_default(game, monsters, person)\n        else:\n            res = display_combat(game, monsters, person)\n        if res != 0:\n            return res\n        if message_end(game, person) == 2:",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -568,7 +576,7 @@
         "kind": 2,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "def nextPosition(personVertice, verticeObjective):\n    # get the best neighbor of the character's current vertice\n    bestNeighboringVertice = breadthFirstSearch(graph, graph[personVertice], graph[verticeObjective])\n    neighboringList = copy.deepcopy(graph[personVertice].adjacentVertices)\n    # 20% of being chosen the best vertice\n    porcente = 2/10\n    luckNumber = random.randint(0, len(neighboringList))\n    # choosing the next vertice\n    neighboringChoice = bestNeighboringVertice\n    if luckNumber > int(len(neighboringList)*porcente):",
+        "peekOfCode": "def nextPosition(personVertice, verticeObjective):\n    # get the best neighbor of the character's current vertice\n    bestNeighboringVertice = breadthFirstSearch(graph, graph[personVertice], graph[verticeObjective])\n    neighboringList = copy.deepcopy(graph[personVertice].adjacentVertices)\n    # 20% of being chosen the best vertice\n    porcente = 5/10\n    luckNumber = random.randint(0, len(neighboringList))\n    # choosing the next vertice\n    neighboringChoice = bestNeighboringVertice\n    if luckNumber > int(len(neighboringList)*porcente):",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -595,7 +603,7 @@
         "kind": 2,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "def display_default(game, monsters, person):\n    global graph\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_informationVetices(graph, screen, monsters)\n    person.draw_explorer_info(fontesys, screen)\n    if button_reset.draw(screen):\n        graph = graphRead()\n        return 3",
+        "peekOfCode": "def display_default(game, monsters, person):\n    global graph\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_informationVetices(graph, screen, monsters)\n    person.draw_explorer_info(fontesys, screen)\n    personVertice = depthFirstSearch(graph, graph[0])\n    person.get_treasure(graph, personVertice)\n    if button_reset.draw(screen):",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -613,7 +621,7 @@
         "kind": 2,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "def display_combat(game, monsters, person):\n    global graph\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_informationVetices(graph, screen, monsters)\n    person.draw_explorer_info(fontesys, screen)\n    personVertice = depthFirstSearch(graph, graph[0])\n    monster = monsters[getMonster(monsters, personVertice)]\n    if button_scape.draw(screen):",
+        "peekOfCode": "def display_combat(game, monsters, person):\n    global graph\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_informationVetices(graph, screen, monsters)\n    person.draw_explorer_info(fontesys, screen)\n    personVertice = depthFirstSearch(graph, graph[0])\n    monster = monsters[getMonster(monsters, personVertice)]\n    if game.combatRound == 3:",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -694,7 +702,7 @@
         "kind": 5,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "fontesys = pygame.font.SysFont(fonte, 40)\nclass Game():\n    def __init__(\n        self, \n        verticeObjective=3, \n        time=0, \n        startTime=pygame.time.get_ticks(), \n        statusGame=-1, \n        end=False,\n        combatMenu=False",
+        "peekOfCode": "fontesys = pygame.font.SysFont(fonte, 40)\nclass Game():\n    def __init__(\n        self, \n        verticeObjective=3, \n        time=0, \n        startTime=pygame.time.get_ticks(), \n        statusGame=-1, \n        end=False,\n        combatMenu=False,",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -793,7 +801,16 @@
         "kind": 2,
         "importPath": "src.graph.search",
         "description": "src.graph.search",
-        "peekOfCode": "def depthFirstSearch(graph, vertice):\n    color = []\n    for item in graph:\n        color.append(branco)\n    return visit(graph, vertice, color)",
+        "peekOfCode": "def depthFirstSearch(graph, vertice):\n    color = []\n    for item in graph:\n        color.append(branco)\n    return visit(graph, vertice, color)\ndef searchVerticalEmpty(graph, vertice):\n    color = []\n    father = []\n    queue = []\n    for item in graph:",
+        "detail": "src.graph.search",
+        "documentation": {}
+    },
+    {
+        "label": "searchVerticalEmpty",
+        "kind": 2,
+        "importPath": "src.graph.search",
+        "description": "src.graph.search",
+        "peekOfCode": "def searchVerticalEmpty(graph, vertice):\n    color = []\n    father = []\n    queue = []\n    for item in graph:\n        color.append(branco)\n    color[vertice.id] = cinza\n    queue.append(vertice)\n    while len(queue) !=  0:\n        verticeW = queue.pop(0)",
         "detail": "src.graph.search",
         "documentation": {}
     },
@@ -847,16 +864,16 @@
         "kind": 2,
         "importPath": "src.graph.vertice",
         "description": "src.graph.vertice",
-        "peekOfCode": "def draw_edges(graph, surface):\n    for vertice in graph:\n        for neighboring in vertice.adjacentVertices:\n            pygame.draw.line(surface, colorPointBlue, vertice.coordinate, graph[neighboring].coordinate, 2)\ndef action_vertices(graph, nextVertice, person):\n    biome = graph[nextVertice].strangeBiome\n    if biome != -1:\n        if biome == 1:\n            person.take_damage(10)\n        elif biome == 2:",
+        "peekOfCode": "def draw_edges(graph, surface):\n    for vertice in graph:\n        for neighboring in vertice.adjacentVertices:\n            pygame.draw.line(surface, colorPointBlue, vertice.coordinate, graph[neighboring].coordinate, 2)\ndef damage_biome(graph, nextVertice, person):\n    biome = graph[nextVertice].strangeBiome\n    if biome != -1:\n        if biome == 1:\n            person.take_damage(10)\n        elif biome == 2:",
         "detail": "src.graph.vertice",
         "documentation": {}
     },
     {
-        "label": "action_vertices",
+        "label": "damage_biome",
         "kind": 2,
         "importPath": "src.graph.vertice",
         "description": "src.graph.vertice",
-        "peekOfCode": "def action_vertices(graph, nextVertice, person):\n    biome = graph[nextVertice].strangeBiome\n    if biome != -1:\n        if biome == 1:\n            person.take_damage(10)\n        elif biome == 2:\n            person.heal()\n        elif biome == 3:\n            person.take_damage(15)\n        elif biome == 4:",
+        "peekOfCode": "def damage_biome(graph, nextVertice, person):\n    biome = graph[nextVertice].strangeBiome\n    if biome != -1:\n        if biome == 1:\n            person.take_damage(10)\n        elif biome == 2:\n            person.heal()\n        elif biome == 3:\n            person.take_damage(15)\n        elif biome == 4:",
         "detail": "src.graph.vertice",
         "documentation": {}
     },

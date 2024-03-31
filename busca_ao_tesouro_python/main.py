@@ -33,6 +33,7 @@ while run:
         game.startTime = pygame.time.get_ticks()
         game.time = 0
         person.health = 100
+        person.treasure_percentage = 0
     
     pygame.display.update()
     

@@ -33,22 +33,28 @@ class Game():
         startTime=pygame.time.get_ticks(), 
         statusGame=-1, 
         end=False,
-        combatMenu=False
+        combatMenu=False,
         ):
       self.verticeObjective = verticeObjective
       self.time = time
       self.startTime = startTime
       self.statusGame = statusGame
       self.end = end
-      self.combatMenu = False
+      self.combatMenu = combatMenu
+      self.combatRound = 3
 
 def gameOn(game, person, monsters):
     if game.statusGame > -1:
+        res = 0
+        
         if game.combatMenu == False:
-            return display_default(game, monsters, person)
+            res =  display_default(game, monsters, person)
         else:
-            return display_combat(game, monsters, person)
-            
+            res = display_combat(game, monsters, person)
+        
+        if res != 0:
+            return res
+        
         if message_end(game, person) == 2:
             return 2
         return 0
@@ -62,7 +68,7 @@ def nextPosition(personVertice, verticeObjective):
     neighboringList = copy.deepcopy(graph[personVertice].adjacentVertices)
     
     # 20% of being chosen the best vertice
-    porcente = 2/10
+    porcente = 5/10
     luckNumber = random.randint(0, len(neighboringList))
 
     # choosing the next vertice
@@ -109,22 +115,29 @@ def display_default(game, monsters, person):
     draw_vertices(graph, screen)
     draw_informationVetices(graph, screen, monsters)
     person.draw_explorer_info(fontesys, screen)
+    personVertice = depthFirstSearch(graph, graph[0])
+    
+    person.get_treasure(graph, personVertice)
+    
     if button_reset.draw(screen):
         graph = graphRead()
+        sleep(0.1)
         return 3
     if button_next.draw(screen) and game.end == False:
-        personVertice = depthFirstSearch(graph, graph[0])
         nextVertice = nextPosition(personVertice, game.verticeObjective)
         step(personVertice, nextVertice)
+        if personVertice == 3:
+            graph[3].treasure = False
         if nextVertice == 3:
             return 1
         if game.verticeObjective == 10 and nextVertice == 10:
             return 2
         game.time += 1
-        action_vertices(graph, nextVertice, person)
+        damage_biome(graph, nextVertice, person)
         if isMonster(monsters, nextVertice):
             game.combatMenu = True
             game.startTime = pygame.time.get_ticks()
+        sleep(0.1)
         print('next')
     return 0
 
@@ -151,20 +164,60 @@ def display_combat(game, monsters, person):
     draw_vertices(graph, screen)
     draw_informationVetices(graph, screen, monsters)
     person.draw_explorer_info(fontesys, screen)
+    
     personVertice = depthFirstSearch(graph, graph[0])
     monster = monsters[getMonster(monsters, personVertice)]
-    if button_scape.draw(screen):
-        person.take_damage(monster.attack_points)
+    
+    if game.combatRound == 3:
+        txttela = fontesys.render('Monstro, escolha combate ou fuga', 1, (255,255,255))
+        screen.blit(txttela, (180, 280))
+    elif game.combatRound == 2:
+        txttela = fontesys.render('Segundo turno, escolha combate ou fuga', 1, (255,255,255))
+        screen.blit(txttela, (180, 280))
+    elif game.combatRound == 1:
+        txttela = fontesys.render('Terceiro turno, escolha combate ou fuga', 1, (255,255,255))
+        screen.blit(txttela, (180, 280))
+    elif game.combatRound == 0:
+        txttela = fontesys.render('Terceiro Combate', 1, (255,255,255))
+        screen.blit(txttela, (180, 280))
         game.combatMenu = False
+        game.combatRound = 3
         nextVertice = nextPosition(personVertice, game.verticeObjective)
         step(personVertice, nextVertice)
-        sleep(0.1)
-        print('scape')
         if nextVertice == 3:
             return 1
         if game.verticeObjective == 10 and nextVertice == 10:
             return 2
+    
+    if button_scape.draw(screen):
+        person.take_damage(monster.attack_points)
+        if person.treasure_percentage > person.health:
+            person.treasure_percentage = person.health
+            
+        game.combatMenu = False
+        game.combatRound = 3
+        
+        nextVertice = nextPosition(personVertice, game.verticeObjective)
+        step(personVertice, nextVertice)
+        sleep(0.2)
+        print('scape')
+        
+        if nextVertice == 3:
+            return 1
+        if game.verticeObjective == 10 and nextVertice == 10:
+            return 2
+    
     if button_combat.draw(screen):
+        if game.combatRound == 3:
+            game.combatRound = 2
+        elif game.combatRound == 2:
+            game.combatRound = 1
+        elif game.combatRound == 1:
+            game.combatRound = 0
+        print(game.combatRound)
+        
+
         print('combat')
+        
     return 0
     

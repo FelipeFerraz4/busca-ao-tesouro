@@ -1,4 +1,4 @@
-from src.config.game import fontesys, screen
+from src.config.game import fontesys, graph, screen
 
 class Explorer:
     def __init__(self, max_health=100, max_attack=10):
@@ -6,7 +6,7 @@ class Explorer:
         self.max_attack = max_attack  
         self.health = max_health      
         self.attack = max_attack      
-        self.treasure_percentage = 100  
+        self.treasure_percentage = 0  
         self.weapon = None            
         self.checkpoints_found = []   
 
@@ -28,9 +28,9 @@ class Explorer:
         if self.health > 100 :
             self.health = 100
 
-    def carry_treasure(self):
+    # def carry_treasure(self):
        
-        return self.treasure_percentage
+    #     return self.treasure_percentage
 
     def equip_weapon(self, weapon):
         
@@ -53,3 +53,7 @@ class Explorer:
         screen.blit(txttela, (270, 0))
         txttela = fontesys.render(f'Arma: {self.weapon}', 1, (255,255,255))
         screen.blit(txttela, (480, 0))
+    
+    def get_treasure(self, graph, vertice):
+        if graph[vertice].treasure:
+            self.treasure_percentage = self.health

@@ -1,0 +1,133 @@
+1 - e se ela é compilada, interpretada ou possue um sistema de implementação
+híbrido. 
+2 - Mostrar exemplos de estruturas condicionais e de repetição que existem na linguagem. Por exemplo, em C seriam as instruções if, while, for, switch e etc
+3 - Em caso de uma vinculação
+estática, as declarações são implícitas ou explícitas?
+4 -  Quais são os tipos de dados compostos? Mostrem exemplos.
+5 - Como as strings são tratadas nessa linguagem?
+6° - No aspecto de memória e variáveis:
+7 - A linguagem se preocupa com o acesso aos atributos e métodos? Em outras
+palavras, é possível deixar atributos e métodos como privados, públicos ou protegidos?
+8 - Mostrem exemplos de herança na linguagem. Se ela permitir herança múltipla,
+mostrar exemplos de herança múltipla.
+9 - A linguagem possui suporte à tratamento de exceções? Como funciona? Mostrar
+exemplos.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A linguagem suporta passagem de parâmetros por valor e por referência? Mostrem exemplos.
+
+Em Julia, os parâmetros são passados por referência.
+detalhes:
+    Julia usa um modelo de passagem de parâmetros que, quando você passa um argumento para uma função em Julia, na verdade está passando uma referência ao objeto. 
+    
+    No entanto, a semântica de alteração desse objeto dentro da função pode variar dependendo do tipo de dados.
+
+Tipos Imutáveis: Quando você passa um tipo imutável para uma função em Julia, é passada uma cópia do valor, e a função não pode modificar o valor original.
+    function f(x)
+        x = 20  # Aqui, x é uma nova referência para 2
+        println(x)  # Isso imprimirá 20
+    end
+
+    a = 10
+    println(a)  # Isso imprimirá 10
+    f(a)
+    println(a)  # Isso imprimirá 10
+
+Tipos Mutáveis: Quando você passa um tipo mutável é passada uma referência ao objeto, e as alterações feitas dentro da função são refletidas no objeto original.
+function f(arr)
+    arr[1] = 10
+    println(a)   # Isso imprimirá [10, 2, 3]
+end
+
+a = [1, 2, 3]
+println(a)  # Isso imprimirá [1, 2, 3]
+f(a)
+println(a)  # Isso imprimirá [10, 2, 3]
+
+
+a escolha entre mutável e imutável é feita durante a definição da variável, utilizando ou não a palavra-chave const.
+ também pode definir tipos de dados personalizados como imutáveis ou mutáveis em Julia. Isso é feito usando a palavra-chave "immutable" ou "mutable struct" ao definir o tipo. 
+    exemplo:
+t = (1, 2, 3)
+
+immutable Point
+    x::Float64
+    y::Float64
+end
+
+mutable_array = [1, 2, 3, 4, 5]
+
+mutable struct Pessoa
+    nome::String
+    idade::Int
+end
+
+Mas se você quiser modificar mais de um valor do tipo int64 (x = 2)
+Para isso temos funções que retornando mais de um valor
+    exemplo
+function foo(a,b)
+    return a+b, a*b
+end
+
+z , y = foo(2,3);
+
+int64 (x = 2)
+Para isso temos funções que retornando mais de um valor
+    exemplo
+function foo(a,b)
+    return a+b, a*b
+end
+
+z , y = foo(2,3);
+
+function contagem_regressiva(n)
+    if n ≤ 0
+        println("Feliz Ano Novo!")
+    else
+        print(n, " ")
+        contagem_regressiva(n-1)
+    end
+end
+
+
+
+vetor = [1, 2, 3, 4, 5]
+
+# Obtendo um ponteiro para o primeiro elemento do vetor
+ptr = pointer(vetor)
+
+# Imprimindo o valor apontado pelo ponteiro
+println(ptr[])  # Isso imprimirá 1
+
+# Avançando o ponteiro para apontar para o segundo elemento
+ptr = pointer(vetor, 2)
+
+# Imprimindo o valor apontado pelo ponteiro
+println(ptr[])  # Isso imprimirá 2
+
+function modificar_array(arr)
+    push!(arr, 4)  # Adiciona o valor 4 ao array
+end
+
+arr = [1, 2, 3]
+modificar_array(arr)
+println(arr)  # Isso imprimirá [1, 2, 3, 4]

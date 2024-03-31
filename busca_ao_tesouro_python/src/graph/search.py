@@ -68,3 +68,26 @@ def depthFirstSearch(graph, vertice):
     for item in graph:
         color.append(branco)
     return visit(graph, vertice, color)
+
+def searchVerticalEmpty(graph, vertice):
+    color = []
+    father = []
+    queue = []
+    
+    for item in graph:
+        color.append(branco)
+        
+    color[vertice.id] = cinza
+    
+    queue.append(vertice)
+
+    while len(queue) !=  0:
+        verticeW = queue.pop(0)
+        for verticeV in verticeW.adjacentVertices:
+            if graph[verticeV].treasure == False and graph[verticeV].strangeBiome != -1 and graph[verticeV].strangeBiome != 0:
+                return verticeV
+            if color[verticeV] == branco:
+                color[verticeV] = cinza
+                father[verticeV] = verticeW.id
+                queue.append(graph[verticeV])
+        color[verticeW.id] = preto

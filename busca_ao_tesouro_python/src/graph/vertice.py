@@ -30,7 +30,7 @@ def draw_edges(graph, surface):
         for neighboring in vertice.adjacentVertices:
             pygame.draw.line(surface, colorPointBlue, vertice.coordinate, graph[neighboring].coordinate, 2)
 
-def action_vertices(graph, nextVertice, person):
+def damage_biome(graph, nextVertice, person):
     biome = graph[nextVertice].strangeBiome
     if biome != -1:
         if biome == 1:
@@ -44,5 +44,6 @@ def action_vertices(graph, nextVertice, person):
         elif biome == 5:
             person.take_damage(17)
 
-            
+    if person.treasure_percentage > person.health:
+        person.treasure_percentage = person.health
     
