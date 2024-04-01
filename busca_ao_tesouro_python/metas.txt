@@ -3,9 +3,9 @@ completa - criar os mostros no mapa
 completa - criar as imagens (mostros)
 
 completa - mostra dados do personagem
-fazer o personagem tomar dano
+completo - fazer o personagem tomar dano
+completo - funções de combate
 
 função savepoint
 função mover mostros
     combate dos monstro
-funções de combate

@@ -71,7 +71,6 @@ def depthFirstSearch(graph, vertice):
 
 def searchVerticalEmpty(graph, vertice):
     color = []
-    father = []
     queue = []
     
     for item in graph:
@@ -88,6 +87,6 @@ def searchVerticalEmpty(graph, vertice):
                 return verticeV
             if color[verticeV] == branco:
                 color[verticeV] = cinza
-                father[verticeV] = verticeW.id
                 queue.append(graph[verticeV])
         color[verticeW.id] = preto
+    return 10

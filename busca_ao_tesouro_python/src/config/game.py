@@ -4,7 +4,7 @@ from pygame.locals import *
 import random
 import copy
 
-from src.graph.search import breadthFirstSearch, depthFirstSearch
+from src.graph.search import breadthFirstSearch, depthFirstSearch, searchVerticalEmpty
 from src.config.button import *
 from src.graph.read import graphRead
 from src.graph.vertice import *
@@ -68,7 +68,7 @@ def nextPosition(personVertice, verticeObjective):
     neighboringList = copy.deepcopy(graph[personVertice].adjacentVertices)
     
     # 20% of being chosen the best vertice
-    porcente = 5/10
+    porcente = 3/10
     luckNumber = random.randint(0, len(neighboringList))
 
     # choosing the next vertice
@@ -144,15 +144,15 @@ def display_default(game, monsters, person):
 def message_end(game, person):
     if game.time > 120:
         txttela = fontesys.render('Game Over, tempo esgotado', 1, (255,255,255))
-        screen.blit(txttela, (225, 280))
+        screen.blit(txttela, (225, 250))
         return 2
     if person.health == 0:
         txttela = fontesys.render('Game Over, muito danano', 1, (255,255,255))
-        screen.blit(txttela, (225, 280))
+        screen.blit(txttela, (225, 250))
         return 2
     if game.statusGame == 2:
         txttela = fontesys.render('Parabéns, fase completa!', 1, (255,255,255))
-        screen.blit(txttela, (225, 280))
+        screen.blit(txttela, (225, 250))
         return 2
     return 0
 
@@ -177,17 +177,7 @@ def display_combat(game, monsters, person):
     elif game.combatRound == 1:
         txttela = fontesys.render('Terceiro turno, escolha combate ou fuga', 1, (255,255,255))
         screen.blit(txttela, (180, 280))
-    elif game.combatRound == 0:
-        txttela = fontesys.render('Terceiro Combate', 1, (255,255,255))
-        screen.blit(txttela, (180, 280))
-        game.combatMenu = False
-        game.combatRound = 3
-        nextVertice = nextPosition(personVertice, game.verticeObjective)
-        step(personVertice, nextVertice)
-        if nextVertice == 3:
-            return 1
-        if game.verticeObjective == 10 and nextVertice == 10:
-            return 2
+
     
     if button_scape.draw(screen):
         person.take_damage(monster.attack_points)
@@ -208,14 +198,50 @@ def display_combat(game, monsters, person):
             return 2
     
     if button_combat.draw(screen):
+        print(len(graph))
         if game.combatRound == 3:
+            person.take_damage(monster.attack_points)
+            monster.take_damage(person.attack)
+            
+            if monster.health_points == 0:
+                monster.health_points = 100
+                monster.vertices = searchVerticalEmpty(graph, graph[random.randint(0, len(graph))])
+                game.combatMenu = False
+                game.combatRound = 3
+            
             game.combatRound = 2
         elif game.combatRound == 2:
+            person.take_damage(monster.attack_points)
+            monster.take_damage(person.attack)
+            
+            if monster.health_points == 0:
+                monster.health_points = 100
+                monster.vertices = searchVerticalEmpty(graph, graph[random.randint(0, len(graph))])
+                game.combatMenu = False
+                game.combatRound = 3
+            
             game.combatRound = 1
         elif game.combatRound == 1:
-            game.combatRound = 0
+            person.take_damage(monster.attack_points)
+            monster.take_damage(person.attack)
+            
+            if monster.health_points == 0:
+                monster.health_points = 100
+                monster.vertices = searchVerticalEmpty(graph, graph[random.randint(0, len(graph)) - 1])
+                game.combatMenu = False
+                game.combatRound = 3
+            
+            game.combatMenu = False
+            game.combatRound = 3
+            nextVertice = nextPosition(personVertice, game.verticeObjective)
+            step(personVertice, nextVertice)        
+            
         print(game.combatRound)
-        
+        nextVertice = nextPosition(personVertice, game.verticeObjective)
+        if nextVertice == 3:
+            return 1
+        if game.verticeObjective == 10 and nextVertice == 10:
+            return 2
 
         print('combat')
         
