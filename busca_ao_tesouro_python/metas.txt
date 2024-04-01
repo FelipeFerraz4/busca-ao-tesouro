@@ -9,3 +9,4 @@ completo - funções de combate
 função savepoint
 função mover mostros
     combate dos monstro
+Armas

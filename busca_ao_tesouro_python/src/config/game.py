@@ -47,6 +47,11 @@ def gameOn(game, person, monsters):
     if game.statusGame > -1:
         res = 0
         
+        personVertice = depthFirstSearch(graph, graph[0])
+        if isMonster(monsters, personVertice):
+            game.combatMenu = True
+            game.startTime = pygame.time.get_ticks()
+        
         if game.combatMenu == False:
             res =  display_default(game, monsters, person)
         else:
@@ -134,10 +139,11 @@ def display_default(game, monsters, person):
             return 2
         game.time += 1
         damage_biome(graph, nextVertice, person)
-        if isMonster(monsters, nextVertice):
-            game.combatMenu = True
-            game.startTime = pygame.time.get_ticks()
+        # if isMonster(monsters, nextVertice):
+        #     game.combatMenu = True
+        #     game.startTime = pygame.time.get_ticks()
         sleep(0.1)
+        moviment_monster(graph, monsters)
         print('next')
     return 0
 
@@ -247,3 +253,53 @@ def display_combat(game, monsters, person):
         
     return 0
     
+def newVerticeMonster(monsters):
+    newVerticeEmpty = False
+    newVertice = 0
+    while newVerticeEmpty == False:
+        newVertice = searchVerticalEmpty(graph, graph[random.randint(0, len(graph) - 1)])
+        count = 0
+        for elementMonster in monsters:
+            if elementMonster.vertices == newVertice:
+                count += 1
+        if count == 0:
+            newVerticeEmpty = True
+    return newVertice
+    
+def moviment_monster(graph, monsters):
+    for item in monsters:
+        vertice = searchVerticalEmpty(graph, graph[random.randint(0, len(graph) - 1)])
+        monsterVertices = []
+        for monster  in monsters:
+            if monster.vertices == vertice:
+                monsterVertices.append(monster)
+        
+        if len(monsterVertices) == 0:
+            item.vertices = vertice
+        elif len(monsterVertices) == 1:
+            monsterEnemy = monsterVertices[0]
+            if monsterEnemy.attack_points >= item.attack_points:
+                item.health_points = 100
+                monsterEnemy.take_damage(item.attack_points)
+                item.vertices = newVerticeMonster(monsters)
+            else:
+                monsterEnemy.health_points = 100
+                item.take_damage(monsterEnemy.attack_points)
+                monsterEnemy.vertices = newVerticeMonster(monsters)
+        else:
+            monsterStrong = monsterVertices[0]
+            monsterWeak = monsterVertices[1]
+            for elementMonster in monsterVertices:
+                if elementMonster.attack_points > monsterStrong.attack_points:
+                    monsterStrong = elementMonster
+                if elementMonster.attack_points < monsterWeak.attack_points:
+                    monsterWeak = elementMonster
+            monsterWeak.health_points = 100
+            monsterWeak.vertices = newVerticeMonster(monsters)
+            monsterStrong.take_damage(monsterWeak.attack_points)
+            for elementMonster in monsterVertices:
+                if elementMonster.index != monsterWeak.index != monsterStrong.index:
+                    elementMonster.take_damage(monsterStrong.attack_points)
+                    if elementMonster.health_points == 0:
+                        elementMonster.health_points = 100
+                    elementMonster.vertices = newVerticeMonster(monsters)

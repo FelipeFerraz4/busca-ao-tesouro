@@ -83,7 +83,7 @@ def searchVerticalEmpty(graph, vertice):
     while len(queue) !=  0:
         verticeW = queue.pop(0)
         for verticeV in verticeW.adjacentVertices:
-            if graph[verticeV].treasure == False and graph[verticeV].strangeBiome != -1 and graph[verticeV].strangeBiome != 0:
+            if graph[verticeV].treasure == False and graph[verticeV].strangeBiome == -1 and graph[verticeV].savePoint == False:
                 return verticeV
             if color[verticeV] == branco:
                 color[verticeV] = cinza
