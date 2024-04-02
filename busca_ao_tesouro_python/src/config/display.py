@@ -7,14 +7,14 @@ from src.graph.informateVertice import draw_informationVetices
 from .draw_info_vertice import *
 from src.character.monster import *
 from src.character.weapon import *
-from .display import *
+from .actionDisplay import *
 
 import pygame
 from time import sleep
 
 screen = createScreen()
 backGround = createBackground()
-graph = graphRead()
+# graph = graphRead()
 
 pygame.font.init()
 fonte = pygame.font.get_default_font()
@@ -28,7 +28,7 @@ button_get = create_button_get()
 button_release = create_button_release()
 button_florest = create_button_florest()
 
-def displayStart(game, monsters, weapons):
+def displayStart(game, monsters, weapons, graph):
     draw_backGround(backGround, screen)
     draw_edges(graph, screen)
     draw_vertices(graph, screen)
@@ -49,45 +49,53 @@ def displayStart(game, monsters, weapons):
     elif game.startTime + 3500 < count_timer:
         game.statusGame =  0
         
-def displayDefault(game, monsters, person, weapons):
-    info_base(game, monsters, person, weapons)
+def displayDefault(game, monsters, person, weapons, graph):
+    info_base(game, monsters, person, weapons, graph)
+    personVertice = depthFirstSearch(graph, graph[0])
+    if personVertice == 3:
+        game.verticeObjective = 10
+        person.get_treasure(graph, personVertice, weapons)
     if button_next.draw(screen):
-        passo(game)
+        next(game, graph, monsters, person, weapons)
         print('next')
         sleep(0.2)
-    if button_florest.draw(screen):
-        print('florest')
+    if person.weapon != None:
+        if button_release.draw(screen):
+            release(game, graph, monsters, person, weapons)
+            print('release weapon')
+    else:
+        if button_florest.draw(screen):
+            print('florest')
         
-def displayEnd(game, monsters, person, weapons):
-    info_base(game, monsters, person, weapons)
+def displayEnd(game, monsters, person, weapons, graph):
+    info_base(game, monsters, person, weapons, graph)
     if button_reset.draw(screen):
-        reset(game)
+        reset(game, graph, monsters, person, weapons)
         print('reset')
     if button_florest.draw(screen):
         print('florest')
         
-def displayCombat(game, monsters, person, weapons):
-    info_base(game, monsters, person, weapons)
+def displayCombat(game, monsters, person, weapons, graph):
+    info_base(game, monsters, person, weapons, graph)
     combat_mensagem(game)
     if button_combat.draw(screen):
-        combat(game)
+        combat(game, graph, monsters, person, weapons)
         print('combat')
     if button_scape.draw(screen):
-        scape(game)
+        scape(game, graph, monsters, person, weapons)
         print('scape')
         
-def displayWeapon(game, monsters, person, weapons):
-    info_base(game, monsters, person, weapons)
+def displayWeapon(game, monsters, person, weapons, graph):
+    info_base(game, monsters, person, weapons, graph)
     if button_next.draw(screen):
-        passo(game)
+        next(game, graph, monsters, person, weapons)
         game.statusGame = 0
         print('next')
     if button_get.draw(screen):
-        get_weapon(game)
+        get_weapon(game, graph, monsters, person, weapons)
         print('weapon')
         
-def info_base(game, monsters, person, weapons):
-    global graph
+def info_base(game, monsters, person, weapons, graph):
     draw_backGround(backGround, screen)
     draw_edges(graph, screen)
     draw_vertices(graph, screen)
@@ -95,10 +103,7 @@ def info_base(game, monsters, person, weapons):
     person.draw_explorer_info(fontesys, screen, weapons)
     txttela = fontesys.render(f'Passos: {game.time}', 1, (255,255,255))
     screen.blit(txttela, (0, 30))
-    
-def reset(game):
-    game.time = 0
-    game.statusGame = -1
+
     
 def combat_mensagem(game):
     if game.combatRound == 3:
@@ -111,25 +116,3 @@ def combat_mensagem(game):
         txttela = fontesys.render('Terceiro turno, escolha combate ou fuga', 1, (255,255,255))
         screen.blit(txttela, (180, 280))
         
-def combat(game):
-    print(game.statusGame)
-    print(game.combatRound)
-    if game.combatRound == 3:
-        game.combatRound -= 1
-    elif game.combatRound == 2:
-        game.combatRound -= 1
-    elif game.combatRound == 1:
-        game.statusGame = 0
-        game.combatRound = 3
-        game.time += 1
-        
-def scape(game):
-    game.time += 1
-    game.statusGame = 0
-    
-def passo(game):
-    game.time += 1
-    
-def get_weapon(game):
-    game.time += 1
-    game.statusGame = 0

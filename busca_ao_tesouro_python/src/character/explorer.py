@@ -58,9 +58,13 @@ class Explorer:
         screen.blit(txttela, (0, 0))
         txttela = fontesys.render(f'Tesouro: {self.treasure_percentage}%', 1, (255,255,255))
         screen.blit(txttela, (270, 0))
+        
+        # print(self.weapon)
         if self.weapon == None:
+            # print('sem arma')
             txttela = fontesys.render(f'Arma: ', 1, (255,255,255))
         else:
+            # print('com arma')
             txttela = fontesys.render(f'Arma: {weapons[self.weapon].name}', 1, (255,255,255))
         screen.blit(txttela, (480, 0))
     

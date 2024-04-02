@@ -40,84 +40,11 @@
         "documentation": {}
     },
     {
-        "label": "pygame",
-        "kind": 6,
+        "label": "*",
+        "importPath": "pygame.locals",
+        "description": "pygame.locals",
         "isExtraImport": true,
-        "importPath": "pygame",
-        "description": "pygame",
-        "detail": "pygame",
-        "documentation": {}
-    },
-    {
-        "label": "mixer",
-        "importPath": "pygame",
-        "description": "pygame",
-        "isExtraImport": true,
-        "detail": "pygame",
-        "documentation": {}
-    },
-    {
-        "label": "depthFirstSearch",
-        "importPath": "src.graph.search",
-        "description": "src.graph.search",
-        "isExtraImport": true,
-        "detail": "src.graph.search",
-        "documentation": {}
-    },
-    {
-        "label": "breadthFirstSearch",
-        "importPath": "src.graph.search",
-        "description": "src.graph.search",
-        "isExtraImport": true,
-        "detail": "src.graph.search",
-        "documentation": {}
-    },
-    {
-        "label": "depthFirstSearch",
-        "importPath": "src.graph.search",
-        "description": "src.graph.search",
-        "isExtraImport": true,
-        "detail": "src.graph.search",
-        "documentation": {}
-    },
-    {
-        "label": "breadthFirstSearch",
-        "importPath": "src.graph.search",
-        "description": "src.graph.search",
-        "isExtraImport": true,
-        "detail": "src.graph.search",
-        "documentation": {}
-    },
-    {
-        "label": "depthFirstSearch",
-        "importPath": "src.graph.search",
-        "description": "src.graph.search",
-        "isExtraImport": true,
-        "detail": "src.graph.search",
-        "documentation": {}
-    },
-    {
-        "label": "depthFirstSearch",
-        "importPath": "src.graph.search",
-        "description": "src.graph.search",
-        "isExtraImport": true,
-        "detail": "src.graph.search",
-        "documentation": {}
-    },
-    {
-        "label": "depthFirstSearch",
-        "importPath": "src.graph.search",
-        "description": "src.graph.search",
-        "isExtraImport": true,
-        "detail": "src.graph.search",
-        "documentation": {}
-    },
-    {
-        "label": "sleep",
-        "importPath": "time",
-        "description": "time",
-        "isExtraImport": true,
-        "detail": "time",
+        "detail": "pygame.locals",
         "documentation": {}
     },
     {
@@ -155,6 +82,150 @@
         "documentation": {}
     },
     {
+        "label": "breadthFirstSearch",
+        "importPath": "src.graph.search",
+        "description": "src.graph.search",
+        "isExtraImport": true,
+        "detail": "src.graph.search",
+        "documentation": {}
+    },
+    {
+        "label": "depthFirstSearch",
+        "importPath": "src.graph.search",
+        "description": "src.graph.search",
+        "isExtraImport": true,
+        "detail": "src.graph.search",
+        "documentation": {}
+    },
+    {
+        "label": "searchVerticalEmpty",
+        "importPath": "src.graph.search",
+        "description": "src.graph.search",
+        "isExtraImport": true,
+        "detail": "src.graph.search",
+        "documentation": {}
+    },
+    {
+        "label": "depthFirstSearch",
+        "importPath": "src.graph.search",
+        "description": "src.graph.search",
+        "isExtraImport": true,
+        "detail": "src.graph.search",
+        "documentation": {}
+    },
+    {
+        "label": "searchVerticalEmpty",
+        "importPath": "src.graph.search",
+        "description": "src.graph.search",
+        "isExtraImport": true,
+        "detail": "src.graph.search",
+        "documentation": {}
+    },
+    {
+        "label": "breadthFirstSearch",
+        "importPath": "src.graph.search",
+        "description": "src.graph.search",
+        "isExtraImport": true,
+        "detail": "src.graph.search",
+        "documentation": {}
+    },
+    {
+        "label": "depthFirstSearch",
+        "importPath": "src.graph.search",
+        "description": "src.graph.search",
+        "isExtraImport": true,
+        "detail": "src.graph.search",
+        "documentation": {}
+    },
+    {
+        "label": "searchVerticalEmpty",
+        "importPath": "src.graph.search",
+        "description": "src.graph.search",
+        "isExtraImport": true,
+        "detail": "src.graph.search",
+        "documentation": {}
+    },
+    {
+        "label": "depthFirstSearch",
+        "importPath": "src.graph.search",
+        "description": "src.graph.search",
+        "isExtraImport": true,
+        "detail": "src.graph.search",
+        "documentation": {}
+    },
+    {
+        "label": "breadthFirstSearch",
+        "importPath": "src.graph.search",
+        "description": "src.graph.search",
+        "isExtraImport": true,
+        "detail": "src.graph.search",
+        "documentation": {}
+    },
+    {
+        "label": "depthFirstSearch",
+        "importPath": "src.graph.search",
+        "description": "src.graph.search",
+        "isExtraImport": true,
+        "detail": "src.graph.search",
+        "documentation": {}
+    },
+    {
+        "label": "searchVerticalEmpty",
+        "importPath": "src.graph.search",
+        "description": "src.graph.search",
+        "isExtraImport": true,
+        "detail": "src.graph.search",
+        "documentation": {}
+    },
+    {
+        "label": "breadthFirstSearch",
+        "importPath": "src.graph.search",
+        "description": "src.graph.search",
+        "isExtraImport": true,
+        "detail": "src.graph.search",
+        "documentation": {}
+    },
+    {
+        "label": "depthFirstSearch",
+        "importPath": "src.graph.search",
+        "description": "src.graph.search",
+        "isExtraImport": true,
+        "detail": "src.graph.search",
+        "documentation": {}
+    },
+    {
+        "label": "depthFirstSearch",
+        "importPath": "src.graph.search",
+        "description": "src.graph.search",
+        "isExtraImport": true,
+        "detail": "src.graph.search",
+        "documentation": {}
+    },
+    {
+        "label": "depthFirstSearch",
+        "importPath": "src.graph.search",
+        "description": "src.graph.search",
+        "isExtraImport": true,
+        "detail": "src.graph.search",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "src.config.button",
+        "description": "src.config.button",
+        "isExtraImport": true,
+        "detail": "src.config.button",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "src.config.button",
+        "description": "src.config.button",
+        "isExtraImport": true,
+        "detail": "src.config.button",
+        "documentation": {}
+    },
+    {
         "label": "*",
         "importPath": "src.config.button",
         "description": "src.config.button",
@@ -184,6 +255,62 @@
         "description": "src.graph.read",
         "isExtraImport": true,
         "detail": "src.graph.read",
+        "documentation": {}
+    },
+    {
+        "label": "graphRead",
+        "importPath": "src.graph.read",
+        "description": "src.graph.read",
+        "isExtraImport": true,
+        "detail": "src.graph.read",
+        "documentation": {}
+    },
+    {
+        "label": "graphRead",
+        "importPath": "src.graph.read",
+        "description": "src.graph.read",
+        "isExtraImport": true,
+        "detail": "src.graph.read",
+        "documentation": {}
+    },
+    {
+        "label": "graphRead",
+        "importPath": "src.graph.read",
+        "description": "src.graph.read",
+        "isExtraImport": true,
+        "detail": "src.graph.read",
+        "documentation": {}
+    },
+    {
+        "label": "graphRead",
+        "importPath": "src.graph.read",
+        "description": "src.graph.read",
+        "isExtraImport": true,
+        "detail": "src.graph.read",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "src.graph.vertice",
+        "description": "src.graph.vertice",
+        "isExtraImport": true,
+        "detail": "src.graph.vertice",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "src.graph.vertice",
+        "description": "src.graph.vertice",
+        "isExtraImport": true,
+        "detail": "src.graph.vertice",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "src.graph.vertice",
+        "description": "src.graph.vertice",
+        "isExtraImport": true,
+        "detail": "src.graph.vertice",
         "documentation": {}
     },
     {
@@ -211,6 +338,38 @@
         "documentation": {}
     },
     {
+        "label": "*",
+        "importPath": "src.config.screen",
+        "description": "src.config.screen",
+        "isExtraImport": true,
+        "detail": "src.config.screen",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "src.config.screen",
+        "description": "src.config.screen",
+        "isExtraImport": true,
+        "detail": "src.config.screen",
+        "documentation": {}
+    },
+    {
+        "label": "draw_informationVetices",
+        "importPath": "src.graph.informateVertice",
+        "description": "src.graph.informateVertice",
+        "isExtraImport": true,
+        "detail": "src.graph.informateVertice",
+        "documentation": {}
+    },
+    {
+        "label": "draw_informationVetices",
+        "importPath": "src.graph.informateVertice",
+        "description": "src.graph.informateVertice",
+        "isExtraImport": true,
+        "detail": "src.graph.informateVertice",
+        "documentation": {}
+    },
+    {
         "label": "draw_informationVetices",
         "importPath": "src.graph.informateVertice",
         "description": "src.graph.informateVertice",
@@ -224,6 +383,135 @@
         "description": "src.character.monster",
         "isExtraImport": true,
         "detail": "src.character.monster",
+        "documentation": {}
+    },
+    {
+        "label": "isMonster",
+        "importPath": "src.character.monster",
+        "description": "src.character.monster",
+        "isExtraImport": true,
+        "detail": "src.character.monster",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "src.character.monster",
+        "description": "src.character.monster",
+        "isExtraImport": true,
+        "detail": "src.character.monster",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "src.character.monster",
+        "description": "src.character.monster",
+        "isExtraImport": true,
+        "detail": "src.character.monster",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "src.character.weapon",
+        "description": "src.character.weapon",
+        "isExtraImport": true,
+        "detail": "src.character.weapon",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "src.character.weapon",
+        "description": "src.character.weapon",
+        "isExtraImport": true,
+        "detail": "src.character.weapon",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "src.character.weapon",
+        "description": "src.character.weapon",
+        "isExtraImport": true,
+        "detail": "src.character.weapon",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "src.character.weapon",
+        "description": "src.character.weapon",
+        "isExtraImport": true,
+        "detail": "src.character.weapon",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "src.config.actionComplement",
+        "description": "src.config.actionComplement",
+        "isExtraImport": true,
+        "detail": "src.config.actionComplement",
+        "documentation": {}
+    },
+    {
+        "label": "graph",
+        "importPath": "src.config.actionComplement",
+        "description": "src.config.actionComplement",
+        "isExtraImport": true,
+        "detail": "src.config.actionComplement",
+        "documentation": {}
+    },
+    {
+        "label": "sleep",
+        "importPath": "time",
+        "description": "time",
+        "isExtraImport": true,
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "sleep",
+        "importPath": "time",
+        "description": "time",
+        "isExtraImport": true,
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "sleep",
+        "importPath": "time",
+        "description": "time",
+        "isExtraImport": true,
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "weaponsRead",
+        "importPath": "src.character.weaponRead",
+        "description": "src.character.weaponRead",
+        "isExtraImport": true,
+        "detail": "src.character.weaponRead",
+        "documentation": {}
+    },
+    {
+        "label": "weaponsRead",
+        "importPath": "src.character.weaponRead",
+        "description": "src.character.weaponRead",
+        "isExtraImport": true,
+        "detail": "src.character.weaponRead",
+        "documentation": {}
+    },
+    {
+        "label": "pygame",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pygame",
+        "description": "pygame",
+        "detail": "pygame",
+        "documentation": {}
+    },
+    {
+        "label": "mixer",
+        "importPath": "pygame",
+        "description": "pygame",
+        "isExtraImport": true,
+        "detail": "pygame",
         "documentation": {}
     },
     {
@@ -279,7 +567,7 @@
         "kind": 6,
         "importPath": "src.character.explorer",
         "description": "src.character.explorer",
-        "peekOfCode": "class Explorer:\n    def __init__(self, max_health=100, max_attack=10):\n        self.max_health = max_health  \n        self.max_attack = max_attack  \n        self.health = max_health      \n        self.attack = max_attack      \n        self.treasure_percentage = 0  \n        self.weapon = None            \n        self.checkpoints_found = []   \n    def attack_enemy(self, enemy, weapon):",
+        "peekOfCode": "class Explorer:\n    def __init__(self, max_health=100, max_attack=10):\n        self.max_health = max_health  \n        self.max_attack = max_attack  \n        self.health = max_health      \n        self.attack = max_attack      \n        self.treasure_percentage = 0  \n        self.weapon = None            \n        self.checkpoints_found = -1\n    def attack_enemy(self, enemy, weapon):",
         "detail": "src.character.explorer",
         "documentation": {}
     },
@@ -288,16 +576,7 @@
         "kind": 6,
         "importPath": "src.character.monster",
         "description": "src.character.monster",
-        "peekOfCode": "class Monster():\n    def __init__(self, position, monster_type, vertices, health_points, attack_points):\n        self.index = position \n        self.type = monster_type\n        self.vertices = vertices\n        self.health_points = health_points\n        self.attack_points = attack_points\ndef take_damage(self, damage):\n    self.health_points -= damage\n    if self.health_points < 0:",
-        "detail": "src.character.monster",
-        "documentation": {}
-    },
-    {
-        "label": "take_damage",
-        "kind": 2,
-        "importPath": "src.character.monster",
-        "description": "src.character.monster",
-        "peekOfCode": "def take_damage(self, damage):\n    self.health_points -= damage\n    if self.health_points < 0:\n        self.healyh_points = 0\ndef isMonster(monsters, vertice):\n    for monster in monsters:\n        if monster.vertices == vertice:\n            return True\n    return False\ndef getMonster(monsters, vertice):",
+        "peekOfCode": "class Monster():\n    def __init__(self, position, monster_type, vertices, health_points, attack_points):\n        self.index = position \n        self.type = monster_type\n        self.vertices = vertices\n        self.health_points = health_points\n        self.attack_points = attack_points\n    def take_damage(self, damage):\n        self.health_points -= damage\n        if self.health_points < 0:",
         "detail": "src.character.monster",
         "documentation": {}
     },
@@ -342,17 +621,215 @@
         "kind": 6,
         "importPath": "src.character.weapon",
         "description": "src.character.weapon",
-        "peekOfCode": "class Weapon:\n    def __init__(self, attack_bonus, treasure_penalty, remaining_usage ):\n        self.attack_bonus = attack_bonus \n        self.treasure_penalty = treasure_penalty  \n        self.remaining_usage = remaining_usage\ndef use_weapon(self):\n        if self.usos_restantes > 0:\n            self.usos_restantes -= 1\n            return self.usos_restantes\n        else:",
+        "peekOfCode": "class Weapon:\n    def __init__(self, index, attack_bonus, vertices, name):\n        self.index = index\n        self.attack_bonus = attack_bonus \n        self.remaining_usage = 3\n        self.vertices = vertices\n        self.name = name\ndef isWeapon(weapons, vertice):\n    for itemWeapon in weapons:\n        if vertice == itemWeapon.vertices:",
         "detail": "src.character.weapon",
         "documentation": {}
     },
     {
-        "label": "use_weapon",
+        "label": "isWeapon",
         "kind": 2,
         "importPath": "src.character.weapon",
         "description": "src.character.weapon",
-        "peekOfCode": "def use_weapon(self):\n        if self.usos_restantes > 0:\n            self.usos_restantes -= 1\n            return self.usos_restantes\n        else:\n            return 0",
+        "peekOfCode": "def isWeapon(weapons, vertice):\n    for itemWeapon in weapons:\n        if vertice == itemWeapon.vertices:\n            return True\n    return False\ndef getWeapon(weapons, vertice):\n    for itemWeapon in weapons:\n        if vertice == itemWeapon.vertices:\n            return itemWeapon.index\n    return 0",
         "detail": "src.character.weapon",
+        "documentation": {}
+    },
+    {
+        "label": "getWeapon",
+        "kind": 2,
+        "importPath": "src.character.weapon",
+        "description": "src.character.weapon",
+        "peekOfCode": "def getWeapon(weapons, vertice):\n    for itemWeapon in weapons:\n        if vertice == itemWeapon.vertices:\n            return itemWeapon.index\n    return 0",
+        "detail": "src.character.weapon",
+        "documentation": {}
+    },
+    {
+        "label": "weaponsRead",
+        "kind": 2,
+        "importPath": "src.character.weaponRead",
+        "description": "src.character.weaponRead",
+        "peekOfCode": "def weaponsRead():\n    weapon = []\n    for element in weapons:\n        weapon.append(Weapon(element[0], element[1], element[2], element[3]))\n    return weapon",
+        "detail": "src.character.weaponRead",
+        "documentation": {}
+    },
+    {
+        "label": "nextPosition",
+        "kind": 2,
+        "importPath": "src.config.actionComplement",
+        "description": "src.config.actionComplement",
+        "peekOfCode": "def nextPosition(personVertice, verticeObjective, graph):\n    # get the best neighbor of the character's current vertice\n    bestNeighboringVertice = breadthFirstSearch(graph, graph[personVertice], graph[verticeObjective])\n    neighboringList = copy.deepcopy(graph[personVertice].adjacentVertices)\n    # 20% of being chosen the best vertice\n    porcente = 5/10\n    luckNumber = random.randint(0, len(neighboringList))\n    # choosing the next vertice\n    neighboringChoice = bestNeighboringVertice\n    if luckNumber > int(len(neighboringList)*porcente):",
+        "detail": "src.config.actionComplement",
+        "documentation": {}
+    },
+    {
+        "label": "newVerticeMonster",
+        "kind": 2,
+        "importPath": "src.config.actionComplement",
+        "description": "src.config.actionComplement",
+        "peekOfCode": "def newVerticeMonster(monsters, weapons):\n    newVerticeEmpty = False\n    newVertice = 0\n    while newVerticeEmpty == False:\n        newVertice = searchVerticalEmpty(graph, graph[random.randint(0, len(graph) - 1)], weapons)\n        count = 0\n        for elementMonster in monsters:\n            if elementMonster.vertices == newVertice:\n                count += 1\n        if count == 0:",
+        "detail": "src.config.actionComplement",
+        "documentation": {}
+    },
+    {
+        "label": "moviment_monster",
+        "kind": 2,
+        "importPath": "src.config.actionComplement",
+        "description": "src.config.actionComplement",
+        "peekOfCode": "def moviment_monster(graph, monsters, weapons):\n    for item in monsters:\n        vertice = searchVerticalEmpty(graph, graph[random.randint(0, len(graph) - 1)], weapons)\n        monsterVertices = []\n        for monster  in monsters:\n            if monster.vertices == vertice:\n                monsterVertices.append(monster)\n        if len(monsterVertices) == 0:\n            item.vertices = vertice\n        elif len(monsterVertices) == 1:",
+        "detail": "src.config.actionComplement",
+        "documentation": {}
+    },
+    {
+        "label": "update_treasure",
+        "kind": 2,
+        "importPath": "src.config.actionComplement",
+        "description": "src.config.actionComplement",
+        "peekOfCode": "def update_treasure(person, weapons):\n    if person.weapon != None:\n        if person.treasure_percentage > (person.health-weapons[person.weapon].attack_bonus):\n            person.treasure_percentage = (person.health-weapons[person.weapon].attack_bonus)\n        if person.treasure_percentage < 0:\n            person.treasure_percentage = 0\n    else:\n        if person.treasure_percentage > person.health:\n            person.treasure_percentage = person.health",
+        "detail": "src.config.actionComplement",
+        "documentation": {}
+    },
+    {
+        "label": "screen",
+        "kind": 5,
+        "importPath": "src.config.actionComplement",
+        "description": "src.config.actionComplement",
+        "peekOfCode": "screen = createScreen()\nbackGround = createBackground()\ngraph = graphRead()\nbutton_reset = create_button_reset()\nbutton_next = create_button_next()\nbutton_scape = create_button_scape()\nbutton_combat = create_button_combat()\nbutton_get = create_button_get()\nbutton_release = create_button_release()\nbutton_florest = create_button_florest()",
+        "detail": "src.config.actionComplement",
+        "documentation": {}
+    },
+    {
+        "label": "backGround",
+        "kind": 5,
+        "importPath": "src.config.actionComplement",
+        "description": "src.config.actionComplement",
+        "peekOfCode": "backGround = createBackground()\ngraph = graphRead()\nbutton_reset = create_button_reset()\nbutton_next = create_button_next()\nbutton_scape = create_button_scape()\nbutton_combat = create_button_combat()\nbutton_get = create_button_get()\nbutton_release = create_button_release()\nbutton_florest = create_button_florest()\ndef nextPosition(personVertice, verticeObjective, graph):",
+        "detail": "src.config.actionComplement",
+        "documentation": {}
+    },
+    {
+        "label": "graph",
+        "kind": 5,
+        "importPath": "src.config.actionComplement",
+        "description": "src.config.actionComplement",
+        "peekOfCode": "graph = graphRead()\nbutton_reset = create_button_reset()\nbutton_next = create_button_next()\nbutton_scape = create_button_scape()\nbutton_combat = create_button_combat()\nbutton_get = create_button_get()\nbutton_release = create_button_release()\nbutton_florest = create_button_florest()\ndef nextPosition(personVertice, verticeObjective, graph):\n    # get the best neighbor of the character's current vertice",
+        "detail": "src.config.actionComplement",
+        "documentation": {}
+    },
+    {
+        "label": "button_reset",
+        "kind": 5,
+        "importPath": "src.config.actionComplement",
+        "description": "src.config.actionComplement",
+        "peekOfCode": "button_reset = create_button_reset()\nbutton_next = create_button_next()\nbutton_scape = create_button_scape()\nbutton_combat = create_button_combat()\nbutton_get = create_button_get()\nbutton_release = create_button_release()\nbutton_florest = create_button_florest()\ndef nextPosition(personVertice, verticeObjective, graph):\n    # get the best neighbor of the character's current vertice\n    bestNeighboringVertice = breadthFirstSearch(graph, graph[personVertice], graph[verticeObjective])",
+        "detail": "src.config.actionComplement",
+        "documentation": {}
+    },
+    {
+        "label": "button_next",
+        "kind": 5,
+        "importPath": "src.config.actionComplement",
+        "description": "src.config.actionComplement",
+        "peekOfCode": "button_next = create_button_next()\nbutton_scape = create_button_scape()\nbutton_combat = create_button_combat()\nbutton_get = create_button_get()\nbutton_release = create_button_release()\nbutton_florest = create_button_florest()\ndef nextPosition(personVertice, verticeObjective, graph):\n    # get the best neighbor of the character's current vertice\n    bestNeighboringVertice = breadthFirstSearch(graph, graph[personVertice], graph[verticeObjective])\n    neighboringList = copy.deepcopy(graph[personVertice].adjacentVertices)",
+        "detail": "src.config.actionComplement",
+        "documentation": {}
+    },
+    {
+        "label": "button_scape",
+        "kind": 5,
+        "importPath": "src.config.actionComplement",
+        "description": "src.config.actionComplement",
+        "peekOfCode": "button_scape = create_button_scape()\nbutton_combat = create_button_combat()\nbutton_get = create_button_get()\nbutton_release = create_button_release()\nbutton_florest = create_button_florest()\ndef nextPosition(personVertice, verticeObjective, graph):\n    # get the best neighbor of the character's current vertice\n    bestNeighboringVertice = breadthFirstSearch(graph, graph[personVertice], graph[verticeObjective])\n    neighboringList = copy.deepcopy(graph[personVertice].adjacentVertices)\n    # 20% of being chosen the best vertice",
+        "detail": "src.config.actionComplement",
+        "documentation": {}
+    },
+    {
+        "label": "button_combat",
+        "kind": 5,
+        "importPath": "src.config.actionComplement",
+        "description": "src.config.actionComplement",
+        "peekOfCode": "button_combat = create_button_combat()\nbutton_get = create_button_get()\nbutton_release = create_button_release()\nbutton_florest = create_button_florest()\ndef nextPosition(personVertice, verticeObjective, graph):\n    # get the best neighbor of the character's current vertice\n    bestNeighboringVertice = breadthFirstSearch(graph, graph[personVertice], graph[verticeObjective])\n    neighboringList = copy.deepcopy(graph[personVertice].adjacentVertices)\n    # 20% of being chosen the best vertice\n    porcente = 5/10",
+        "detail": "src.config.actionComplement",
+        "documentation": {}
+    },
+    {
+        "label": "button_get",
+        "kind": 5,
+        "importPath": "src.config.actionComplement",
+        "description": "src.config.actionComplement",
+        "peekOfCode": "button_get = create_button_get()\nbutton_release = create_button_release()\nbutton_florest = create_button_florest()\ndef nextPosition(personVertice, verticeObjective, graph):\n    # get the best neighbor of the character's current vertice\n    bestNeighboringVertice = breadthFirstSearch(graph, graph[personVertice], graph[verticeObjective])\n    neighboringList = copy.deepcopy(graph[personVertice].adjacentVertices)\n    # 20% of being chosen the best vertice\n    porcente = 5/10\n    luckNumber = random.randint(0, len(neighboringList))",
+        "detail": "src.config.actionComplement",
+        "documentation": {}
+    },
+    {
+        "label": "button_release",
+        "kind": 5,
+        "importPath": "src.config.actionComplement",
+        "description": "src.config.actionComplement",
+        "peekOfCode": "button_release = create_button_release()\nbutton_florest = create_button_florest()\ndef nextPosition(personVertice, verticeObjective, graph):\n    # get the best neighbor of the character's current vertice\n    bestNeighboringVertice = breadthFirstSearch(graph, graph[personVertice], graph[verticeObjective])\n    neighboringList = copy.deepcopy(graph[personVertice].adjacentVertices)\n    # 20% of being chosen the best vertice\n    porcente = 5/10\n    luckNumber = random.randint(0, len(neighboringList))\n    # choosing the next vertice",
+        "detail": "src.config.actionComplement",
+        "documentation": {}
+    },
+    {
+        "label": "button_florest",
+        "kind": 5,
+        "importPath": "src.config.actionComplement",
+        "description": "src.config.actionComplement",
+        "peekOfCode": "button_florest = create_button_florest()\ndef nextPosition(personVertice, verticeObjective, graph):\n    # get the best neighbor of the character's current vertice\n    bestNeighboringVertice = breadthFirstSearch(graph, graph[personVertice], graph[verticeObjective])\n    neighboringList = copy.deepcopy(graph[personVertice].adjacentVertices)\n    # 20% of being chosen the best vertice\n    porcente = 5/10\n    luckNumber = random.randint(0, len(neighboringList))\n    # choosing the next vertice\n    neighboringChoice = bestNeighboringVertice",
+        "detail": "src.config.actionComplement",
+        "documentation": {}
+    },
+    {
+        "label": "reset",
+        "kind": 2,
+        "importPath": "src.config.actionDisplay",
+        "description": "src.config.actionDisplay",
+        "peekOfCode": "def reset(game, graph, monsters, person, weapons):\n    game.time = 0\n    game.verticeObjective = 3\n    game.statusGame = -1\n    person.health = 100\n    person.treasure_percentage = 0\n    person.weapon = None\n    game.end = True\ndef combat(game, graph, monsters, person, weapons):\n    personVertice = depthFirstSearch(graph, graph[0])",
+        "detail": "src.config.actionDisplay",
+        "documentation": {}
+    },
+    {
+        "label": "combat",
+        "kind": 2,
+        "importPath": "src.config.actionDisplay",
+        "description": "src.config.actionDisplay",
+        "peekOfCode": "def combat(game, graph, monsters, person, weapons):\n    personVertice = depthFirstSearch(graph, graph[0])\n    monster = monsters[getMonster(monsters, personVertice)]\n    #dano do monstro na rodada\n    person.take_damage(monster.attack_points, weapons)\n    #atualiza a porcetagem do tesouro\n    update_treasure(person, weapons)\n    #dano do personagem na rodada\n    if person.weapon == None:\n        monster.take_damage(person.attack)",
+        "detail": "src.config.actionDisplay",
+        "documentation": {}
+    },
+    {
+        "label": "scape",
+        "kind": 2,
+        "importPath": "src.config.actionDisplay",
+        "description": "src.config.actionDisplay",
+        "peekOfCode": "def scape(game, graph, monsters, person, weapons):\n    personVertice = depthFirstSearch(graph, graph[0])\n    monster = monsters[getMonster(monsters, personVertice)]\n    # game.time += 1\n    #   Faz o vertice passar\n    game.statusGame = 0\n    # dano da fuga\n    person.take_damage(monster.attack_points, weapons)\n    #atualiza a porcetagem do tesouro\n    update_treasure(person, weapons)",
+        "detail": "src.config.actionDisplay",
+        "documentation": {}
+    },
+    {
+        "label": "next",
+        "kind": 2,
+        "importPath": "src.config.actionDisplay",
+        "description": "src.config.actionDisplay",
+        "peekOfCode": "def next(game, graph, monsters, person, weapons):\n    game.time += 1\n    personVertice = depthFirstSearch(graph, graph[0])\n    nextVertice = nextPosition(personVertice, game.verticeObjective, graph)\n    #change the person's vertice\n    graph[personVertice].person = False\n    graph[nextVertice].person = True\n    #pegar tesouro\n    if personVertice == 3:\n        graph[3].treasure = False",
+        "detail": "src.config.actionDisplay",
+        "documentation": {}
+    },
+    {
+        "label": "get_weapon",
+        "kind": 2,
+        "importPath": "src.config.actionDisplay",
+        "description": "src.config.actionDisplay",
+        "peekOfCode": "def get_weapon(game, graph, monsters, person, weapons):\n    personVertice = depthFirstSearch(graph, graph[0])\n    #pegar a arma\n    weapon = getWeapon(weapons, personVertice)\n    #indexando o vertice a arma\n    if person.weapon != None:\n        weapons[weapon].vertices = personVertice\n    #indexando a arma a pessoa\n    person.weapon = weapon\n    print(person.weapon)",
+        "detail": "src.config.actionDisplay",
+        "documentation": {}
+    },
+    {
+        "label": "release",
+        "kind": 2,
+        "importPath": "src.config.actionDisplay",
+        "description": "src.config.actionDisplay",
+        "peekOfCode": "def release(game, graph, monsters, person, weapons):\n    personVertice = depthFirstSearch(graph, graph[0])\n    #deixando a arma no vertice\n    weapons[person.weapon].vertices = personVertice\n    #retirar a arma do personagem\n    person.weapon = None\n    game.statusGame = 0\n    next(game, graph, monsters, person, weapons)",
+        "detail": "src.config.actionDisplay",
         "documentation": {}
     },
     {
@@ -369,7 +846,7 @@
         "kind": 2,
         "importPath": "src.config.button",
         "description": "src.config.button",
-        "peekOfCode": "def create_button_reset():\n    start_img = pygame.image.load('./src/assets/button_image/reset_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 400, start_img)\ndef create_button_scape():\n    start_img = pygame.image.load('./src/assets/image/scape_button.jpg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 400, start_img)\ndef create_button_next():\n    start_img = pygame.image.load('./src/assets/image/next_button.jpeg')",
+        "peekOfCode": "def create_button_reset():\n    start_img = pygame.image.load('./src/assets/button_image/reset_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 200, start_img)\ndef create_button_scape():\n    start_img = pygame.image.load('./src/assets/image/scape_button.jpg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 400, start_img)\ndef create_button_release():\n    start_img = pygame.image.load('./src/assets/button_image/release_button.jpeg')",
         "detail": "src.config.button",
         "documentation": {}
     },
@@ -378,7 +855,16 @@
         "kind": 2,
         "importPath": "src.config.button",
         "description": "src.config.button",
-        "peekOfCode": "def create_button_scape():\n    start_img = pygame.image.load('./src/assets/image/scape_button.jpg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 400, start_img)\ndef create_button_next():\n    start_img = pygame.image.load('./src/assets/image/next_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 200, start_img)\ndef create_button_combat():\n    start_img = pygame.image.load('./src/assets/image/combat_button.jpg')",
+        "peekOfCode": "def create_button_scape():\n    start_img = pygame.image.load('./src/assets/image/scape_button.jpg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 400, start_img)\ndef create_button_release():\n    start_img = pygame.image.load('./src/assets/button_image/release_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 400, start_img)\ndef create_button_next():\n    start_img = pygame.image.load('./src/assets/image/next_button.jpeg')",
+        "detail": "src.config.button",
+        "documentation": {}
+    },
+    {
+        "label": "create_button_release",
+        "kind": 2,
+        "importPath": "src.config.button",
+        "description": "src.config.button",
+        "peekOfCode": "def create_button_release():\n    start_img = pygame.image.load('./src/assets/button_image/release_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 400, start_img)\ndef create_button_next():\n    start_img = pygame.image.load('./src/assets/image/next_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 200, start_img)\ndef create_button_combat():\n    start_img = pygame.image.load('./src/assets/image/combat_button.jpg')",
         "detail": "src.config.button",
         "documentation": {}
     },
@@ -387,7 +873,7 @@
         "kind": 2,
         "importPath": "src.config.button",
         "description": "src.config.button",
-        "peekOfCode": "def create_button_next():\n    start_img = pygame.image.load('./src/assets/image/next_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 200, start_img)\ndef create_button_combat():\n    start_img = pygame.image.load('./src/assets/image/combat_button.jpg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 200, start_img)",
+        "peekOfCode": "def create_button_next():\n    start_img = pygame.image.load('./src/assets/image/next_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 200, start_img)\ndef create_button_combat():\n    start_img = pygame.image.load('./src/assets/image/combat_button.jpg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 200, start_img)\ndef create_button_get():\n    start_img = pygame.image.load('./src/assets/button_image/get_button.jpeg')",
         "detail": "src.config.button",
         "documentation": {}
     },
@@ -396,7 +882,25 @@
         "kind": 2,
         "importPath": "src.config.button",
         "description": "src.config.button",
-        "peekOfCode": "def create_button_combat():\n    start_img = pygame.image.load('./src/assets/image/combat_button.jpg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 200, start_img)",
+        "peekOfCode": "def create_button_combat():\n    start_img = pygame.image.load('./src/assets/image/combat_button.jpg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 200, start_img)\ndef create_button_get():\n    start_img = pygame.image.load('./src/assets/button_image/get_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 400, start_img)\ndef create_button_florest():\n    start_img = pygame.image.load('./src/assets/button_image/florest_button.jpeg')",
+        "detail": "src.config.button",
+        "documentation": {}
+    },
+    {
+        "label": "create_button_get",
+        "kind": 2,
+        "importPath": "src.config.button",
+        "description": "src.config.button",
+        "peekOfCode": "def create_button_get():\n    start_img = pygame.image.load('./src/assets/button_image/get_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 400, start_img)\ndef create_button_florest():\n    start_img = pygame.image.load('./src/assets/button_image/florest_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 400, start_img)",
+        "detail": "src.config.button",
+        "documentation": {}
+    },
+    {
+        "label": "create_button_florest",
+        "kind": 2,
+        "importPath": "src.config.button",
+        "description": "src.config.button",
+        "peekOfCode": "def create_button_florest():\n    start_img = pygame.image.load('./src/assets/button_image/florest_button.jpeg')\n    start_img = pygame.transform.scale(start_img, (200, 200))\n    return Button(800, 400, start_img)",
         "detail": "src.config.button",
         "documentation": {}
     },
@@ -434,6 +938,168 @@
         "description": "src.config.color",
         "peekOfCode": "colorPointWhite = (255, 255, 255) #branco",
         "detail": "src.config.color",
+        "documentation": {}
+    },
+    {
+        "label": "displayStart",
+        "kind": 2,
+        "importPath": "src.config.display",
+        "description": "src.config.display",
+        "peekOfCode": "def displayStart(game, monsters, weapons, graph):\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_informationVetices(graph, screen, monsters, weapons)\n    if game.statusGame == -1:\n        txttela = fontesys.render('Prepare-se, a ilha está a vista', 1, (255,255,255))\n    elif game.statusGame == -2:\n        txttela = fontesys.render('Desvende segredos ocultos e tesouros.', 1, (255,255,255))\n    elif game.statusGame == -3:",
+        "detail": "src.config.display",
+        "documentation": {}
+    },
+    {
+        "label": "displayDefault",
+        "kind": 2,
+        "importPath": "src.config.display",
+        "description": "src.config.display",
+        "peekOfCode": "def displayDefault(game, monsters, person, weapons, graph):\n    info_base(game, monsters, person, weapons, graph)\n    personVertice = depthFirstSearch(graph, graph[0])\n    if personVertice == 3:\n        game.verticeObjective = 10\n        person.get_treasure(graph, personVertice, weapons)\n    if button_next.draw(screen):\n        next(game, graph, monsters, person, weapons)\n        print('next')\n        sleep(0.2)",
+        "detail": "src.config.display",
+        "documentation": {}
+    },
+    {
+        "label": "displayEnd",
+        "kind": 2,
+        "importPath": "src.config.display",
+        "description": "src.config.display",
+        "peekOfCode": "def displayEnd(game, monsters, person, weapons, graph):\n    info_base(game, monsters, person, weapons, graph)\n    if button_reset.draw(screen):\n        reset(game, graph, monsters, person, weapons)\n        print('reset')\n    if button_florest.draw(screen):\n        print('florest')\ndef displayCombat(game, monsters, person, weapons, graph):\n    info_base(game, monsters, person, weapons, graph)\n    combat_mensagem(game)",
+        "detail": "src.config.display",
+        "documentation": {}
+    },
+    {
+        "label": "displayCombat",
+        "kind": 2,
+        "importPath": "src.config.display",
+        "description": "src.config.display",
+        "peekOfCode": "def displayCombat(game, monsters, person, weapons, graph):\n    info_base(game, monsters, person, weapons, graph)\n    combat_mensagem(game)\n    if button_combat.draw(screen):\n        combat(game, graph, monsters, person, weapons)\n        print('combat')\n    if button_scape.draw(screen):\n        scape(game, graph, monsters, person, weapons)\n        print('scape')\ndef displayWeapon(game, monsters, person, weapons, graph):",
+        "detail": "src.config.display",
+        "documentation": {}
+    },
+    {
+        "label": "displayWeapon",
+        "kind": 2,
+        "importPath": "src.config.display",
+        "description": "src.config.display",
+        "peekOfCode": "def displayWeapon(game, monsters, person, weapons, graph):\n    info_base(game, monsters, person, weapons, graph)\n    if button_next.draw(screen):\n        next(game, graph, monsters, person, weapons)\n        game.statusGame = 0\n        print('next')\n    if button_get.draw(screen):\n        get_weapon(game, graph, monsters, person, weapons)\n        print('weapon')\ndef info_base(game, monsters, person, weapons, graph):",
+        "detail": "src.config.display",
+        "documentation": {}
+    },
+    {
+        "label": "info_base",
+        "kind": 2,
+        "importPath": "src.config.display",
+        "description": "src.config.display",
+        "peekOfCode": "def info_base(game, monsters, person, weapons, graph):\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_informationVetices(graph, screen, monsters, weapons)\n    person.draw_explorer_info(fontesys, screen, weapons)\n    txttela = fontesys.render(f'Passos: {game.time}', 1, (255,255,255))\n    screen.blit(txttela, (0, 30))\ndef combat_mensagem(game):\n    if game.combatRound == 3:",
+        "detail": "src.config.display",
+        "documentation": {}
+    },
+    {
+        "label": "combat_mensagem",
+        "kind": 2,
+        "importPath": "src.config.display",
+        "description": "src.config.display",
+        "peekOfCode": "def combat_mensagem(game):\n    if game.combatRound == 3:\n        txttela = fontesys.render('Monstro, escolha combate ou fuga', 1, (255,255,255))\n        screen.blit(txttela, (180, 280))\n    elif game.combatRound == 2:\n        txttela = fontesys.render('Segundo turno, escolha combate ou fuga', 1, (255,255,255))\n        screen.blit(txttela, (180, 280))\n    elif game.combatRound == 1:\n        txttela = fontesys.render('Terceiro turno, escolha combate ou fuga', 1, (255,255,255))\n        screen.blit(txttela, (180, 280))",
+        "detail": "src.config.display",
+        "documentation": {}
+    },
+    {
+        "label": "screen",
+        "kind": 5,
+        "importPath": "src.config.display",
+        "description": "src.config.display",
+        "peekOfCode": "screen = createScreen()\nbackGround = createBackground()\n# graph = graphRead()\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)\nbutton_reset = create_button_reset()\nbutton_next = create_button_next()\nbutton_scape = create_button_scape()\nbutton_combat = create_button_combat()",
+        "detail": "src.config.display",
+        "documentation": {}
+    },
+    {
+        "label": "backGround",
+        "kind": 5,
+        "importPath": "src.config.display",
+        "description": "src.config.display",
+        "peekOfCode": "backGround = createBackground()\n# graph = graphRead()\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)\nbutton_reset = create_button_reset()\nbutton_next = create_button_next()\nbutton_scape = create_button_scape()\nbutton_combat = create_button_combat()\nbutton_get = create_button_get()",
+        "detail": "src.config.display",
+        "documentation": {}
+    },
+    {
+        "label": "fonte",
+        "kind": 5,
+        "importPath": "src.config.display",
+        "description": "src.config.display",
+        "peekOfCode": "fonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)\nbutton_reset = create_button_reset()\nbutton_next = create_button_next()\nbutton_scape = create_button_scape()\nbutton_combat = create_button_combat()\nbutton_get = create_button_get()\nbutton_release = create_button_release()\nbutton_florest = create_button_florest()\ndef displayStart(game, monsters, weapons, graph):",
+        "detail": "src.config.display",
+        "documentation": {}
+    },
+    {
+        "label": "fontesys",
+        "kind": 5,
+        "importPath": "src.config.display",
+        "description": "src.config.display",
+        "peekOfCode": "fontesys = pygame.font.SysFont(fonte, 40)\nbutton_reset = create_button_reset()\nbutton_next = create_button_next()\nbutton_scape = create_button_scape()\nbutton_combat = create_button_combat()\nbutton_get = create_button_get()\nbutton_release = create_button_release()\nbutton_florest = create_button_florest()\ndef displayStart(game, monsters, weapons, graph):\n    draw_backGround(backGround, screen)",
+        "detail": "src.config.display",
+        "documentation": {}
+    },
+    {
+        "label": "button_reset",
+        "kind": 5,
+        "importPath": "src.config.display",
+        "description": "src.config.display",
+        "peekOfCode": "button_reset = create_button_reset()\nbutton_next = create_button_next()\nbutton_scape = create_button_scape()\nbutton_combat = create_button_combat()\nbutton_get = create_button_get()\nbutton_release = create_button_release()\nbutton_florest = create_button_florest()\ndef displayStart(game, monsters, weapons, graph):\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)",
+        "detail": "src.config.display",
+        "documentation": {}
+    },
+    {
+        "label": "button_next",
+        "kind": 5,
+        "importPath": "src.config.display",
+        "description": "src.config.display",
+        "peekOfCode": "button_next = create_button_next()\nbutton_scape = create_button_scape()\nbutton_combat = create_button_combat()\nbutton_get = create_button_get()\nbutton_release = create_button_release()\nbutton_florest = create_button_florest()\ndef displayStart(game, monsters, weapons, graph):\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)",
+        "detail": "src.config.display",
+        "documentation": {}
+    },
+    {
+        "label": "button_scape",
+        "kind": 5,
+        "importPath": "src.config.display",
+        "description": "src.config.display",
+        "peekOfCode": "button_scape = create_button_scape()\nbutton_combat = create_button_combat()\nbutton_get = create_button_get()\nbutton_release = create_button_release()\nbutton_florest = create_button_florest()\ndef displayStart(game, monsters, weapons, graph):\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_informationVetices(graph, screen, monsters, weapons)",
+        "detail": "src.config.display",
+        "documentation": {}
+    },
+    {
+        "label": "button_combat",
+        "kind": 5,
+        "importPath": "src.config.display",
+        "description": "src.config.display",
+        "peekOfCode": "button_combat = create_button_combat()\nbutton_get = create_button_get()\nbutton_release = create_button_release()\nbutton_florest = create_button_florest()\ndef displayStart(game, monsters, weapons, graph):\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_informationVetices(graph, screen, monsters, weapons)\n    if game.statusGame == -1:",
+        "detail": "src.config.display",
+        "documentation": {}
+    },
+    {
+        "label": "button_get",
+        "kind": 5,
+        "importPath": "src.config.display",
+        "description": "src.config.display",
+        "peekOfCode": "button_get = create_button_get()\nbutton_release = create_button_release()\nbutton_florest = create_button_florest()\ndef displayStart(game, monsters, weapons, graph):\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_informationVetices(graph, screen, monsters, weapons)\n    if game.statusGame == -1:\n        txttela = fontesys.render('Prepare-se, a ilha está a vista', 1, (255,255,255))",
+        "detail": "src.config.display",
+        "documentation": {}
+    },
+    {
+        "label": "button_release",
+        "kind": 5,
+        "importPath": "src.config.display",
+        "description": "src.config.display",
+        "peekOfCode": "button_release = create_button_release()\nbutton_florest = create_button_florest()\ndef displayStart(game, monsters, weapons, graph):\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_informationVetices(graph, screen, monsters, weapons)\n    if game.statusGame == -1:\n        txttela = fontesys.render('Prepare-se, a ilha está a vista', 1, (255,255,255))\n    elif game.statusGame == -2:",
+        "detail": "src.config.display",
+        "documentation": {}
+    },
+    {
+        "label": "button_florest",
+        "kind": 5,
+        "importPath": "src.config.display",
+        "description": "src.config.display",
+        "peekOfCode": "button_florest = create_button_florest()\ndef displayStart(game, monsters, weapons, graph):\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_informationVetices(graph, screen, monsters, weapons)\n    if game.statusGame == -1:\n        txttela = fontesys.render('Prepare-se, a ilha está a vista', 1, (255,255,255))\n    elif game.statusGame == -2:\n        txttela = fontesys.render('Desvende segredos ocultos e tesouros.', 1, (255,255,255))",
+        "detail": "src.config.display",
         "documentation": {}
     },
     {
@@ -540,7 +1206,7 @@
         "kind": 2,
         "importPath": "src.config.draw_info_vertice",
         "description": "src.config.draw_info_vertice",
-        "peekOfCode": "def create_monster_hawk():\n   animal = pygame.image.load('./src/assets/animals-img/hawk.jpeg')\n   animal = pygame.transform.scale(animal, (200, 200))\n   return InfoVertice(800, 0, animal)\ndef create_monster_alligator():\n   animal = pygame.image.load('./src/assets/animals-img/alligator.jpeg')\n   animal = pygame.transform.scale(animal, (200, 200))\n   return InfoVertice(800, 0, animal)",
+        "peekOfCode": "def create_monster_hawk():\n   animal = pygame.image.load('./src/assets/animals-img/hawk.jpeg')\n   animal = pygame.transform.scale(animal, (200, 200))\n   return InfoVertice(800, 0, animal)\ndef create_monster_alligator():\n   animal = pygame.image.load('./src/assets/animals-img/alligator.jpeg')\n   animal = pygame.transform.scale(animal, (200, 200))\n   return InfoVertice(800, 0, animal)\ndef create_weapon_bow():\n   animal = pygame.image.load('./src/assets/weapon/bow.jpeg')",
         "detail": "src.config.draw_info_vertice",
         "documentation": {}
     },
@@ -549,7 +1215,43 @@
         "kind": 2,
         "importPath": "src.config.draw_info_vertice",
         "description": "src.config.draw_info_vertice",
-        "peekOfCode": "def create_monster_alligator():\n   animal = pygame.image.load('./src/assets/animals-img/alligator.jpeg')\n   animal = pygame.transform.scale(animal, (200, 200))\n   return InfoVertice(800, 0, animal)",
+        "peekOfCode": "def create_monster_alligator():\n   animal = pygame.image.load('./src/assets/animals-img/alligator.jpeg')\n   animal = pygame.transform.scale(animal, (200, 200))\n   return InfoVertice(800, 0, animal)\ndef create_weapon_bow():\n   animal = pygame.image.load('./src/assets/weapon/bow.jpeg')\n   animal = pygame.transform.scale(animal, (200, 200))\n   return InfoVertice(800, 0, animal)\ndef create_weapon_dagger():\n   animal = pygame.image.load('./src/assets/weapon/dagger.jpeg')",
+        "detail": "src.config.draw_info_vertice",
+        "documentation": {}
+    },
+    {
+        "label": "create_weapon_bow",
+        "kind": 2,
+        "importPath": "src.config.draw_info_vertice",
+        "description": "src.config.draw_info_vertice",
+        "peekOfCode": "def create_weapon_bow():\n   animal = pygame.image.load('./src/assets/weapon/bow.jpeg')\n   animal = pygame.transform.scale(animal, (200, 200))\n   return InfoVertice(800, 0, animal)\ndef create_weapon_dagger():\n   animal = pygame.image.load('./src/assets/weapon/dagger.jpeg')\n   animal = pygame.transform.scale(animal, (200, 200))\n   return InfoVertice(800, 0, animal)\ndef create_weapon_gun():\n   animal = pygame.image.load('./src/assets/weapon/gun.jpeg')",
+        "detail": "src.config.draw_info_vertice",
+        "documentation": {}
+    },
+    {
+        "label": "create_weapon_dagger",
+        "kind": 2,
+        "importPath": "src.config.draw_info_vertice",
+        "description": "src.config.draw_info_vertice",
+        "peekOfCode": "def create_weapon_dagger():\n   animal = pygame.image.load('./src/assets/weapon/dagger.jpeg')\n   animal = pygame.transform.scale(animal, (200, 200))\n   return InfoVertice(800, 0, animal)\ndef create_weapon_gun():\n   animal = pygame.image.load('./src/assets/weapon/gun.jpeg')\n   animal = pygame.transform.scale(animal, (200, 200))\n   return InfoVertice(800, 0, animal)\ndef create_weapon_sword():\n   animal = pygame.image.load('./src/assets/weapon/sword.jpeg')",
+        "detail": "src.config.draw_info_vertice",
+        "documentation": {}
+    },
+    {
+        "label": "create_weapon_gun",
+        "kind": 2,
+        "importPath": "src.config.draw_info_vertice",
+        "description": "src.config.draw_info_vertice",
+        "peekOfCode": "def create_weapon_gun():\n   animal = pygame.image.load('./src/assets/weapon/gun.jpeg')\n   animal = pygame.transform.scale(animal, (200, 200))\n   return InfoVertice(800, 0, animal)\ndef create_weapon_sword():\n   animal = pygame.image.load('./src/assets/weapon/sword.jpeg')\n   animal = pygame.transform.scale(animal, (200, 200))\n   return InfoVertice(800, 0, animal)",
+        "detail": "src.config.draw_info_vertice",
+        "documentation": {}
+    },
+    {
+        "label": "create_weapon_sword",
+        "kind": 2,
+        "importPath": "src.config.draw_info_vertice",
+        "description": "src.config.draw_info_vertice",
+        "peekOfCode": "def create_weapon_sword():\n   animal = pygame.image.load('./src/assets/weapon/sword.jpeg')\n   animal = pygame.transform.scale(animal, (200, 200))\n   return InfoVertice(800, 0, animal)",
         "detail": "src.config.draw_info_vertice",
         "documentation": {}
     },
@@ -558,7 +1260,7 @@
         "kind": 6,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "class Game():\n    def __init__(\n        self, \n        verticeObjective=3, \n        time=0, \n        startTime=pygame.time.get_ticks(), \n        statusGame=-1, \n        end=False,\n        combatMenu=False,\n        ):",
+        "peekOfCode": "class Game():\n    def __init__(\n        self, \n        verticeObjective=3, \n        time=0, \n        startTime=pygame.time.get_ticks(), \n        statusGame=-1, \n        end=False,\n        combatMenu=False,\n        weaponMenu=False",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -567,43 +1269,7 @@
         "kind": 2,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "def gameOn(game, person, monsters):\n    if game.statusGame > -1:\n        res = 0\n        if game.combatMenu == False:\n            res =  display_default(game, monsters, person)\n        else:\n            res = display_combat(game, monsters, person)\n        if res != 0:\n            return res\n        if message_end(game, person) == 2:",
-        "detail": "src.config.game",
-        "documentation": {}
-    },
-    {
-        "label": "nextPosition",
-        "kind": 2,
-        "importPath": "src.config.game",
-        "description": "src.config.game",
-        "peekOfCode": "def nextPosition(personVertice, verticeObjective):\n    # get the best neighbor of the character's current vertice\n    bestNeighboringVertice = breadthFirstSearch(graph, graph[personVertice], graph[verticeObjective])\n    neighboringList = copy.deepcopy(graph[personVertice].adjacentVertices)\n    # 20% of being chosen the best vertice\n    porcente = 5/10\n    luckNumber = random.randint(0, len(neighboringList))\n    # choosing the next vertice\n    neighboringChoice = bestNeighboringVertice\n    if luckNumber > int(len(neighboringList)*porcente):",
-        "detail": "src.config.game",
-        "documentation": {}
-    },
-    {
-        "label": "step",
-        "kind": 2,
-        "importPath": "src.config.game",
-        "description": "src.config.game",
-        "peekOfCode": "def step(personVertice, nextVertice):\n    #change the person's vertice\n    graph[personVertice].person = False\n    graph[nextVertice].person = True\ndef startMessage(statusGame, startTime, monsters):\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_informationVetices(graph, screen, monsters)\n    if statusGame == -1:",
-        "detail": "src.config.game",
-        "documentation": {}
-    },
-    {
-        "label": "startMessage",
-        "kind": 2,
-        "importPath": "src.config.game",
-        "description": "src.config.game",
-        "peekOfCode": "def startMessage(statusGame, startTime, monsters):\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_informationVetices(graph, screen, monsters)\n    if statusGame == -1:\n        txttela = fontesys.render('Prepare-se, a ilha está a vista', 1, (255,255,255))\n    elif statusGame == -2:\n        txttela = fontesys.render('Desvende segredos ocultos e tesouros.', 1, (255,255,255))\n    elif statusGame == -3:",
-        "detail": "src.config.game",
-        "documentation": {}
-    },
-    {
-        "label": "display_default",
-        "kind": 2,
-        "importPath": "src.config.game",
-        "description": "src.config.game",
-        "peekOfCode": "def display_default(game, monsters, person):\n    global graph\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_informationVetices(graph, screen, monsters)\n    person.draw_explorer_info(fontesys, screen)\n    personVertice = depthFirstSearch(graph, graph[0])\n    person.get_treasure(graph, personVertice)\n    if button_reset.draw(screen):",
+        "peekOfCode": "def gameOn(game, person, monsters, weapons, graph):\n    # update_display(game, person, monsters, weapons, graph)\n    if game.statusGame == 0:\n        displayDefault(game, monsters, person, weapons, graph)\n    elif game.statusGame == 3:\n        displayEnd(game, monsters, person, weapons, graph)\n    elif game.statusGame == 1:\n        displayCombat(game, monsters, person, weapons, graph)\n    elif game.statusGame == 2:\n        displayWeapon(game, monsters, person, weapons, graph)",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -612,16 +1278,7 @@
         "kind": 2,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "def message_end(game, person):\n    if game.time > 120:\n        txttela = fontesys.render('Game Over, tempo esgotado', 1, (255,255,255))\n        screen.blit(txttela, (225, 280))\n        return 2\n    if person.health == 0:\n        txttela = fontesys.render('Game Over, muito danano', 1, (255,255,255))\n        screen.blit(txttela, (225, 280))\n        return 2\n    if game.statusGame == 2:",
-        "detail": "src.config.game",
-        "documentation": {}
-    },
-    {
-        "label": "display_combat",
-        "kind": 2,
-        "importPath": "src.config.game",
-        "description": "src.config.game",
-        "peekOfCode": "def display_combat(game, monsters, person):\n    global graph\n    draw_backGround(backGround, screen)\n    draw_edges(graph, screen)\n    draw_vertices(graph, screen)\n    draw_informationVetices(graph, screen, monsters)\n    person.draw_explorer_info(fontesys, screen)\n    personVertice = depthFirstSearch(graph, graph[0])\n    monster = monsters[getMonster(monsters, personVertice)]\n    if game.combatRound == 3:",
+        "peekOfCode": "def message_end(game, person, graph):\n    personVertice = depthFirstSearch(graph, graph[0])\n    # nextVertice = nextPosition(personVertice, game.verticeObjective, graph)\n    if game.time > 120:\n        txttela = fontesys.render('Game Over, tempo esgotado', 1, (255,255,255))\n        screen.blit(txttela, (225, 250))\n        game.statusGame = 3\n    if person.health == 0 and person.checkpoints_found == -1:\n        txttela = fontesys.render('Game Over, muito danano', 1, (255,255,255))\n        screen.blit(txttela, (225, 250))",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -630,7 +1287,7 @@
         "kind": 5,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "screen = createScreen()\nbackGround = createBackground()\ngraph = graphRead()\nbutton_reset = create_button_reset()\nbutton_next = create_button_next()\nbutton_scape = create_button_scape()\nbutton_combat = create_button_combat()\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)",
+        "peekOfCode": "screen = createScreen()\nbackGround = createBackground()\nbutton_reset = create_button_reset()\nbutton_next = create_button_next()\nbutton_scape = create_button_scape()\nbutton_combat = create_button_combat()\nbutton_get = create_button_get()\nbutton_release = create_button_release()\nbutton_florest = create_button_florest()\npygame.font.init()",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -639,16 +1296,7 @@
         "kind": 5,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "backGround = createBackground()\ngraph = graphRead()\nbutton_reset = create_button_reset()\nbutton_next = create_button_next()\nbutton_scape = create_button_scape()\nbutton_combat = create_button_combat()\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)\nclass Game():",
-        "detail": "src.config.game",
-        "documentation": {}
-    },
-    {
-        "label": "graph",
-        "kind": 5,
-        "importPath": "src.config.game",
-        "description": "src.config.game",
-        "peekOfCode": "graph = graphRead()\nbutton_reset = create_button_reset()\nbutton_next = create_button_next()\nbutton_scape = create_button_scape()\nbutton_combat = create_button_combat()\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)\nclass Game():\n    def __init__(",
+        "peekOfCode": "backGround = createBackground()\nbutton_reset = create_button_reset()\nbutton_next = create_button_next()\nbutton_scape = create_button_scape()\nbutton_combat = create_button_combat()\nbutton_get = create_button_get()\nbutton_release = create_button_release()\nbutton_florest = create_button_florest()\npygame.font.init()\nfonte = pygame.font.get_default_font()",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -657,7 +1305,7 @@
         "kind": 5,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "button_reset = create_button_reset()\nbutton_next = create_button_next()\nbutton_scape = create_button_scape()\nbutton_combat = create_button_combat()\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)\nclass Game():\n    def __init__(\n        self, ",
+        "peekOfCode": "button_reset = create_button_reset()\nbutton_next = create_button_next()\nbutton_scape = create_button_scape()\nbutton_combat = create_button_combat()\nbutton_get = create_button_get()\nbutton_release = create_button_release()\nbutton_florest = create_button_florest()\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -666,7 +1314,7 @@
         "kind": 5,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "button_next = create_button_next()\nbutton_scape = create_button_scape()\nbutton_combat = create_button_combat()\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)\nclass Game():\n    def __init__(\n        self, \n        verticeObjective=3, ",
+        "peekOfCode": "button_next = create_button_next()\nbutton_scape = create_button_scape()\nbutton_combat = create_button_combat()\nbutton_get = create_button_get()\nbutton_release = create_button_release()\nbutton_florest = create_button_florest()\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)\nclass Game():",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -675,7 +1323,7 @@
         "kind": 5,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "button_scape = create_button_scape()\nbutton_combat = create_button_combat()\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)\nclass Game():\n    def __init__(\n        self, \n        verticeObjective=3, \n        time=0, ",
+        "peekOfCode": "button_scape = create_button_scape()\nbutton_combat = create_button_combat()\nbutton_get = create_button_get()\nbutton_release = create_button_release()\nbutton_florest = create_button_florest()\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)\nclass Game():\n    def __init__(",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -684,7 +1332,34 @@
         "kind": 5,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "button_combat = create_button_combat()\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)\nclass Game():\n    def __init__(\n        self, \n        verticeObjective=3, \n        time=0, \n        startTime=pygame.time.get_ticks(), ",
+        "peekOfCode": "button_combat = create_button_combat()\nbutton_get = create_button_get()\nbutton_release = create_button_release()\nbutton_florest = create_button_florest()\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)\nclass Game():\n    def __init__(\n        self, ",
+        "detail": "src.config.game",
+        "documentation": {}
+    },
+    {
+        "label": "button_get",
+        "kind": 5,
+        "importPath": "src.config.game",
+        "description": "src.config.game",
+        "peekOfCode": "button_get = create_button_get()\nbutton_release = create_button_release()\nbutton_florest = create_button_florest()\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)\nclass Game():\n    def __init__(\n        self, \n        verticeObjective=3, ",
+        "detail": "src.config.game",
+        "documentation": {}
+    },
+    {
+        "label": "button_release",
+        "kind": 5,
+        "importPath": "src.config.game",
+        "description": "src.config.game",
+        "peekOfCode": "button_release = create_button_release()\nbutton_florest = create_button_florest()\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)\nclass Game():\n    def __init__(\n        self, \n        verticeObjective=3, \n        time=0, ",
+        "detail": "src.config.game",
+        "documentation": {}
+    },
+    {
+        "label": "button_florest",
+        "kind": 5,
+        "importPath": "src.config.game",
+        "description": "src.config.game",
+        "peekOfCode": "button_florest = create_button_florest()\npygame.font.init()\nfonte = pygame.font.get_default_font()\nfontesys = pygame.font.SysFont(fonte, 40)\nclass Game():\n    def __init__(\n        self, \n        verticeObjective=3, \n        time=0, \n        startTime=pygame.time.get_ticks(), ",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -765,7 +1440,7 @@
         "kind": 2,
         "importPath": "src.graph.informateVertice",
         "description": "src.graph.informateVertice",
-        "peekOfCode": "def draw_informationVetices(graph, surface, monster):\n    personVertice = depthFirstSearch(graph, graph[0])\n    monsters = -1\n    for item in monster:\n        if item.vertices == personVertice:\n            monsters = item.index\n    biomeType = graph[personVertice].strangeBiome\n    if monsters != -1 and monster[monsters].type == 'hawk':\n        info = create_monster_hawk()\n    elif monsters != -1 and monster[monsters].type == 'ant':",
+        "peekOfCode": "def draw_informationVetices(graph, surface, monster, weapons):\n    personVertice = depthFirstSearch(graph, graph[0])\n    monsters = -1\n    for item in monster:\n        if item.vertices == personVertice:\n            monsters = item.index\n    weapon = -1\n    for itemWeapon in weapons:\n        if itemWeapon.vertices == personVertice:\n            weapon = itemWeapon.index",
         "detail": "src.graph.informateVertice",
         "documentation": {}
     },
@@ -801,7 +1476,7 @@
         "kind": 2,
         "importPath": "src.graph.search",
         "description": "src.graph.search",
-        "peekOfCode": "def depthFirstSearch(graph, vertice):\n    color = []\n    for item in graph:\n        color.append(branco)\n    return visit(graph, vertice, color)\ndef searchVerticalEmpty(graph, vertice):\n    color = []\n    father = []\n    queue = []\n    for item in graph:",
+        "peekOfCode": "def depthFirstSearch(graph, vertice):\n    color = []\n    for item in graph:\n        color.append(branco)\n    return visit(graph, vertice, color)\ndef searchVerticalEmpty(graph, vertice, weapons):\n    color = []\n    queue = []\n    for item in graph:\n        color.append(branco)",
         "detail": "src.graph.search",
         "documentation": {}
     },
@@ -810,7 +1485,7 @@
         "kind": 2,
         "importPath": "src.graph.search",
         "description": "src.graph.search",
-        "peekOfCode": "def searchVerticalEmpty(graph, vertice):\n    color = []\n    father = []\n    queue = []\n    for item in graph:\n        color.append(branco)\n    color[vertice.id] = cinza\n    queue.append(vertice)\n    while len(queue) !=  0:\n        verticeW = queue.pop(0)",
+        "peekOfCode": "def searchVerticalEmpty(graph, vertice, weapons):\n    color = []\n    queue = []\n    for item in graph:\n        color.append(branco)\n    color[vertice.id] = cinza\n    queue.append(vertice)\n    while len(queue) !=  0:\n        verticeW = queue.pop(0)\n        for verticeV in verticeW.adjacentVertices:",
         "detail": "src.graph.search",
         "documentation": {}
     },
@@ -864,7 +1539,7 @@
         "kind": 2,
         "importPath": "src.graph.vertice",
         "description": "src.graph.vertice",
-        "peekOfCode": "def draw_edges(graph, surface):\n    for vertice in graph:\n        for neighboring in vertice.adjacentVertices:\n            pygame.draw.line(surface, colorPointBlue, vertice.coordinate, graph[neighboring].coordinate, 2)\ndef damage_biome(graph, nextVertice, person):\n    biome = graph[nextVertice].strangeBiome\n    if biome != -1:\n        if biome == 1:\n            person.take_damage(10)\n        elif biome == 2:",
+        "peekOfCode": "def draw_edges(graph, surface):\n    for vertice in graph:\n        for neighboring in vertice.adjacentVertices:\n            pygame.draw.line(surface, colorPointBlue, vertice.coordinate, graph[neighboring].coordinate, 2)\ndef damage_biome(graph, nextVertice, person, weapons):\n    biome = graph[nextVertice].strangeBiome\n    if biome != -1:\n        if biome == 1:\n            person.take_damage(10, weapons)\n        elif biome == 2:",
         "detail": "src.graph.vertice",
         "documentation": {}
     },
@@ -873,7 +1548,25 @@
         "kind": 2,
         "importPath": "src.graph.vertice",
         "description": "src.graph.vertice",
-        "peekOfCode": "def damage_biome(graph, nextVertice, person):\n    biome = graph[nextVertice].strangeBiome\n    if biome != -1:\n        if biome == 1:\n            person.take_damage(10)\n        elif biome == 2:\n            person.heal()\n        elif biome == 3:\n            person.take_damage(15)\n        elif biome == 4:",
+        "peekOfCode": "def damage_biome(graph, nextVertice, person, weapons):\n    biome = graph[nextVertice].strangeBiome\n    if biome != -1:\n        if biome == 1:\n            person.take_damage(10, weapons)\n        elif biome == 2:\n            person.heal()\n        elif biome == 3:\n            person.take_damage(15, weapons)\n        elif biome == 4:",
+        "detail": "src.graph.vertice",
+        "documentation": {}
+    },
+    {
+        "label": "isSavePoint",
+        "kind": 2,
+        "importPath": "src.graph.vertice",
+        "description": "src.graph.vertice",
+        "peekOfCode": "def isSavePoint(graph, personVertice):\n    if graph[personVertice].savePoint:\n        return True\n    return False\ndef resurrect(person, graph, personVertice, weapons):\n    person.health = 100\n    graph[personVertice].person = False\n    graph[person.checkpoints_found].person = True\n    if person.weapon != None:\n        weapons[person.weapon].vertices = personVertice",
+        "detail": "src.graph.vertice",
+        "documentation": {}
+    },
+    {
+        "label": "resurrect",
+        "kind": 2,
+        "importPath": "src.graph.vertice",
+        "description": "src.graph.vertice",
+        "peekOfCode": "def resurrect(person, graph, personVertice, weapons):\n    person.health = 100\n    graph[personVertice].person = False\n    graph[person.checkpoints_found].person = True\n    if person.weapon != None:\n        weapons[person.weapon].vertices = personVertice\n        person.weapon = None",
         "detail": "src.graph.vertice",
         "documentation": {}
     },
@@ -882,7 +1575,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "run = True\n#statusGame code 0 - continue, 1 - change goal, 2 - finish game, 3 - reset \ngame = Game()\n# verticeObjective = 3\n# end = False\n# statusGame = -1\n# startTime = pygame.time.get_ticks()\nperson = Explorer()\nmonsters = monsterRead()\nwhile run:",
+        "peekOfCode": "run = True\n#statusGame code 0 - continue, 1 - change goal, 2 - finish game, 3 - reset \ngame = Game()\nperson = Explorer()\nmonsters = monsterRead()\nweapon = weaponsRead()\ngraph = graphRead()\nwhile run:\n    gameOn(game, person, monsters, weapon, graph)\n    if game.end == True:",
         "detail": "main",
         "documentation": {}
     },
@@ -891,7 +1584,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "game = Game()\n# verticeObjective = 3\n# end = False\n# statusGame = -1\n# startTime = pygame.time.get_ticks()\nperson = Explorer()\nmonsters = monsterRead()\nwhile run:\n    game.statusGame = gameOn(game, person, monsters)\n    if game.statusGame == 1:",
+        "peekOfCode": "game = Game()\nperson = Explorer()\nmonsters = monsterRead()\nweapon = weaponsRead()\ngraph = graphRead()\nwhile run:\n    gameOn(game, person, monsters, weapon, graph)\n    if game.end == True:\n        weapon = weaponsRead()\n        graph = graphRead()",
         "detail": "main",
         "documentation": {}
     },
@@ -900,7 +1593,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "person = Explorer()\nmonsters = monsterRead()\nwhile run:\n    game.statusGame = gameOn(game, person, monsters)\n    if game.statusGame == 1:\n        game.verticeObjective = 10\n        print('Change Goal')\n    if game.statusGame == 2:\n        game.end = True\n    if game.statusGame == 3:",
+        "peekOfCode": "person = Explorer()\nmonsters = monsterRead()\nweapon = weaponsRead()\ngraph = graphRead()\nwhile run:\n    gameOn(game, person, monsters, weapon, graph)\n    if game.end == True:\n        weapon = weaponsRead()\n        graph = graphRead()\n        monsters = monsterRead()",
         "detail": "main",
         "documentation": {}
     },
@@ -909,7 +1602,25 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "monsters = monsterRead()\nwhile run:\n    game.statusGame = gameOn(game, person, monsters)\n    if game.statusGame == 1:\n        game.verticeObjective = 10\n        print('Change Goal')\n    if game.statusGame == 2:\n        game.end = True\n    if game.statusGame == 3:\n        game.verticeObjective = 3",
+        "peekOfCode": "monsters = monsterRead()\nweapon = weaponsRead()\ngraph = graphRead()\nwhile run:\n    gameOn(game, person, monsters, weapon, graph)\n    if game.end == True:\n        weapon = weaponsRead()\n        graph = graphRead()\n        monsters = monsterRead()\n        person = Explorer()",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "weapon",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "weapon = weaponsRead()\ngraph = graphRead()\nwhile run:\n    gameOn(game, person, monsters, weapon, graph)\n    if game.end == True:\n        weapon = weaponsRead()\n        graph = graphRead()\n        monsters = monsterRead()\n        person = Explorer()\n        game = Game()",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "graph",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "graph = graphRead()\nwhile run:\n    gameOn(game, person, monsters, weapon, graph)\n    if game.end == True:\n        weapon = weaponsRead()\n        graph = graphRead()\n        monsters = monsterRead()\n        person = Explorer()\n        game = Game()\n    pygame.display.update()",
         "detail": "main",
         "documentation": {}
     }
