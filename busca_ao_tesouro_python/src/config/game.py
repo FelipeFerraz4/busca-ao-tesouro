@@ -90,6 +90,8 @@ def nextPosition(personVertice, verticeObjective):
     # choosing the next vertice
     neighboringChoice = bestNeighboringVertice
     
+    print(bestNeighboringVertice)
+    print(neighboringList)
     if luckNumber > int(len(neighboringList)*porcente):
         neighboringList.remove(bestNeighboringVertice)
         numberChoice = random.randint(0, len(neighboringList) - 1)
@@ -139,7 +141,12 @@ def display_default(game, monsters, person, weapons):
     
     # if button_release.draw(screen):
     #     pass
-    if person.weapon != None:
+    if game.end == True:
+        if button_reset.draw(screen):
+            graph = graphRead()
+            sleep(0.1)
+            return 3
+    elif person.weapon != None:
         if button_release.draw(screen):
             weapons[person.weapon].vertices = personVertice
             person.weapon = None
@@ -151,15 +158,10 @@ def display_default(game, monsters, person, weapons):
             if game.verticeObjective == 10 and nextVertice == 10:
                 return 2
             game.time += 1
-            damage_biome(graph, nextVertice, person)
+            damage_biome(graph, nextVertice, person, weapons)
             moviment_monster(graph, monsters, weapons)
             sleep(0.2)
             
-    if game.end == True:
-        if button_reset.draw(screen):
-            graph = graphRead()
-            sleep(0.1)
-            return 3
     if button_next.draw(screen) and game.end == False:
         nextVertice = nextPosition(personVertice, game.verticeObjective)
         step(personVertice, nextVertice)
@@ -170,7 +172,7 @@ def display_default(game, monsters, person, weapons):
         if game.verticeObjective == 10 and nextVertice == 10:
             return 2
         game.time += 1
-        damage_biome(graph, nextVertice, person)
+        damage_biome(graph, nextVertice, person, weapons)
         sleep(0.2)
         moviment_monster(graph, monsters, weapons)
         print('next')
@@ -215,7 +217,7 @@ def display_combat(game, monsters, person, weapons):
 
     
     if button_scape.draw(screen):
-        person.take_damage(monster.attack_points)
+        person.take_damage(monster.attack_points, weapons)
         update_treasure(person, weapons)
             
         game.combatMenu = False
@@ -233,7 +235,7 @@ def display_combat(game, monsters, person, weapons):
     
     if button_combat.draw(screen):
         if game.combatRound == 3:
-            person.take_damage(monster.attack_points)
+            person.take_damage(monster.attack_points, weapons)
             update_treasure(person, weapons)
             print(monster.health_points, end=' ')
             if person.weapon == None:
@@ -251,7 +253,7 @@ def display_combat(game, monsters, person, weapons):
             
             game.combatRound = 2
         elif game.combatRound == 2:
-            person.take_damage(monster.attack_points)
+            person.take_damage(monster.attack_points, weapons)
             update_treasure(person, weapons)
             print(monster.health_points, end=' ')
             if person.weapon == None:
@@ -268,7 +270,7 @@ def display_combat(game, monsters, person, weapons):
             
             game.combatRound = 1
         elif game.combatRound == 1:
-            person.take_damage(monster.attack_points)
+            person.take_damage(monster.attack_points, weapons)
             update_treasure(person, weapons)
             print(monster.health_points, end=' ')
             if person.weapon == None:
@@ -374,7 +376,7 @@ def display_weapon(game, monsters, person, weapons):
         if game.verticeObjective == 10 and nextVertice == 10:
             return 2
         game.time += 1
-        damage_biome(graph, nextVertice, person)
+        damage_biome(graph, nextVertice, person, weapons)
         moviment_monster(graph, monsters, weapons)
         sleep(0.3)
         # return 3
@@ -389,7 +391,7 @@ def display_weapon(game, monsters, person, weapons):
         if game.verticeObjective == 10 and nextVertice == 10:
             return 2
         game.time += 1
-        damage_biome(graph, nextVertice, person)
+        damage_biome(graph, nextVertice, person, weapons)
         sleep(0.2)
         moviment_monster(graph, monsters, weapons)
         print('next')

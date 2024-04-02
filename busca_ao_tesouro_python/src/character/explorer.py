@@ -17,11 +17,18 @@ class Explorer:
             damage = self.attack
         enemy.take_damage(damage)
 
-    def take_damage(self, damage):
-       
+    def take_damage(self, damage, weapons):
         self.health -= damage
         if self.health < 0:
             self.health = 0
+        if self.weapon != None:
+            if self.treasure_percentage > (self.health-weapons[self.weapon].attack_bonus):
+                self.treasure_percentage = (self.health-weapons[self.weapon].attack_bonus)
+            if self.treasure_percentage < 0:
+                self.treasure_percentage = 0
+        else:
+            if self.treasure_percentage > self.health:
+                self.treasure_percentage = self.health
 
     def heal(self):
         self.health += 20 #pontos fixos do bioma de chá
