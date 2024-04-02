@@ -18,22 +18,23 @@ monsters = monsterRead()
 weapon = weaponsRead()
 
 while run:
-    game.statusGame = gameOn(game, person, monsters, weapon)
-    if game.statusGame == 1:
-        game.verticeObjective = 10
-        print('Change Goal')
-    if game.statusGame == 2:
-        game.end = True
-    if game.statusGame == 3:
-        game.verticeObjective = 3
-        game.end = False
-        game.statusGame = -1
-        game.startTime = pygame.time.get_ticks()
-        game.time = 0
-        person.health = 100
-        person.treasure_percentage = 0
-        weapon = weaponsRead()
-        person.weapon = None
+    gameOn(game, person, monsters, weapon)
+    
+    # if game.statusGame == 1:
+    #     game.verticeObjective = 10
+    #     print('Change Goal')
+    # if game.statusGame == 2:
+    #     game.end = True
+    # if game.statusGame == 3:
+    #     game.verticeObjective = 3
+    #     game.end = False
+    #     game.statusGame = -1
+    #     game.startTime = pygame.time.get_ticks()
+    #     game.time = 0
+    #     person.health = 100
+    #     person.treasure_percentage = 0
+    #     weapon = weaponsRead()
+    #     person.weapon = None
     
     pygame.display.update()
     

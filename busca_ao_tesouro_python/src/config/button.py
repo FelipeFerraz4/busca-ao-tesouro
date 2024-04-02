@@ -25,7 +25,7 @@ class Button():
 def create_button_reset():
     start_img = pygame.image.load('./src/assets/button_image/reset_button.jpeg')
     start_img = pygame.transform.scale(start_img, (200, 200))
-    return Button(800, 400, start_img)
+    return Button(800, 200, start_img)
 
 def create_button_scape():
     start_img = pygame.image.load('./src/assets/image/scape_button.jpg')
@@ -49,6 +49,11 @@ def create_button_combat():
 
 def create_button_get():
     start_img = pygame.image.load('./src/assets/button_image/get_button.jpeg')
+    start_img = pygame.transform.scale(start_img, (200, 200))
+    return Button(800, 400, start_img)
+
+def create_button_florest():
+    start_img = pygame.image.load('./src/assets/button_image/florest_button.jpeg')
     start_img = pygame.transform.scale(start_img, (200, 200))
     return Button(800, 400, start_img)
 
