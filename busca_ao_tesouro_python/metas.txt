@@ -10,4 +10,3 @@ completa - combate dos monstro
 completa - Armas
 
 completa - função savepoint
-                verificar morte bioma
