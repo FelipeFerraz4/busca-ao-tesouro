@@ -364,6 +364,7 @@ def display_weapon(game, monsters, person, weapons):
             weapons[weapon].vertices = personVertice
         person.weapon = weapon
         weapons[weapon].vertices = -1
+        update_treasure(person, weapons)
         game.weaponMenu = False
         print('get weapon')
         nextVertice = nextPosition(personVertice, game.verticeObjective)

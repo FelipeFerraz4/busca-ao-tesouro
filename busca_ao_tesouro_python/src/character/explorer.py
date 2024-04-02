@@ -62,3 +62,5 @@ class Explorer:
             self.treasure_percentage = self.health
             if self.weapon != None:
                 self.treasure_percentage -= weapons[self.weapon].attack_bonus
+            if self.treasure_percentage < 0:
+                self.treasure_percentage = 0
