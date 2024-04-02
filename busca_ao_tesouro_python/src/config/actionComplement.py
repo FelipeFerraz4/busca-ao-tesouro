@@ -31,7 +31,7 @@ def nextPosition(personVertice, verticeObjective, graph):
     neighboringList = copy.deepcopy(graph[personVertice].adjacentVertices)
     
     # 20% of being chosen the best vertice
-    porcente = 5/10
+    porcente = 3/10
     luckNumber = random.randint(0, len(neighboringList))
 
     # choosing the next vertice

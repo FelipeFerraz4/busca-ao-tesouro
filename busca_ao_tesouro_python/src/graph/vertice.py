@@ -30,7 +30,7 @@ def draw_edges(graph, surface):
         for neighboring in vertice.adjacentVertices:
             pygame.draw.line(surface, colorPointBlue, vertice.coordinate, graph[neighboring].coordinate, 2)
 
-def damage_biome(graph, nextVertice, person, weapons):
+def damage_biome(graph, nextVertice, person, weapons, personVertice):
     biome = graph[nextVertice].strangeBiome
     if biome != -1:
         if biome == 1:
@@ -46,6 +46,18 @@ def damage_biome(graph, nextVertice, person, weapons):
 
     if person.treasure_percentage > person.health:
         person.treasure_percentage = person.health
+        
+    if person.health == 0 and person.checkpoints_found != -1:
+        person.health = 100
+        graph[personVertice].person = False
+        graph[person.checkpoints_found] = True
+        person.weapon = None
+        if person.treasure_percentage > 0:
+            graph[3] = True
+            person.treasure_percentage = 0
+        if person.weapon != None:
+            weapons[person.weapon].vertices = personVertice
+            person.weapon = None
     
 def isSavePoint(graph, personVertice):
     if graph[personVertice].savePoint:

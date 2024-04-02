@@ -657,7 +657,7 @@
         "kind": 2,
         "importPath": "src.config.actionComplement",
         "description": "src.config.actionComplement",
-        "peekOfCode": "def nextPosition(personVertice, verticeObjective, graph):\n    # get the best neighbor of the character's current vertice\n    bestNeighboringVertice = breadthFirstSearch(graph, graph[personVertice], graph[verticeObjective])\n    neighboringList = copy.deepcopy(graph[personVertice].adjacentVertices)\n    # 20% of being chosen the best vertice\n    porcente = 5/10\n    luckNumber = random.randint(0, len(neighboringList))\n    # choosing the next vertice\n    neighboringChoice = bestNeighboringVertice\n    if luckNumber > int(len(neighboringList)*porcente):",
+        "peekOfCode": "def nextPosition(personVertice, verticeObjective, graph):\n    # get the best neighbor of the character's current vertice\n    bestNeighboringVertice = breadthFirstSearch(graph, graph[personVertice], graph[verticeObjective])\n    neighboringList = copy.deepcopy(graph[personVertice].adjacentVertices)\n    # 20% of being chosen the best vertice\n    porcente = 3/10\n    luckNumber = random.randint(0, len(neighboringList))\n    # choosing the next vertice\n    neighboringChoice = bestNeighboringVertice\n    if luckNumber > int(len(neighboringList)*porcente):",
         "detail": "src.config.actionComplement",
         "documentation": {}
     },
@@ -747,7 +747,7 @@
         "kind": 5,
         "importPath": "src.config.actionComplement",
         "description": "src.config.actionComplement",
-        "peekOfCode": "button_combat = create_button_combat()\nbutton_get = create_button_get()\nbutton_release = create_button_release()\nbutton_florest = create_button_florest()\ndef nextPosition(personVertice, verticeObjective, graph):\n    # get the best neighbor of the character's current vertice\n    bestNeighboringVertice = breadthFirstSearch(graph, graph[personVertice], graph[verticeObjective])\n    neighboringList = copy.deepcopy(graph[personVertice].adjacentVertices)\n    # 20% of being chosen the best vertice\n    porcente = 5/10",
+        "peekOfCode": "button_combat = create_button_combat()\nbutton_get = create_button_get()\nbutton_release = create_button_release()\nbutton_florest = create_button_florest()\ndef nextPosition(personVertice, verticeObjective, graph):\n    # get the best neighbor of the character's current vertice\n    bestNeighboringVertice = breadthFirstSearch(graph, graph[personVertice], graph[verticeObjective])\n    neighboringList = copy.deepcopy(graph[personVertice].adjacentVertices)\n    # 20% of being chosen the best vertice\n    porcente = 3/10",
         "detail": "src.config.actionComplement",
         "documentation": {}
     },
@@ -756,7 +756,7 @@
         "kind": 5,
         "importPath": "src.config.actionComplement",
         "description": "src.config.actionComplement",
-        "peekOfCode": "button_get = create_button_get()\nbutton_release = create_button_release()\nbutton_florest = create_button_florest()\ndef nextPosition(personVertice, verticeObjective, graph):\n    # get the best neighbor of the character's current vertice\n    bestNeighboringVertice = breadthFirstSearch(graph, graph[personVertice], graph[verticeObjective])\n    neighboringList = copy.deepcopy(graph[personVertice].adjacentVertices)\n    # 20% of being chosen the best vertice\n    porcente = 5/10\n    luckNumber = random.randint(0, len(neighboringList))",
+        "peekOfCode": "button_get = create_button_get()\nbutton_release = create_button_release()\nbutton_florest = create_button_florest()\ndef nextPosition(personVertice, verticeObjective, graph):\n    # get the best neighbor of the character's current vertice\n    bestNeighboringVertice = breadthFirstSearch(graph, graph[personVertice], graph[verticeObjective])\n    neighboringList = copy.deepcopy(graph[personVertice].adjacentVertices)\n    # 20% of being chosen the best vertice\n    porcente = 3/10\n    luckNumber = random.randint(0, len(neighboringList))",
         "detail": "src.config.actionComplement",
         "documentation": {}
     },
@@ -765,7 +765,7 @@
         "kind": 5,
         "importPath": "src.config.actionComplement",
         "description": "src.config.actionComplement",
-        "peekOfCode": "button_release = create_button_release()\nbutton_florest = create_button_florest()\ndef nextPosition(personVertice, verticeObjective, graph):\n    # get the best neighbor of the character's current vertice\n    bestNeighboringVertice = breadthFirstSearch(graph, graph[personVertice], graph[verticeObjective])\n    neighboringList = copy.deepcopy(graph[personVertice].adjacentVertices)\n    # 20% of being chosen the best vertice\n    porcente = 5/10\n    luckNumber = random.randint(0, len(neighboringList))\n    # choosing the next vertice",
+        "peekOfCode": "button_release = create_button_release()\nbutton_florest = create_button_florest()\ndef nextPosition(personVertice, verticeObjective, graph):\n    # get the best neighbor of the character's current vertice\n    bestNeighboringVertice = breadthFirstSearch(graph, graph[personVertice], graph[verticeObjective])\n    neighboringList = copy.deepcopy(graph[personVertice].adjacentVertices)\n    # 20% of being chosen the best vertice\n    porcente = 3/10\n    luckNumber = random.randint(0, len(neighboringList))\n    # choosing the next vertice",
         "detail": "src.config.actionComplement",
         "documentation": {}
     },
@@ -774,7 +774,7 @@
         "kind": 5,
         "importPath": "src.config.actionComplement",
         "description": "src.config.actionComplement",
-        "peekOfCode": "button_florest = create_button_florest()\ndef nextPosition(personVertice, verticeObjective, graph):\n    # get the best neighbor of the character's current vertice\n    bestNeighboringVertice = breadthFirstSearch(graph, graph[personVertice], graph[verticeObjective])\n    neighboringList = copy.deepcopy(graph[personVertice].adjacentVertices)\n    # 20% of being chosen the best vertice\n    porcente = 5/10\n    luckNumber = random.randint(0, len(neighboringList))\n    # choosing the next vertice\n    neighboringChoice = bestNeighboringVertice",
+        "peekOfCode": "button_florest = create_button_florest()\ndef nextPosition(personVertice, verticeObjective, graph):\n    # get the best neighbor of the character's current vertice\n    bestNeighboringVertice = breadthFirstSearch(graph, graph[personVertice], graph[verticeObjective])\n    neighboringList = copy.deepcopy(graph[personVertice].adjacentVertices)\n    # 20% of being chosen the best vertice\n    porcente = 3/10\n    luckNumber = random.randint(0, len(neighboringList))\n    # choosing the next vertice\n    neighboringChoice = bestNeighboringVertice",
         "detail": "src.config.actionComplement",
         "documentation": {}
     },
@@ -792,7 +792,7 @@
         "kind": 2,
         "importPath": "src.config.actionDisplay",
         "description": "src.config.actionDisplay",
-        "peekOfCode": "def combat(game, graph, monsters, person, weapons):\n    personVertice = depthFirstSearch(graph, graph[0])\n    monster = monsters[getMonster(monsters, personVertice)]\n    #dano do monstro na rodada\n    person.take_damage(monster.attack_points, weapons)\n    #atualiza a porcetagem do tesouro\n    update_treasure(person, weapons)\n    #dano do personagem na rodada\n    if person.weapon == None:\n        monster.take_damage(person.attack)",
+        "peekOfCode": "def combat(game, graph, monsters, person, weapons):\n    personVertice = depthFirstSearch(graph, graph[0])\n    monster = monsters[getMonster(monsters, personVertice)]\n    #dano do monstro na rodada\n    person.take_damage(monster.attack_points, weapons)\n    #atualiza a porcetagem do tesouro\n    update_treasure(person, weapons)\n    #verifica se o personagem morreu\n    if person.health == 0 and person.checkpoints_found != -1:\n        person.health = 100",
         "detail": "src.config.actionDisplay",
         "documentation": {}
     },
@@ -1278,7 +1278,7 @@
         "kind": 2,
         "importPath": "src.config.game",
         "description": "src.config.game",
-        "peekOfCode": "def message_end(game, person, graph):\n    personVertice = depthFirstSearch(graph, graph[0])\n    # nextVertice = nextPosition(personVertice, game.verticeObjective, graph)\n    if game.time > 120:\n        txttela = fontesys.render('Game Over, tempo esgotado', 1, (255,255,255))\n        screen.blit(txttela, (225, 250))\n        game.statusGame = 3\n    if person.health == 0 and person.checkpoints_found == -1:\n        txttela = fontesys.render('Game Over, muito danano', 1, (255,255,255))\n        screen.blit(txttela, (225, 250))",
+        "peekOfCode": "def message_end(game, person, graph):\n    personVertice = depthFirstSearch(graph, graph[0])\n    if game.time > 120:\n        txttela = fontesys.render('Game Over, tempo esgotado', 1, (255,255,255))\n        screen.blit(txttela, (225, 250))\n        game.statusGame = 3\n    if person.health == 0 and person.checkpoints_found == -1:\n        txttela = fontesys.render('Game Over, muito danano', 1, (255,255,255))\n        screen.blit(txttela, (225, 250))\n        game.statusGame = 3",
         "detail": "src.config.game",
         "documentation": {}
     },
@@ -1539,7 +1539,7 @@
         "kind": 2,
         "importPath": "src.graph.vertice",
         "description": "src.graph.vertice",
-        "peekOfCode": "def draw_edges(graph, surface):\n    for vertice in graph:\n        for neighboring in vertice.adjacentVertices:\n            pygame.draw.line(surface, colorPointBlue, vertice.coordinate, graph[neighboring].coordinate, 2)\ndef damage_biome(graph, nextVertice, person, weapons):\n    biome = graph[nextVertice].strangeBiome\n    if biome != -1:\n        if biome == 1:\n            person.take_damage(10, weapons)\n        elif biome == 2:",
+        "peekOfCode": "def draw_edges(graph, surface):\n    for vertice in graph:\n        for neighboring in vertice.adjacentVertices:\n            pygame.draw.line(surface, colorPointBlue, vertice.coordinate, graph[neighboring].coordinate, 2)\ndef damage_biome(graph, nextVertice, person, weapons, personVertice):\n    biome = graph[nextVertice].strangeBiome\n    if biome != -1:\n        if biome == 1:\n            person.take_damage(10, weapons)\n        elif biome == 2:",
         "detail": "src.graph.vertice",
         "documentation": {}
     },
@@ -1548,7 +1548,7 @@
         "kind": 2,
         "importPath": "src.graph.vertice",
         "description": "src.graph.vertice",
-        "peekOfCode": "def damage_biome(graph, nextVertice, person, weapons):\n    biome = graph[nextVertice].strangeBiome\n    if biome != -1:\n        if biome == 1:\n            person.take_damage(10, weapons)\n        elif biome == 2:\n            person.heal()\n        elif biome == 3:\n            person.take_damage(15, weapons)\n        elif biome == 4:",
+        "peekOfCode": "def damage_biome(graph, nextVertice, person, weapons, personVertice):\n    biome = graph[nextVertice].strangeBiome\n    if biome != -1:\n        if biome == 1:\n            person.take_damage(10, weapons)\n        elif biome == 2:\n            person.heal()\n        elif biome == 3:\n            person.take_damage(15, weapons)\n        elif biome == 4:",
         "detail": "src.graph.vertice",
         "documentation": {}
     },

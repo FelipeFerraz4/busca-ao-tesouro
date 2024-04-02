@@ -25,6 +25,19 @@ def combat(game, graph, monsters, person, weapons):
     #atualiza a porcetagem do tesouro
     update_treasure(person, weapons)
     
+    #verifica se o personagem morreu
+    if person.health == 0 and person.checkpoints_found != -1:
+        person.health = 100
+        graph[personVertice].person = False
+        graph[person.checkpoints_found].person = True
+        person.weapon = None
+        if person.treasure_percentage > 0:
+            graph[3] = True
+            person.treasure_percentage = 0
+        if person.weapon != None:
+            weapons[person.weapon].vertices = personVertice
+            person.weapon = None
+    
     #dano do personagem na rodada
     if person.weapon == None:
         monster.take_damage(person.attack)
@@ -82,13 +95,17 @@ def next(game, graph, monsters, person, weapons):
     moviment_monster(graph, monsters, weapons)
     
     # dano do bioma
-    damage_biome(graph, nextVertice, person, weapons)
+    damage_biome(graph, nextVertice, person, weapons, personVertice)
     
     if isMonster(monsters, nextVertice):
         game.statusGame = 1
         
     if isWeapon(weapons, nextVertice):
         game.statusGame = 2
+    
+    if isSavePoint(graph, personVertice):
+        person.checkpoints_found = personVertice
+        graph[personVertice].savePoint = False
         
     
 def get_weapon(game, graph, monsters, person, weapons):
