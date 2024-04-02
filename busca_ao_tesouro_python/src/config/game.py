@@ -135,10 +135,31 @@ def display_default(game, monsters, person, weapons):
     
     person.get_treasure(graph, personVertice, weapons)
     
-    if button_reset.draw(screen):
-        graph = graphRead()
-        sleep(0.1)
-        return 3
+    
+    
+    # if button_release.draw(screen):
+    #     pass
+    if person.weapon != None:
+        if button_release.draw(screen):
+            weapons[person.weapon].vertices = personVertice
+            person.weapon = None
+            
+            nextVertice = nextPosition(personVertice, game.verticeObjective)
+            step(personVertice, nextVertice)
+            if nextVertice == 3:
+                return 1
+            if game.verticeObjective == 10 and nextVertice == 10:
+                return 2
+            game.time += 1
+            damage_biome(graph, nextVertice, person)
+            moviment_monster(graph, monsters, weapons)
+            sleep(0.2)
+            
+    if game.end == True:
+        if button_reset.draw(screen):
+            graph = graphRead()
+            sleep(0.1)
+            return 3
     if button_next.draw(screen) and game.end == False:
         nextVertice = nextPosition(personVertice, game.verticeObjective)
         step(personVertice, nextVertice)
@@ -150,9 +171,6 @@ def display_default(game, monsters, person, weapons):
             return 2
         game.time += 1
         damage_biome(graph, nextVertice, person)
-        # if isMonster(monsters, nextVertice):
-        #     game.combatMenu = True
-        #     game.startTime = pygame.time.get_ticks()
         sleep(0.2)
         moviment_monster(graph, monsters, weapons)
         print('next')
