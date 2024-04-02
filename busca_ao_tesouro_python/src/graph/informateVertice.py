@@ -1,13 +1,21 @@
 from src.graph.search import depthFirstSearch
 from src.config.draw_info_vertice import *
 
-def draw_informationVetices(graph, surface, monster):
+def draw_informationVetices(graph, surface, monster, weapons):
     personVertice = depthFirstSearch(graph, graph[0])
+    
     monsters = -1
     for item in monster:
         if item.vertices == personVertice:
             monsters = item.index
+    
+    weapon = -1
+    for itemWeapon in weapons:
+        if itemWeapon.vertices == personVertice:
+            weapon = itemWeapon.index
+        
     biomeType = graph[personVertice].strangeBiome
+    
     if monsters != -1 and monster[monsters].type == 'hawk':
         info = create_monster_hawk()
     elif monsters != -1 and monster[monsters].type == 'ant':
@@ -16,6 +24,15 @@ def draw_informationVetices(graph, surface, monster):
         info = create_monster_jaguar()
     elif monsters != -1 and monster[monsters].type == 'alligator':
         info = create_monster_alligator()
+    elif weapon != -1:
+        if weapon == 0:
+            info = create_weapon_bow()
+        elif weapon == 1:
+            info = create_weapon_dagger()
+        elif weapon == 2:
+            info = create_weapon_gun()
+        elif weapon == 3:
+            info = create_weapon_sword()
     elif biomeType == 0:
         info = create_biome_0()
     elif biomeType == 1:

@@ -32,6 +32,11 @@ def create_button_scape():
     start_img = pygame.transform.scale(start_img, (200, 200))
     return Button(800, 400, start_img)
 
+def create_button_release():
+    start_img = pygame.image.load('./src/assets/button_image/release_button.jpeg')
+    start_img = pygame.transform.scale(start_img, (200, 200))
+    return Button(800, 400, start_img)
+
 def create_button_next():
     start_img = pygame.image.load('./src/assets/image/next_button.jpeg')
     start_img = pygame.transform.scale(start_img, (200, 200))
@@ -41,3 +46,9 @@ def create_button_combat():
     start_img = pygame.image.load('./src/assets/image/combat_button.jpg')
     start_img = pygame.transform.scale(start_img, (200, 200))
     return Button(800, 200, start_img)
+
+def create_button_get():
+    start_img = pygame.image.load('./src/assets/button_image/get_button.jpeg')
+    start_img = pygame.transform.scale(start_img, (200, 200))
+    return Button(800, 400, start_img)
+

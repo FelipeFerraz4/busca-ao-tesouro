@@ -46,14 +46,19 @@ class Explorer:
        
         self.weapon = None
 
-    def draw_explorer_info(self, fontesys, screen):
+    def draw_explorer_info(self, fontesys, screen, weapons):
         txttela = fontesys.render(f'Ponto de vida: {self.health}', 1, (255,255,255))
         screen.blit(txttela, (0, 0))
         txttela = fontesys.render(f'Tesouro: {self.treasure_percentage}%', 1, (255,255,255))
         screen.blit(txttela, (270, 0))
-        txttela = fontesys.render(f'Arma: {self.weapon}', 1, (255,255,255))
+        if self.weapon == None:
+            txttela = fontesys.render(f'Arma: ', 1, (255,255,255))
+        else:
+            txttela = fontesys.render(f'Arma: {weapons[self.weapon].name}', 1, (255,255,255))
         screen.blit(txttela, (480, 0))
     
-    def get_treasure(self, graph, vertice):
+    def get_treasure(self, graph, vertice, weapons):
         if graph[vertice].treasure:
             self.treasure_percentage = self.health
+            if self.weapon != None:
+                self.treasure_percentage -= weapons[self.weapon].attack_bonus

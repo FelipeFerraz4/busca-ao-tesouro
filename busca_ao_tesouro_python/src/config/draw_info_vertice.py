@@ -69,3 +69,23 @@ def create_monster_alligator():
    animal = pygame.image.load('./src/assets/animals-img/alligator.jpeg')
    animal = pygame.transform.scale(animal, (200, 200))
    return InfoVertice(800, 0, animal)
+
+def create_weapon_bow():
+   animal = pygame.image.load('./src/assets/weapon/bow.jpeg')
+   animal = pygame.transform.scale(animal, (200, 200))
+   return InfoVertice(800, 0, animal)
+
+def create_weapon_dagger():
+   animal = pygame.image.load('./src/assets/weapon/dagger.jpeg')
+   animal = pygame.transform.scale(animal, (200, 200))
+   return InfoVertice(800, 0, animal)
+
+def create_weapon_gun():
+   animal = pygame.image.load('./src/assets/weapon/gun.jpeg')
+   animal = pygame.transform.scale(animal, (200, 200))
+   return InfoVertice(800, 0, animal)
+
+def create_weapon_sword():
+   animal = pygame.image.load('./src/assets/weapon/sword.jpeg')
+   animal = pygame.transform.scale(animal, (200, 200))
+   return InfoVertice(800, 0, animal)

@@ -1,13 +1,19 @@
 class Weapon:
-    def __init__(self, attack_bonus, treasure_penalty, remaining_usage ):
+    def __init__(self, index, attack_bonus, vertices, name):
+        self.index = index
         self.attack_bonus = attack_bonus 
-        self.treasure_penalty = treasure_penalty  
-        self.remaining_usage = remaining_usage
+        self.remaining_usage = 3
+        self.vertices = vertices
+        self.name = name
 
-def use_weapon(self):
-        
-        if self.usos_restantes > 0:
-            self.usos_restantes -= 1
-            return self.usos_restantes
-        else:
-            return 0
+def isWeapon(weapons, vertice):
+    for itemWeapon in weapons:
+        if vertice == itemWeapon.vertices:
+            return True
+    return False
+
+def getWeapon(weapons, vertice):
+    for itemWeapon in weapons:
+        if vertice == itemWeapon.vertices:
+            return itemWeapon.index
+    return 0

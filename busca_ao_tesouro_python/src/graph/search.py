@@ -1,6 +1,6 @@
 from queue import Empty, Queue
 # from main import graph
-
+from src.character.weapon import *
 branco = 0
 cinza = 1
 preto = 2
@@ -69,7 +69,7 @@ def depthFirstSearch(graph, vertice):
         color.append(branco)
     return visit(graph, vertice, color)
 
-def searchVerticalEmpty(graph, vertice):
+def searchVerticalEmpty(graph, vertice, weapons):
     color = []
     queue = []
     
@@ -83,7 +83,7 @@ def searchVerticalEmpty(graph, vertice):
     while len(queue) !=  0:
         verticeW = queue.pop(0)
         for verticeV in verticeW.adjacentVertices:
-            if graph[verticeV].treasure == False and graph[verticeV].strangeBiome == -1 and graph[verticeV].savePoint == False:
+            if graph[verticeV].treasure == False and graph[verticeV].strangeBiome == -1 and graph[verticeV].savePoint == False and isWeapon(weapons, verticeV) == False:
                 return verticeV
             if color[verticeV] == branco:
                 color[verticeV] = cinza

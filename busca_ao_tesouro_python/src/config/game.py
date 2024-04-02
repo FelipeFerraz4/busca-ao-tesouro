@@ -12,14 +12,18 @@ from src.config.screen import *
 from src.graph.informateVertice import draw_informationVetices
 from .draw_info_vertice import *
 from src.character.monster import *
+from src.character.weapon import *
 
 screen = createScreen()
 backGround = createBackground()
 graph = graphRead()
+
 button_reset = create_button_reset()
 button_next = create_button_next()
 button_scape = create_button_scape()
 button_combat = create_button_combat()
+button_get = create_button_get()
+button_release = create_button_release()
 
 pygame.font.init()
 fonte = pygame.font.get_default_font()
@@ -34,6 +38,7 @@ class Game():
         statusGame=-1, 
         end=False,
         combatMenu=False,
+        weaponMenu=False
         ):
       self.verticeObjective = verticeObjective
       self.time = time
@@ -42,8 +47,9 @@ class Game():
       self.end = end
       self.combatMenu = combatMenu
       self.combatRound = 3
+      self.weaponMenu = weaponMenu
 
-def gameOn(game, person, monsters):
+def gameOn(game, person, monsters, weapons):
     if game.statusGame > -1:
         res = 0
         
@@ -51,11 +57,16 @@ def gameOn(game, person, monsters):
         if isMonster(monsters, personVertice):
             game.combatMenu = True
             game.startTime = pygame.time.get_ticks()
+            
+        if isWeapon(weapons, personVertice):
+            game.weaponMenu = True
         
-        if game.combatMenu == False:
-            res =  display_default(game, monsters, person)
+        if game.combatMenu == False and game.weaponMenu == False:
+            res =  display_default(game, monsters, person, weapons)
+        elif game.combatMenu == False and game.weaponMenu == True:
+            res = display_weapon(game, monsters, person, weapons)
         else:
-            res = display_combat(game, monsters, person)
+            res = display_combat(game, monsters, person, weapons)
         
         if res != 0:
             return res
@@ -64,7 +75,7 @@ def gameOn(game, person, monsters):
             return 2
         return 0
     else:
-        return startMessage(game.statusGame, game.startTime, monsters)
+        return startMessage(game.statusGame, game.startTime, monsters, weapons)
     
 
 def nextPosition(personVertice, verticeObjective):
@@ -73,7 +84,7 @@ def nextPosition(personVertice, verticeObjective):
     neighboringList = copy.deepcopy(graph[personVertice].adjacentVertices)
     
     # 20% of being chosen the best vertice
-    porcente = 3/10
+    porcente = 5/10
     luckNumber = random.randint(0, len(neighboringList))
 
     # choosing the next vertice
@@ -91,11 +102,11 @@ def step(personVertice, nextVertice):
     graph[personVertice].person = False
     graph[nextVertice].person = True
     
-def startMessage(statusGame, startTime, monsters):
+def startMessage(statusGame, startTime, monsters, weapons):
     draw_backGround(backGround, screen)
     draw_edges(graph, screen)
     draw_vertices(graph, screen)
-    draw_informationVetices(graph, screen, monsters)
+    draw_informationVetices(graph, screen, monsters, weapons)
     
     if statusGame == -1:
         txttela = fontesys.render('Prepare-se, a ilha está a vista', 1, (255,255,255))
@@ -113,16 +124,16 @@ def startMessage(statusGame, startTime, monsters):
         return 0
     return -1
 
-def display_default(game, monsters, person):
+def display_default(game, monsters, person, weapons):
     global graph
     draw_backGround(backGround, screen)
     draw_edges(graph, screen)
     draw_vertices(graph, screen)
-    draw_informationVetices(graph, screen, monsters)
-    person.draw_explorer_info(fontesys, screen)
+    draw_informationVetices(graph, screen, monsters, weapons)
+    person.draw_explorer_info(fontesys, screen, weapons)
     personVertice = depthFirstSearch(graph, graph[0])
     
-    person.get_treasure(graph, personVertice)
+    person.get_treasure(graph, personVertice, weapons)
     
     if button_reset.draw(screen):
         graph = graphRead()
@@ -142,8 +153,8 @@ def display_default(game, monsters, person):
         # if isMonster(monsters, nextVertice):
         #     game.combatMenu = True
         #     game.startTime = pygame.time.get_ticks()
-        sleep(0.1)
-        moviment_monster(graph, monsters)
+        sleep(0.2)
+        moviment_monster(graph, monsters, weapons)
         print('next')
     return 0
 
@@ -163,13 +174,13 @@ def message_end(game, person):
     return 0
 
 
-def display_combat(game, monsters, person):
+def display_combat(game, monsters, person, weapons):
     global graph
     draw_backGround(backGround, screen)
     draw_edges(graph, screen)
     draw_vertices(graph, screen)
-    draw_informationVetices(graph, screen, monsters)
-    person.draw_explorer_info(fontesys, screen)
+    draw_informationVetices(graph, screen, monsters, weapons)
+    person.draw_explorer_info(fontesys, screen, weapons)
     
     personVertice = depthFirstSearch(graph, graph[0])
     monster = monsters[getMonster(monsters, personVertice)]
@@ -187,15 +198,14 @@ def display_combat(game, monsters, person):
     
     if button_scape.draw(screen):
         person.take_damage(monster.attack_points)
-        if person.treasure_percentage > person.health:
-            person.treasure_percentage = person.health
+        update_treasure(person, weapons)
             
         game.combatMenu = False
         game.combatRound = 3
         
         nextVertice = nextPosition(personVertice, game.verticeObjective)
         step(personVertice, nextVertice)
-        sleep(0.2)
+        sleep(0.3)
         print('scape')
         
         if nextVertice == 3:
@@ -204,36 +214,54 @@ def display_combat(game, monsters, person):
             return 2
     
     if button_combat.draw(screen):
-        print(len(graph))
         if game.combatRound == 3:
             person.take_damage(monster.attack_points)
-            monster.take_damage(person.attack)
+            update_treasure(person, weapons)
+            print(monster.health_points, end=' ')
+            if person.weapon == None:
+                monster.take_damage(person.attack)
+            else:
+                monster.take_damage(person.attack + weapons[person.weapon].attack_bonus)
+            print(monster.health_points)
+            
             
             if monster.health_points == 0:
                 monster.health_points = 100
-                monster.vertices = searchVerticalEmpty(graph, graph[random.randint(0, len(graph))])
+                monster.vertices = searchVerticalEmpty(graph, graph[random.randint(0, len(graph))], weapons)
                 game.combatMenu = False
                 game.combatRound = 3
             
             game.combatRound = 2
         elif game.combatRound == 2:
             person.take_damage(monster.attack_points)
-            monster.take_damage(person.attack)
+            update_treasure(person, weapons)
+            print(monster.health_points, end=' ')
+            if person.weapon == None:
+                monster.take_damage(person.attack)
+            else:
+                monster.take_damage(person.attack + weapons[person.weapon].attack_bonus)
+            print(monster.health_points)
             
             if monster.health_points == 0:
                 monster.health_points = 100
-                monster.vertices = searchVerticalEmpty(graph, graph[random.randint(0, len(graph))])
+                monster.vertices = searchVerticalEmpty(graph, graph[random.randint(0, len(graph))], weapons)
                 game.combatMenu = False
                 game.combatRound = 3
             
             game.combatRound = 1
         elif game.combatRound == 1:
             person.take_damage(monster.attack_points)
-            monster.take_damage(person.attack)
+            update_treasure(person, weapons)
+            print(monster.health_points, end=' ')
+            if person.weapon == None:
+                monster.take_damage(person.attack)
+            else:
+                monster.take_damage(person.attack + weapons[person.weapon].attack_bonus)
+            print(monster.health_points)
             
             if monster.health_points == 0:
                 monster.health_points = 100
-                monster.vertices = searchVerticalEmpty(graph, graph[random.randint(0, len(graph)) - 1])
+                monster.vertices = searchVerticalEmpty(graph, graph[random.randint(0, len(graph)) - 1], weapons)
                 game.combatMenu = False
                 game.combatRound = 3
             
@@ -242,7 +270,6 @@ def display_combat(game, monsters, person):
             nextVertice = nextPosition(personVertice, game.verticeObjective)
             step(personVertice, nextVertice)        
             
-        print(game.combatRound)
         nextVertice = nextPosition(personVertice, game.verticeObjective)
         if nextVertice == 3:
             return 1
@@ -253,11 +280,11 @@ def display_combat(game, monsters, person):
         
     return 0
     
-def newVerticeMonster(monsters):
+def newVerticeMonster(monsters, weapons):
     newVerticeEmpty = False
     newVertice = 0
     while newVerticeEmpty == False:
-        newVertice = searchVerticalEmpty(graph, graph[random.randint(0, len(graph) - 1)])
+        newVertice = searchVerticalEmpty(graph, graph[random.randint(0, len(graph) - 1)], weapons)
         count = 0
         for elementMonster in monsters:
             if elementMonster.vertices == newVertice:
@@ -266,9 +293,9 @@ def newVerticeMonster(monsters):
             newVerticeEmpty = True
     return newVertice
     
-def moviment_monster(graph, monsters):
+def moviment_monster(graph, monsters, weapons):
     for item in monsters:
-        vertice = searchVerticalEmpty(graph, graph[random.randint(0, len(graph) - 1)])
+        vertice = searchVerticalEmpty(graph, graph[random.randint(0, len(graph) - 1)], weapons)
         monsterVertices = []
         for monster  in monsters:
             if monster.vertices == vertice:
@@ -281,11 +308,11 @@ def moviment_monster(graph, monsters):
             if monsterEnemy.attack_points >= item.attack_points:
                 item.health_points = 100
                 monsterEnemy.take_damage(item.attack_points)
-                item.vertices = newVerticeMonster(monsters)
+                item.vertices = newVerticeMonster(monsters, weapons)
             else:
                 monsterEnemy.health_points = 100
                 item.take_damage(monsterEnemy.attack_points)
-                monsterEnemy.vertices = newVerticeMonster(monsters)
+                monsterEnemy.vertices = newVerticeMonster(monsters, weapons)
         else:
             monsterStrong = monsterVertices[0]
             monsterWeak = monsterVertices[1]
@@ -295,11 +322,66 @@ def moviment_monster(graph, monsters):
                 if elementMonster.attack_points < monsterWeak.attack_points:
                     monsterWeak = elementMonster
             monsterWeak.health_points = 100
-            monsterWeak.vertices = newVerticeMonster(monsters)
+            monsterWeak.vertices = newVerticeMonster(monsters, weapons)
             monsterStrong.take_damage(monsterWeak.attack_points)
             for elementMonster in monsterVertices:
                 if elementMonster.index != monsterWeak.index != monsterStrong.index:
                     elementMonster.take_damage(monsterStrong.attack_points)
                     if elementMonster.health_points == 0:
                         elementMonster.health_points = 100
-                    elementMonster.vertices = newVerticeMonster(monsters)
+                    elementMonster.vertices = newVerticeMonster(monsters, weapons)
+                    
+def display_weapon(game, monsters, person, weapons):
+    global graph
+    draw_backGround(backGround, screen)
+    draw_edges(graph, screen)
+    draw_vertices(graph, screen)
+    draw_informationVetices(graph, screen, monsters, weapons)
+    person.draw_explorer_info(fontesys, screen, weapons)
+    personVertice = depthFirstSearch(graph, graph[0])
+    
+    if button_get.draw(screen):
+        weapon = getWeapon(weapons, personVertice)
+        if person.weapon != None:
+            weapons[weapon].vertices = personVertice
+        person.weapon = weapon
+        weapons[weapon].vertices = -1
+        game.weaponMenu = False
+        print('get weapon')
+        nextVertice = nextPosition(personVertice, game.verticeObjective)
+        step(personVertice, nextVertice)
+        if nextVertice == 3:
+            return 1
+        if game.verticeObjective == 10 and nextVertice == 10:
+            return 2
+        game.time += 1
+        damage_biome(graph, nextVertice, person)
+        moviment_monster(graph, monsters, weapons)
+        sleep(0.3)
+        # return 3
+    if button_next.draw(screen) and game.end == False:
+        game.weaponMenu = False
+        nextVertice = nextPosition(personVertice, game.verticeObjective)
+        step(personVertice, nextVertice)
+        if personVertice == 3:
+            graph[3].treasure = False
+        if nextVertice == 3:
+            return 1
+        if game.verticeObjective == 10 and nextVertice == 10:
+            return 2
+        game.time += 1
+        damage_biome(graph, nextVertice, person)
+        sleep(0.2)
+        moviment_monster(graph, monsters, weapons)
+        print('next')
+    return 0
+
+def update_treasure(person, weapons):
+    if person.weapon != None:
+        if person.treasure_percentage > (person.health-weapons[person.weapon].attack_bonus):
+            person.treasure_percentage = (person.health-weapons[person.weapon].attack_bonus)
+        if person.treasure_percentage < 0:
+            person.treasure_percentage = 0
+    else:
+        if person.treasure_percentage > person.health:
+            person.treasure_percentage = person.health

@@ -5,6 +5,7 @@ from pygame.locals import *
 from src.config.game import Game, gameOn
 from src.character.explorer import Explorer
 from src.character.monsterRead import monsterRead
+from src.character.weaponRead import weaponsRead
 
 pygame.init()
 
@@ -12,15 +13,12 @@ run = True
 
 #statusGame code 0 - continue, 1 - change goal, 2 - finish game, 3 - reset 
 game = Game()
-# verticeObjective = 3
-# end = False
-# statusGame = -1
-# startTime = pygame.time.get_ticks()
 person = Explorer()
 monsters = monsterRead()
+weapon = weaponsRead()
 
 while run:
-    game.statusGame = gameOn(game, person, monsters)
+    game.statusGame = gameOn(game, person, monsters, weapon)
     if game.statusGame == 1:
         game.verticeObjective = 10
         print('Change Goal')
@@ -34,6 +32,8 @@ while run:
         game.time = 0
         person.health = 100
         person.treasure_percentage = 0
+        weapon = weaponsRead()
+        person.weapon = None
     
     pygame.display.update()
     
