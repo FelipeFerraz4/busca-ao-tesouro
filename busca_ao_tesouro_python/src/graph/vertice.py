@@ -47,3 +47,16 @@ def damage_biome(graph, nextVertice, person, weapons):
     if person.treasure_percentage > person.health:
         person.treasure_percentage = person.health
     
+def isSavePoint(graph, personVertice):
+    if graph[personVertice].savePoint:
+        return True
+    return False
+
+def resurrect(person, graph, personVertice, weapons):
+    person.health = 100
+    graph[personVertice].person = False
+    graph[person.checkpoints_found].person = True
+    if person.weapon != None:
+        weapons[person.weapon].vertices = personVertice
+        person.weapon = None
+            

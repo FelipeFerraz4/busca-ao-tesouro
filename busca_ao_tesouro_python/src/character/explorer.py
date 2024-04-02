@@ -8,7 +8,7 @@ class Explorer:
         self.attack = max_attack      
         self.treasure_percentage = 0  
         self.weapon = None            
-        self.checkpoints_found = []   
+        self.checkpoints_found = -1
 
     def attack_enemy(self, enemy, weapon):
         if self.weapon:
