@@ -89,7 +89,6 @@ def displayWeapon(game, monsters, person, weapons, graph):
     info_base(game, monsters, person, weapons, graph)
     if button_next.draw(screen):
         next(game, graph, monsters, person, weapons)
-        game.statusGame = 0
         print('next')
     if button_get.draw(screen):
         get_weapon(game, graph, monsters, person, weapons)

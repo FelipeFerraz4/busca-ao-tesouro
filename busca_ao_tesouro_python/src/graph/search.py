@@ -5,6 +5,7 @@ branco = 0
 cinza = 1
 preto = 2
 
+# achar o melhor visinho para atigir o objetivo mais rápido
 def breadthFirstSearch(graph, vertice, verticeObjective):
     color = []
     # distance = []
@@ -46,6 +47,7 @@ def breadthFirstSearch(graph, vertice, verticeObjective):
     # print(verticeAnterio)
     return verticeAnterio
 
+
 def visit(graph, vertice, color):
     color[vertice.id] = cinza
     status = -1
@@ -61,7 +63,7 @@ def visit(graph, vertice, color):
     color[vertice.id] = preto
     return status
 
-
+# achar o persongem no grafo
 def depthFirstSearch(graph, vertice):
     color = []
     
@@ -69,6 +71,7 @@ def depthFirstSearch(graph, vertice):
         color.append(branco)
     return visit(graph, vertice, color)
 
+#acha um vertice considerado vazio
 def searchVerticalEmpty(graph, vertice, weapons):
     color = []
     queue = []
