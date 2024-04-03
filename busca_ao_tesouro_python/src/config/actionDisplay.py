@@ -106,6 +106,7 @@ def next(game, graph, monsters, person, weapons):
     if isSavePoint(graph, personVertice):
         person.checkpoints_found = personVertice
         graph[personVertice].savePoint = False
+    sleep(0.1)    
         
     
 def get_weapon(game, graph, monsters, person, weapons):
@@ -121,7 +122,7 @@ def get_weapon(game, graph, monsters, person, weapons):
     #indexando a arma a pessoa
     person.weapon = weapon
     
-    print(person.weapon)
+    # print(person.weapon)
     #retirando a arma do vertice
     weapons[weapon].vertices = -1
     

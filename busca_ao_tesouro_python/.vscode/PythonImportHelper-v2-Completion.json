@@ -657,7 +657,7 @@
         "kind": 2,
         "importPath": "src.config.actionComplement",
         "description": "src.config.actionComplement",
-        "peekOfCode": "def nextPosition(personVertice, verticeObjective, graph):\n    # get the best neighbor of the character's current vertice\n    bestNeighboringVertice = breadthFirstSearch(graph, graph[personVertice], graph[verticeObjective])\n    neighboringList = copy.deepcopy(graph[personVertice].adjacentVertices)\n    # 20% of being chosen the best vertice\n    porcente = 3/10\n    luckNumber = random.randint(0, len(neighboringList))\n    # choosing the next vertice\n    neighboringChoice = bestNeighboringVertice\n    if luckNumber > int(len(neighboringList)*porcente):",
+        "peekOfCode": "def nextPosition(personVertice, verticeObjective, graph):\n    # get the best neighbor of the character's current vertice\n    bestNeighboringVertice = breadthFirstSearch(graph, graph[personVertice], graph[verticeObjective])\n    neighboringList = copy.deepcopy(graph[personVertice].adjacentVertices)\n    # 20% of being chosen the best vertice\n    porcente = 6/10\n    luckNumber = random.randint(0, len(neighboringList))\n    # choosing the next vertice\n    neighboringChoice = bestNeighboringVertice\n    if luckNumber > int(len(neighboringList)*porcente):",
         "detail": "src.config.actionComplement",
         "documentation": {}
     },
@@ -747,7 +747,7 @@
         "kind": 5,
         "importPath": "src.config.actionComplement",
         "description": "src.config.actionComplement",
-        "peekOfCode": "button_combat = create_button_combat()\nbutton_get = create_button_get()\nbutton_release = create_button_release()\nbutton_florest = create_button_florest()\ndef nextPosition(personVertice, verticeObjective, graph):\n    # get the best neighbor of the character's current vertice\n    bestNeighboringVertice = breadthFirstSearch(graph, graph[personVertice], graph[verticeObjective])\n    neighboringList = copy.deepcopy(graph[personVertice].adjacentVertices)\n    # 20% of being chosen the best vertice\n    porcente = 3/10",
+        "peekOfCode": "button_combat = create_button_combat()\nbutton_get = create_button_get()\nbutton_release = create_button_release()\nbutton_florest = create_button_florest()\ndef nextPosition(personVertice, verticeObjective, graph):\n    # get the best neighbor of the character's current vertice\n    bestNeighboringVertice = breadthFirstSearch(graph, graph[personVertice], graph[verticeObjective])\n    neighboringList = copy.deepcopy(graph[personVertice].adjacentVertices)\n    # 20% of being chosen the best vertice\n    porcente = 6/10",
         "detail": "src.config.actionComplement",
         "documentation": {}
     },
@@ -756,7 +756,7 @@
         "kind": 5,
         "importPath": "src.config.actionComplement",
         "description": "src.config.actionComplement",
-        "peekOfCode": "button_get = create_button_get()\nbutton_release = create_button_release()\nbutton_florest = create_button_florest()\ndef nextPosition(personVertice, verticeObjective, graph):\n    # get the best neighbor of the character's current vertice\n    bestNeighboringVertice = breadthFirstSearch(graph, graph[personVertice], graph[verticeObjective])\n    neighboringList = copy.deepcopy(graph[personVertice].adjacentVertices)\n    # 20% of being chosen the best vertice\n    porcente = 3/10\n    luckNumber = random.randint(0, len(neighboringList))",
+        "peekOfCode": "button_get = create_button_get()\nbutton_release = create_button_release()\nbutton_florest = create_button_florest()\ndef nextPosition(personVertice, verticeObjective, graph):\n    # get the best neighbor of the character's current vertice\n    bestNeighboringVertice = breadthFirstSearch(graph, graph[personVertice], graph[verticeObjective])\n    neighboringList = copy.deepcopy(graph[personVertice].adjacentVertices)\n    # 20% of being chosen the best vertice\n    porcente = 6/10\n    luckNumber = random.randint(0, len(neighboringList))",
         "detail": "src.config.actionComplement",
         "documentation": {}
     },
@@ -765,7 +765,7 @@
         "kind": 5,
         "importPath": "src.config.actionComplement",
         "description": "src.config.actionComplement",
-        "peekOfCode": "button_release = create_button_release()\nbutton_florest = create_button_florest()\ndef nextPosition(personVertice, verticeObjective, graph):\n    # get the best neighbor of the character's current vertice\n    bestNeighboringVertice = breadthFirstSearch(graph, graph[personVertice], graph[verticeObjective])\n    neighboringList = copy.deepcopy(graph[personVertice].adjacentVertices)\n    # 20% of being chosen the best vertice\n    porcente = 3/10\n    luckNumber = random.randint(0, len(neighboringList))\n    # choosing the next vertice",
+        "peekOfCode": "button_release = create_button_release()\nbutton_florest = create_button_florest()\ndef nextPosition(personVertice, verticeObjective, graph):\n    # get the best neighbor of the character's current vertice\n    bestNeighboringVertice = breadthFirstSearch(graph, graph[personVertice], graph[verticeObjective])\n    neighboringList = copy.deepcopy(graph[personVertice].adjacentVertices)\n    # 20% of being chosen the best vertice\n    porcente = 6/10\n    luckNumber = random.randint(0, len(neighboringList))\n    # choosing the next vertice",
         "detail": "src.config.actionComplement",
         "documentation": {}
     },
@@ -774,7 +774,7 @@
         "kind": 5,
         "importPath": "src.config.actionComplement",
         "description": "src.config.actionComplement",
-        "peekOfCode": "button_florest = create_button_florest()\ndef nextPosition(personVertice, verticeObjective, graph):\n    # get the best neighbor of the character's current vertice\n    bestNeighboringVertice = breadthFirstSearch(graph, graph[personVertice], graph[verticeObjective])\n    neighboringList = copy.deepcopy(graph[personVertice].adjacentVertices)\n    # 20% of being chosen the best vertice\n    porcente = 3/10\n    luckNumber = random.randint(0, len(neighboringList))\n    # choosing the next vertice\n    neighboringChoice = bestNeighboringVertice",
+        "peekOfCode": "button_florest = create_button_florest()\ndef nextPosition(personVertice, verticeObjective, graph):\n    # get the best neighbor of the character's current vertice\n    bestNeighboringVertice = breadthFirstSearch(graph, graph[personVertice], graph[verticeObjective])\n    neighboringList = copy.deepcopy(graph[personVertice].adjacentVertices)\n    # 20% of being chosen the best vertice\n    porcente = 6/10\n    luckNumber = random.randint(0, len(neighboringList))\n    # choosing the next vertice\n    neighboringChoice = bestNeighboringVertice",
         "detail": "src.config.actionComplement",
         "documentation": {}
     },
@@ -819,7 +819,7 @@
         "kind": 2,
         "importPath": "src.config.actionDisplay",
         "description": "src.config.actionDisplay",
-        "peekOfCode": "def get_weapon(game, graph, monsters, person, weapons):\n    personVertice = depthFirstSearch(graph, graph[0])\n    #pegar a arma\n    weapon = getWeapon(weapons, personVertice)\n    #indexando o vertice a arma\n    if person.weapon != None:\n        weapons[weapon].vertices = personVertice\n    #indexando a arma a pessoa\n    person.weapon = weapon\n    print(person.weapon)",
+        "peekOfCode": "def get_weapon(game, graph, monsters, person, weapons):\n    personVertice = depthFirstSearch(graph, graph[0])\n    #pegar a arma\n    weapon = getWeapon(weapons, personVertice)\n    #indexando o vertice a arma\n    if person.weapon != None:\n        weapons[weapon].vertices = personVertice\n    #indexando a arma a pessoa\n    person.weapon = weapon\n    # print(person.weapon)",
         "detail": "src.config.actionDisplay",
         "documentation": {}
     },
@@ -981,7 +981,7 @@
         "kind": 2,
         "importPath": "src.config.display",
         "description": "src.config.display",
-        "peekOfCode": "def displayWeapon(game, monsters, person, weapons, graph):\n    info_base(game, monsters, person, weapons, graph)\n    if button_next.draw(screen):\n        next(game, graph, monsters, person, weapons)\n        game.statusGame = 0\n        print('next')\n    if button_get.draw(screen):\n        get_weapon(game, graph, monsters, person, weapons)\n        print('weapon')\ndef info_base(game, monsters, person, weapons, graph):",
+        "peekOfCode": "def displayWeapon(game, monsters, person, weapons, graph):\n    info_base(game, monsters, person, weapons, graph)\n    if button_next.draw(screen):\n        next(game, graph, monsters, person, weapons)\n        print('next')\n    if button_get.draw(screen):\n        get_weapon(game, graph, monsters, person, weapons)\n        print('weapon')\ndef info_base(game, monsters, person, weapons, graph):\n    draw_backGround(backGround, screen)",
         "detail": "src.config.display",
         "documentation": {}
     },
@@ -1476,7 +1476,7 @@
         "kind": 2,
         "importPath": "src.graph.search",
         "description": "src.graph.search",
-        "peekOfCode": "def depthFirstSearch(graph, vertice):\n    color = []\n    for item in graph:\n        color.append(branco)\n    return visit(graph, vertice, color)\ndef searchVerticalEmpty(graph, vertice, weapons):\n    color = []\n    queue = []\n    for item in graph:\n        color.append(branco)",
+        "peekOfCode": "def depthFirstSearch(graph, vertice):\n    color = []\n    for item in graph:\n        color.append(branco)\n    return visit(graph, vertice, color)\n#acha um vertice considerado vazio\ndef searchVerticalEmpty(graph, vertice, weapons):\n    color = []\n    queue = []\n    for item in graph:",
         "detail": "src.graph.search",
         "documentation": {}
     },
@@ -1494,7 +1494,7 @@
         "kind": 5,
         "importPath": "src.graph.search",
         "description": "src.graph.search",
-        "peekOfCode": "branco = 0\ncinza = 1\npreto = 2\ndef breadthFirstSearch(graph, vertice, verticeObjective):\n    color = []\n    # distance = []\n    father = []\n    queue = []\n    # teste = []\n    for item in graph:",
+        "peekOfCode": "branco = 0\ncinza = 1\npreto = 2\n# achar o melhor visinho para atigir o objetivo mais rápido\ndef breadthFirstSearch(graph, vertice, verticeObjective):\n    color = []\n    # distance = []\n    father = []\n    queue = []\n    # teste = []",
         "detail": "src.graph.search",
         "documentation": {}
     },
@@ -1503,7 +1503,7 @@
         "kind": 5,
         "importPath": "src.graph.search",
         "description": "src.graph.search",
-        "peekOfCode": "cinza = 1\npreto = 2\ndef breadthFirstSearch(graph, vertice, verticeObjective):\n    color = []\n    # distance = []\n    father = []\n    queue = []\n    # teste = []\n    for item in graph:\n        # teste.append(item.id)",
+        "peekOfCode": "cinza = 1\npreto = 2\n# achar o melhor visinho para atigir o objetivo mais rápido\ndef breadthFirstSearch(graph, vertice, verticeObjective):\n    color = []\n    # distance = []\n    father = []\n    queue = []\n    # teste = []\n    for item in graph:",
         "detail": "src.graph.search",
         "documentation": {}
     },
@@ -1512,7 +1512,7 @@
         "kind": 5,
         "importPath": "src.graph.search",
         "description": "src.graph.search",
-        "peekOfCode": "preto = 2\ndef breadthFirstSearch(graph, vertice, verticeObjective):\n    color = []\n    # distance = []\n    father = []\n    queue = []\n    # teste = []\n    for item in graph:\n        # teste.append(item.id)\n        color.append(branco)",
+        "peekOfCode": "preto = 2\n# achar o melhor visinho para atigir o objetivo mais rápido\ndef breadthFirstSearch(graph, vertice, verticeObjective):\n    color = []\n    # distance = []\n    father = []\n    queue = []\n    # teste = []\n    for item in graph:\n        # teste.append(item.id)",
         "detail": "src.graph.search",
         "documentation": {}
     },
@@ -1521,7 +1521,7 @@
         "kind": 6,
         "importPath": "src.graph.vertice",
         "description": "src.graph.vertice",
-        "peekOfCode": "class verticeGraph():\n    def __init__(self, id, coordenate, adjacentVertices, person=False, savePoint=False, treasure=False, strangeBiome=0):\n        self.id = id\n        self.coordinate = (coordenate[0], coordenate[1])\n        self.savePoint = savePoint\n        self.person = person\n        self.adjacentVertices = adjacentVertices\n        self.treasure = treasure\n        self.item = False\n        self.strangeBiome = strangeBiome",
+        "peekOfCode": "class verticeGraph():\n    def __init__(self, id, coordenate, adjacentVertices, person=False, savePoint=False, treasure=False, strangeBiome=0):\n        self.id = id\n        self.coordinate = (coordenate[0], coordenate[1])\n        self.savePoint = savePoint\n        self.person = person\n        self.adjacentVertices = adjacentVertices\n        self.treasure = treasure\n        # self.item = False\n        self.strangeBiome = strangeBiome",
         "detail": "src.graph.vertice",
         "documentation": {}
     },

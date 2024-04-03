@@ -11,7 +11,7 @@ class verticeGraph():
         self.person = person
         self.adjacentVertices = adjacentVertices
         self.treasure = treasure
-        self.item = False
+        # self.item = False
         self.strangeBiome = strangeBiome
     
 def draw_vertices(graph, surface):
