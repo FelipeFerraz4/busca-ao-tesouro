@@ -1,0 +1,12 @@
+completa - tempo
+completa - criar os mostros no mapa
+completa - criar as imagens (mostros)
+
+completa - mostra dados do personagem
+completo - fazer o personagem tomar dano
+completo - funções de combate
+completa - função mover mostros
+completa - combate dos monstro
+completa - Armas
+
+completa - função savepoint
